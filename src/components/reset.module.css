@@ -1,0 +1,5 @@
+.reset {
+  all: unset;         /* remove everything (margins, paddings, inherited styles, etc.) */
+  box-sizing: border-box; /* optional, but usually useful */
+  display: revert;    /* restore natural display type */
+}
