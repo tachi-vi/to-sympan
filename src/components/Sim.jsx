@@ -1,12 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
-import styles from './Sim.module.css';
 
 export default function Sim({ config, handleBackButton }) {
   const mainCanvasRef = useRef(null);
   const bgCanvasRef = useRef(null);
   const [startSim, setStartSim] = useState(false);
 
-  const settings = {scale: 40, simulator: 'vv', spf: 150, dt: 0.0001, trails: false}
+  const settings = {scale: 10, simulator: 'vv', spf: 150, dt: 0.0001, trails: false}
 
 
   // //optinal bar graph on top left showing energy, momentum, angular momentum, potential energy, kinetic energy
@@ -184,14 +183,12 @@ export default function Sim({ config, handleBackButton }) {
             bodies[i].vy += 0.5 * (oldAy[i] + bodies[i].ay) * dt;
         }
     }
-
     function getRadius(mass) {
       const minRadius = 3;
-      const maxRadius = 15;
+      const maxRadius = 8;
       const scaled = Math.log10(mass + 1) * 3; 
       return Math.min(maxRadius, Math.max(minRadius, scaled));
     }
-
 
     const mainCanvas = mainCanvasRef.current;
     const bgCanvas = bgCanvasRef.current;
@@ -218,8 +215,7 @@ export default function Sim({ config, handleBackButton }) {
       { body1: "#00FFC5", body2: "#FF3CAC", body3: "#845EC2" },
       { body1: "#FFB86F", body2: "#8BE9FD", body3: "#BD93F9" },
     ];
-    let i = 1; // pick a scheme
-
+    let i = 1; 
     class Body {
       constructor(x, y, vx, vy, m, name, color) {
         this.x = x;
@@ -303,18 +299,20 @@ export default function Sim({ config, handleBackButton }) {
  return (
   <>
     {startSim ? (
-      <div className={styles.container}>
-        <button onClick={handleBackButton} className={styles.button}>
+      <div className='simCont'>
+        <button onClick={handleBackButton} className="button">
           Home
         </button>
-        <button className={styles.button2} onClick={()=>setStartSim(false)}>stop</button>
-        <div className={styles.canvas}>
-          <canvas ref={bgCanvasRef} className={styles.bg}></canvas>
-          <canvas ref={mainCanvasRef} className={styles.main}></canvas>
+        <button className="button2" onClick={()=>setStartSim(false)}>stop</button>
+        <div className="canvas">
+          <canvas ref={bgCanvasRef} className="bg-canvas"></canvas>
+          <canvas ref={mainCanvasRef} className="main-canvas"></canvas>
         </div>
       </div>
     ) : (<>
-      <h1>Enter Config</h1>
+      <h1>{config.name}</h1>
+      <h1>Select Settings</h1>
+      <p>form here</p>
       <button onClick={()=>setStartSim(true)}>Run Config</button></>
     )}
   </>
