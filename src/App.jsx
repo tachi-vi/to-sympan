@@ -37,18 +37,18 @@ Of course, the three body problem does have a solution - it's whatever would act
       <p>I built this to just test out various methods of integrators, expiriment with solved Configrations</p>
       <h1>3 Body Configurations</h1>
       <h1>Popular and Solved</h1>
-      <ul>
+      <ul className='grid'>
         {configs.map((config)=> ((config.bodies.length === 3) &&
           <li key={config.ids}><button onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>)
         )}
       </ul>
       <h1>N Body Configrations</h1>
-      <ul>
+      <ul className='grid'>
         {configs.map((config)=> ((!(config.bodies.length === 3)) &&
           <li key={config.id}><button onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>)
         )} </ul>
         <hr/>
-      <button>Create Your Own</button>
+      <button className='cyoButton'>Check Out Simulator</button>
       </div>
     </>
     

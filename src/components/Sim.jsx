@@ -5,28 +5,20 @@ export default function Sim({ config, handleBackButton }) {
   const bgCanvasRef = useRef(null);
   const [startSim, setStartSim] = useState(false);
 
-  const settings = {scale: 10, simulator: 'vv', spf: 150, dt: 0.0001, trails: false}
+  const settings = {scale: config.scale || 50, simulator: 'rk2', spf: 1500, dt: 0.00001, trails: true}
 
 
-  // //optinal bar graph on top left showing energy, momentum, angular momentum, potential energy, kinetic energy
-  
+
+// // bar graph on top left showing energy, momentum, angular momentum, potential energy, kinetic energy (something to note error)
   // if  (nosarttsim)
   //   show form for settings, run sim button to set start sim (setStartSim(true))
-
 //(optional) make it pannable?
-
 //time analysis in days etc with irl days
-
-//name text if body has a name property otherwise indexed
-
 //sexy ui
 //light theme
-
 //astronomical units scale
-
-
+//fix for figure 8 orbits
 //optinal (changing speed inbetween runs, changing scale inbetween runs, changing color scheme inbetween runs)
-
 //consider it done afet finishding non optinal and making tht home page with lots of configsv
   
 
@@ -243,7 +235,7 @@ export default function Sim({ config, handleBackButton }) {
         let ypos = originY + this.y * scale;
         context.beginPath();
         context.fillStyle = this.color;
-        context.arc(xpos, ypos, getRadius(this.m), 0, Math.PI * 2, false);
+        context.arc(xpos, ypos, 0.8, 0, Math.PI * 2, false);
         context.fill();
       }
 
@@ -251,7 +243,7 @@ export default function Sim({ config, handleBackButton }) {
         let xpos = originX + this.x * scale;
         let ypos = originY + this.y * scale;
         context.fillStyle = "white";
-        context.font = "12px Arial";
+        context.font = "11px system-ui";
         context.fillText(text, xpos + 10, ypos - 10);
       }
     }
