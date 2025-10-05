@@ -12,15 +12,15 @@ const configs = [
     name: 'Earth-Sun',
     id: "earth-sun",
     bodies: [
-      { m: 1000, x: 0, y: 0, vx: 0, vy: 0 },   // Sun
-      { m: 1, x: 10, y: 0, vx: 0, vy: 3.2 }    // Earth
+      { m: 1000, x: 0, y: 0, vx: 0, vy: 0, name: "Sun" },   // Sun
+      { m: 1, x: 10, y: 0, vx: 0, vy: 3.2, name: "Earth" }    // Earth
     ],
   },
   {
     name: 'Sun + 2 Planets',
     id: "sun-2planets",
     bodies: [
-      { m: 1000, x: 0, y: 0, vx: 0, vy: 0 },   // Sun
+      { m: 1000, x: 0, y: 0, vx: 0, vy: 0, name:"Sun" },   // Sun
       { m: 1, x: 10, y: 0, vx: 0, vy: 3.2 },   // Planet A
       { m: 0.5, x: 15, y: 0, vx: 0, vy: 2.6 }  // Planet B
     ],

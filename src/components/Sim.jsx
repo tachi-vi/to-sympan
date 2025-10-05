@@ -6,9 +6,9 @@ export default function Sim({ config, handleBackButton }) {
   const bgCanvasRef = useRef(null);
   const [startSim, setStartSim] = useState(false);
 
-  const settings = {scale: 40, simulator: 'rk2', spf: 150, dt: 0.0001, trails: false}
+  const settings = {scale: 40, simulator: 'vv', spf: 150, dt: 0.0001, trails: false}
 
-  
+
   // //optinal bar graph on top left showing energy, momentum, angular momentum, potential energy, kinetic energy
   
   // if  (nosarttsim)
@@ -16,8 +16,9 @@ export default function Sim({ config, handleBackButton }) {
 
 //(optional) make it pannable?
 
-//text of body 1 body 2 alongise the bodies (or cutsom text as per settings)S
 //time analysis in days etc with irl days
+
+//name text if body has a name property otherwise indexed
 
 //sexy ui
 //light theme
@@ -220,12 +221,13 @@ export default function Sim({ config, handleBackButton }) {
     let i = 1; // pick a scheme
 
     class Body {
-      constructor(x, y, vx, vy, m, color) {
+      constructor(x, y, vx, vy, m, name, color) {
         this.x = x;
         this.y = y;
         this.vx = vx;
         this.vy = vy;
         this.m = m;
+        this.name = name;
         this.color = color;
         this.oldx = x;
         this.oldy = y;
@@ -248,6 +250,14 @@ export default function Sim({ config, handleBackButton }) {
         context.arc(xpos, ypos, getRadius(this.m), 0, Math.PI * 2, false);
         context.fill();
       }
+
+      drawText(context, text) {
+        let xpos = originX + this.x * scale;
+        let ypos = originY + this.y * scale;
+        context.fillStyle = "white";
+        context.font = "12px Arial";
+        context.fillText(text, xpos + 10, ypos - 10);
+      }
     }
 
     let bodies = config.bodies.map((b, idx) => {
@@ -255,8 +265,8 @@ export default function Sim({ config, handleBackButton }) {
       const colorKeys = Object.keys(colorScheme[i]);
       const color = colorScheme[i][colorKeys[idx % colorKeys.length]];
 
-      return new Body(b.x, b.y, b.vx, b.vy, b.m, color);
-    });
+      return new Body(b.x, b.y, b.vx, b.vy, b.m, b.name || null, color);
+    }); 
 
 
     let dt = settings.dt;
@@ -278,9 +288,10 @@ export default function Sim({ config, handleBackButton }) {
 
       }
 
-      for (let body of bodies) {
+      for (let [index, body] of bodies.entries()) {
         if (settings.trails){body.drawSmallCircle(bgCanvasContext);}
         body.drawCircle(mainCanvasContext);
+        body.drawText(mainCanvasContext, body.name || `Body ${index+1}`);
       }
     };
 
