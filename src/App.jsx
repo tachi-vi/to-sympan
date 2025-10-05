@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import configs from './components/configs.js';
 import Sim from './components/Sim.jsx';
+import styles from './App.module.css';
 
 function App() {
   const [selectedSim, setSelectedSim] = useState(null);
@@ -20,6 +21,7 @@ function App() {
   if (selectedSim === null) {
   return (
     <>
+    <div className={styles.container}>
       <div>
         <h1>To Sýmpan</h1>
       </div>
@@ -37,7 +39,9 @@ function App() {
           <li key={config.id}><button onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>)
         )}
       <button>Create Your Own</button>
+      </div>
     </>
+    
   )}
   else {
     return (<Sim config={selectedSim} handleBackButton={handleBackButtonStateChange}/>)

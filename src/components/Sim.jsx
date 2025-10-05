@@ -6,10 +6,9 @@ export default function Sim({ config, handleBackButton }) {
   const bgCanvasRef = useRef(null);
   const [startSim, setStartSim] = useState(false);
 
-  const settings = {scale: 150, simulator: 'rk2', spf: 150, dt: 0.0001}
+  const settings = {scale: 40, simulator: 'rk2', spf: 150, dt: 0.0001, trails: false}
 
-  // if (startsim)
-  //   useEffect (configs, settings), 
+  
   // //optinal bar graph on top left showing energy, momentum, angular momentum, potential energy, kinetic energy
   
   // if  (nosarttsim)
@@ -22,6 +21,8 @@ export default function Sim({ config, handleBackButton }) {
 
 //sexy ui
 //light theme
+
+//astronomical units scale
 
 
 //optinal (changing speed inbetween runs, changing scale inbetween runs, changing color scheme inbetween runs)
@@ -183,6 +184,14 @@ export default function Sim({ config, handleBackButton }) {
         }
     }
 
+    function getRadius(mass) {
+      const minRadius = 3;
+      const maxRadius = 15;
+      const scaled = Math.log10(mass + 1) * 3; 
+      return Math.min(maxRadius, Math.max(minRadius, scaled));
+    }
+
+
     const mainCanvas = mainCanvasRef.current;
     const bgCanvas = bgCanvasRef.current;
     const mainCanvasContext = mainCanvas.getContext("2d");
@@ -211,13 +220,12 @@ export default function Sim({ config, handleBackButton }) {
     let i = 1; // pick a scheme
 
     class Body {
-      constructor(x, y, vx, vy, m, radius, color) {
+      constructor(x, y, vx, vy, m, color) {
         this.x = x;
         this.y = y;
         this.vx = vx;
         this.vy = vy;
         this.m = m;
-        this.radius = radius;
         this.color = color;
         this.oldx = x;
         this.oldy = y;
@@ -228,7 +236,7 @@ export default function Sim({ config, handleBackButton }) {
         let ypos = originY + this.y * scale;
         context.beginPath();
         context.fillStyle = this.color;
-        context.arc(xpos, ypos, this.radius, 0, Math.PI * 2, false);
+        context.arc(xpos, ypos, getRadius(this.m), 0, Math.PI * 2, false);
         context.fill();
       }
 
@@ -237,7 +245,7 @@ export default function Sim({ config, handleBackButton }) {
         let ypos = originY + this.y * scale;
         context.beginPath();
         context.fillStyle = this.color;
-        context.arc(xpos, ypos, 0.8, 0, Math.PI * 2, false);
+        context.arc(xpos, ypos, getRadius(this.m), 0, Math.PI * 2, false);
         context.fill();
       }
     }
@@ -247,7 +255,7 @@ export default function Sim({ config, handleBackButton }) {
       const colorKeys = Object.keys(colorScheme[i]);
       const color = colorScheme[i][colorKeys[idx % colorKeys.length]];
 
-      return new Body(b.x, b.y, b.vx, b.vy, b.m, b.radius || 4, color);
+      return new Body(b.x, b.y, b.vx, b.vy, b.m, color);
     });
 
 
@@ -271,7 +279,7 @@ export default function Sim({ config, handleBackButton }) {
       }
 
       for (let body of bodies) {
-        body.drawSmallCircle(bgCanvasContext);
+        if (settings.trails){body.drawSmallCircle(bgCanvasContext);}
         body.drawCircle(mainCanvasContext);
       }
     };
