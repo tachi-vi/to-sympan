@@ -5,6 +5,8 @@ export default function Sim({ config, handleBackButton }) {
   const mainCanvasRef = useRef(null);
   const bgCanvasRef = useRef(null);
   const [startSim, setStartSim] = useState(false);
+  const [elapsedTime, setElapsedTime] = useState(0);
+
 
   const [settings, setSettings] = useState({
     scale: 50,
@@ -14,11 +16,15 @@ export default function Sim({ config, handleBackButton }) {
     trails: true,
   });
 
+  function handleStopButton(){
+    setElapsedTime(0);
+    setStartSim(false);
+    
+  }
 
 
 // // bar graph on top left showing energy, momentum, angular momentum, potential energy, kinetic energy (something to note error)
-  // if  (nosarttsim)
-  //   show form for settings, run sim button to set start sim (setStartSim(true))
+
 //(optional) make it pannable?
 //time analysis in days etc with irl days
 //sexy ui
@@ -512,6 +518,7 @@ function adaptiveIntegrate(bodies, dtTarget, opts = {}) {
     const RunSim = () => {
       animationId = requestAnimationFrame(RunSim);
       mainCanvasContext.clearRect(0, 0, window_width, window_height);
+      const time = 0;
 
       for (let j = 0; j < stepsPerFrame; j++) {
           if (settings.simulator === "rk2") {
@@ -523,6 +530,7 @@ function adaptiveIntegrate(bodies, dtTarget, opts = {}) {
         else if (settings.simulator === "rk45") {
         adaptiveIntegrate(bodies, dt, {eps: 1e-2, tol: 1e-8})
       }
+      setElapsedTime(prev => prev + dt);
 
       }
 
@@ -545,7 +553,8 @@ function adaptiveIntegrate(bodies, dtTarget, opts = {}) {
         <button onClick={handleBackButton} className="button">
           Home
         </button>
-        <button className="button2" onClick={()=>setStartSim(false)}>stop</button>
+        <button className="button2" onClick={handleStopButton}>stop</button>
+        <button className="button3">Time: {elapsedTime.toFixed(1)}</button>
         <div className="canvas">
           <canvas ref={bgCanvasRef} className="bg-canvas"></canvas>
           <canvas ref={mainCanvasRef} className="main-canvas"></canvas>
