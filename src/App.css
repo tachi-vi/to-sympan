@@ -1,4 +1,4 @@
-.mainCont{
+.mainCont, .formPageContain {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,7 +95,7 @@ p {
   height: 100%;
 }
 
-.simCont .button {
+.simCont .button, .formPageContain .button {
   position: absolute; /* remove from normal flow */
   top: 20px;          /* distance from top */
   left: 20px;         /* distance from left */
