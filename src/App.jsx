@@ -29,14 +29,21 @@ function App() {
         'To Sympan' is my attempt at understanding the universe. 
       </p>
       <h1>The N-Body Problem</h1>
-      <p>The three-body problem lacks a closed-form solution, which is a mathematical expression that uses a finite number of "standard" operations (addition, division, logarithm, etc.), usually expressed as a formula or equation. This means there is no equation for which you can plug in the initial positions, velocities, and masses, and solve for the exact positions and velocities at a later time. For most configurations of the three bodies, numerical methods are needed to iteratively compute the positions over time, although the chaotic behavior of the system means that even small numerical errors can propagate and result in large deviations over time.
-Chaotic systems are very sensitive to their input parameters, so anything less than a perfect continuous estimation can result in wildly different results. Unlike a non-chaotic problem where a 1% error in velocity might result in a 1% error in position, a 1% error in velocity at some time step can result in arbitrarily large deviation at a later time. Even if your numerical approximation is very good, you may eventually find that your model predicts something entirely different from reality. You can run increasingly good approximations with decreasingly short time steps, but there is no numerical approach that is anything but an approximation, which simply may not be "good enough" in a chaotic system.
-Of course, the three body problem does have a solution - it's whatever would actually happen when observing the three bodies in isolation. The physical reality is the solution to the problem. It's just that this solution cannot be expressed with common mathematical operations in "closed form"
-      </p>
-      <h1>Project Introduction</h1>
-      <p>I built this to just test out various methods of integrators, expiriment with solved Configrations</p>
+      <p>The N-body problem deals with predicting the motion of several objects that interact through gravity. While the two-body problem can be solved exactly with known mathematical formulas, adding even one more body makes the system far more complex.
+For three or more bodies, there is no general closed-form solution — no single equation where you can plug in the initial positions, velocities, and masses to find the exact future positions. Instead, numerical methods are used to calculate the motion step by step over time.
+These systems are often chaotic, meaning they are extremely sensitive to their starting conditions. A very small difference in an initial velocity or position can lead to a completely different outcome later. In a non-chaotic system, a small error usually stays small, but in an N-body system, even a tiny rounding or calculation error can grow rapidly.
+</p>
+<p>Because of this, all numerical methods are approximations. Reducing the time step or increasing precision can improve the results, but no method can produce a perfectly exact prediction. The real motion of the bodies — what would happen in nature — is the true solution, even though it cannot be written as a simple formula.
+
+The three-body problem is the first case where this behavior appears. It shows how quickly a system can move from predictable and stable to chaotic and unpredictable once more bodies are involved.</p>
+<h1>Project Introduction</h1>
+<p>This project focuses on simulating periodic solutions in the N-body problem — cases where, despite the general chaotic nature of the system, the bodies follow repeating paths over time. 
+The objective of this project is to identify and analyze these periodic solutions while testing how different numerical methods perform when simulating them. Since the N-body problem does not have a closed-form solution for most cases, numerical integration methods are required to compute motion over time. By comparing approaches such as Runge–Kutta methods and Velocity Verlet, the project evaluates how accurately each method preserves periodicity and energy over extended simulations.
+Different configurations may require different numerical techniques. Some methods remain stable and maintain the periodic motion, while others accumulate numerical errors that alter the system’s behavior. Through this comparison, the project aims to determine which numerical methods are most suitable for maintaining periodicity across a range of three (as well as N)-body configurations.
+</p>
       <h1>3 Body Configurations</h1>
-      <h1>Popular and Solved</h1>
+      <h2>Popular and Solved</h2>
+      <h2>3-Body Gallery: Sheen's</h2>
       <ul className='grid'>
         {configs.map((config)=> ((config.bodies.length === 3) &&
           <li key={config.ids}><button onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>)

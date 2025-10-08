@@ -568,7 +568,7 @@ elapsedTime.current += dt * stepsPerFrame;
 
 frameCounter++;
 // Only push every 10 frames
-if (frameCounter % 10 === 0) {
+if (frameCounter % 50 === 0) {
   systemMetricRecord.current.push({
     time: +elapsedTime.current.toFixed(2),
     energy: metrics.totalEnergy,
@@ -579,11 +579,11 @@ if (frameCounter % 10 === 0) {
   });
 
   // Keep history short (e.g., 200 points)
-  if (systemMetricRecord.current.length > 5) systemMetricRecord.current.shift();
+  if (systemMetricRecord.current.length > 50) systemMetricRecord.current.shift();
 
   // Update Recharts state
   setMetricsHistory([...systemMetricRecord.current]);
-}
+  }
       
 
   for (let [index, body] of bodies.entries()) {
