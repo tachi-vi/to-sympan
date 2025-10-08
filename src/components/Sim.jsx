@@ -568,7 +568,7 @@ elapsedTime.current += dt * stepsPerFrame;
 
 frameCounter++;
 // Only push every 10 frames
-if (frameCounter % 50 === 0) {
+if (frameCounter % 15 === 0) {
   systemMetricRecord.current.push({
     time: +elapsedTime.current.toFixed(2),
     energy: metrics.totalEnergy,

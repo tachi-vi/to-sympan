@@ -22,10 +22,8 @@ function App() {
   return (
     <>
     <div className='mainCont'>
-      <div>
-        <h1>To Sýmpan</h1>
-      </div>
-      <p>
+      <h1 className='centeredText'style={{ fontSize: "1.7rem", marginTop: "0px", marginBottom:"0px", paddingTop: "0px", textAlign: "center", fontStyle:"normal" }}>To Sýmpan</h1>
+      <p className='centeredText' style={{fontSize: "1rem"}}>
         'To Sympan' is my attempt at understanding the universe. 
       </p>
       <h1>The N-Body Problem</h1>
@@ -42,8 +40,8 @@ The objective of this project is to identify and analyze these periodic solution
 Different configurations may require different numerical techniques. Some methods remain stable and maintain the periodic motion, while others accumulate numerical errors that alter the system’s behavior. Through this comparison, the project aims to determine which numerical methods are most suitable for maintaining periodicity across a range of three (as well as N)-body configurations.
 </p>
       <h1>3 Body Configurations</h1>
-      <h2>Popular and Solved</h2>
-      <h2>3-Body Gallery: Sheen's</h2>
+      <h2 className='centeredText'>Popular and Solved</h2>
+      <h2 className='centeredText'>3-Body Gallery: Sheen's</h2>
       <ul className='grid'>
         {configs.map((config)=> ((config.bodies.length === 3) &&
           <li key={config.ids}><button onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>)
@@ -55,8 +53,8 @@ Different configurations may require different numerical techniques. Some method
           <li key={config.id}><button onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>)
         )} </ul>
         <hr/>
-      <button className='cyoButton'>Check Out Simulator</button>
       </div>
+    
     </>
     
   )}

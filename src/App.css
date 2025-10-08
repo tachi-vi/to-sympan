@@ -1,25 +1,47 @@
+body {
+  margin: 0;
+  background-color: #f7f5ef; /* off-white academic background */
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #222;
+}
+
 .mainCont, .formPageContain {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* push content toward top */
+  flex-direction: column;
+  padding: 4vh 15vw;
+  min-height: 100vh;
+}
+
+.centeredText {
+  text-align: center;
+  align-self: center;
 }
 
 
-
+/* Headings and text styling */
 h1 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: normal;
+  font-style: italic;
+  align-self: flex-start; /* aligns to top-left of the paper */
+  margin-bottom: 0px;
+  margin-top: 5vh;
 }
 
 h2 {
+  font-size: 1.2rem;
   font-weight: normal;
+  margin-bottom: 0;
 }
 
 p {
   font-size: 1rem;
+  line-height: 1.6;
+  color: #222;
+  text-align: justify;
 }
-
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
@@ -47,10 +69,10 @@ li {
 
 button {
   font-family: "Times New Roman", Georgia, serif;
-  font-size: 0.9rem;
-  padding: 6px 12px;
+  font-size: 0.rem;
+  padding: 4px 8px;
   border: 1px solid #aaa;
-  background: #fff;
+  background: #fdf9f9;
   cursor: pointer;
   transition: background 0.2s;
 }
@@ -59,16 +81,8 @@ button:hover {
   background: #f0f0f0;
 }
 
-button + button {
-  margin-left: 10px; /* spacing between buttons */
-}
 
-p {
-  padding: 0 40px;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #222;
-}
+
 
 .cyoButton{
     position: sticky;
