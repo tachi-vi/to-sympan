@@ -17,7 +17,6 @@ export default function SimulationSettings({ settings, setSettings }) {
           max="400"
           value={settings.scale}
           onChange={(e) => handleChange('scale', Number(e.target.value))}
-          className="w-full cursor-pointer accent-pink-500"
         />
       </div>
 
@@ -30,6 +29,7 @@ export default function SimulationSettings({ settings, setSettings }) {
         >
           <option value="rk2">Runge-Kutta 2</option>
           <option value="rk4">Runge-Kutta 4</option>
+          <option value="rk45">Runge-Kutta 45</option>
           <option value="vv">Velocity Verlet</option>
         </select>
       </div>
