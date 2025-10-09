@@ -1,0 +1,37 @@
+.config-card {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 16px 20px;
+  font-family: system-ui, sans-serif;
+}
+
+.config-title {
+  text-align: center;
+  margin-bottom: 4px;
+  font-size: 1.4rem;
+  color: #222;
+}
+
+.config-id {
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.body-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.body-item {
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.body-header {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+  color: #333;
+}

@@ -31,10 +31,10 @@ body {
 .themeButton{
   position: fixed;       /* makes it sticky wrt viewport (body) */
   top: 20px;             /* adjust position */
-  left: 20px;
-  z-index: 1000;
+  right: 20px;
   background-color: transparent;
   border: 0px;
+
 }
 
 /* Headings and text styling */
@@ -102,9 +102,7 @@ li {
 button {
   font-family: "Times New Roman", Georgia, serif;
   font-size: 0.rem;
-  padding: 4px 8px;
   cursor: pointer;
-  transition: background 0.2s;
 }
 
 
@@ -118,6 +116,8 @@ button {
     margin-top: 20px;
     width: 100%;
 }
+
+
 
 .simCont {
   background-color: transparent;
@@ -163,5 +163,12 @@ button {
   position: absolute; /* remove from normal flow */
   bottom: 20px;          /* distance from top */ 
   right: 20px;         /* distance from left */
+  z-index: 10;        /* on top of canvases */
+}
+
+.changePageButton {
+  position: fixed; /* remove from normal flow */
+  top: 20px;          /* distance from top */
+  left: 20px;         /* distance from left */
   z-index: 10;        /* on top of canvases */
 }

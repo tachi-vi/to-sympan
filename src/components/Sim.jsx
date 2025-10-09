@@ -2,9 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import Form from "./Form";
 // import MetricsGraph from "./graph";
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend } from "recharts";
-import { MdOutlineDarkMode } from "react-icons/md";
 
-export default function Sim({ config, handleBackButton, theme, setThemeState }) {
+export default function Sim({ config, handleBackButton, theme }) {
   const mainCanvasRef = useRef(null);
   const bgCanvasRef = useRef(null);
   const [startSim, setStartSim] = useState(false);
@@ -604,6 +603,22 @@ RunSim();
     return () => cancelAnimationFrame(animationId);
   }, [startSim]);
 
+  // Prepare a lightweight list for the UI info bar (use config as the source of truth for masses)
+  const infoBodyList = (() => {
+    if (!config || !Array.isArray(config.bodies)) return [];
+    const colorScheme = [
+      { body1: "red", body2: "green", body3: "blue" },
+      { body1: "#00FFC5", body2: "#FF3CAC", body3: "#845EC2" },
+      { body1: "#FFB86F", body2: "#8BE9FD", body3: "#BD93F9" },
+    ];
+    const i = 1;
+    return config.bodies.map((b, idx) => {
+      const colorKeys = Object.keys(colorScheme[i]);
+      const color = colorScheme[i][colorKeys[idx % colorKeys.length]];
+      return { name: b.name || null, m: b.m, color };
+    });
+  })();
+
  return (
   <>
     {startSim ? (
@@ -611,7 +626,6 @@ RunSim();
         <button onClick={handleBackButton} className="button">
           Home
         </button>
-        
         <div style={{ position: "absolute", zIndex: 20, top: 50, left: 40, background: "transparent", padding: "10px", borderRadius: "8px" }}>
   <LineChart width={300} height={400} data={metricsHistory}>
     <CartesianGrid strokeDasharray="3 3" stroke="#444" />
@@ -628,6 +642,18 @@ RunSim();
   </LineChart>
 </div>
         <button className="button2" onClick={handleStopButton}>stop</button>
+        {/* Info bar: show mass and color for each body (uses config as source of mass values) */}
+        <div style={{ position: 'absolute', top: 12, right: 12, zIndex: 30, background: theme === 'light' ? 'rgba(255,255,255,0.9)' : 'rgba(0,0,0,0.6)', color: theme === 'light' ? '#000' : '#fff', padding: '8px 10px', borderRadius: 8, display: 'flex', gap: 12, alignItems: 'center', overflowX: 'auto' }}>
+          {infoBodyList.map((b, idx) => (
+            <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: 8, minWidth: 100 }}>
+              <div style={{ width: 16, height: 16, borderRadius: 3, background: b.color, boxShadow: '0 0 6px rgba(0,0,0,0.4)' }} />
+              <div style={{ fontSize: 12 }}>
+                <div style={{ fontWeight: 700 }}>{b.name || `Body ${idx+1}`}</div>
+                <div style={{ fontSize: 11, opacity: 0.85 }}>m: {Number(b.m).toFixed(3)}</div>
+              </div>
+            </div>
+          ))}
+        </div>
         {/* <button className="button3">Time: {elapsedTime.toFixed(1)}</button> */}
         <div className="canvas">
           <canvas ref={bgCanvasRef} className="bg-canvas"></canvas>
@@ -638,16 +664,12 @@ RunSim();
 
     <div className="formPageContain">
           <button onClick={handleBackButton} className="button">
-Home
+          Home
         </button>
-        {theme=='light' ?
-              <button className="themeButton" onClick={setThemeState}><MdOutlineDarkMode color='black' size={30}/></button> :
-              <button className="themeButton" onClick={setThemeState}><MdOutlineDarkMode color='white' size={30}/></button>
-            }
       <h1>{config.name}</h1>
       <h1>Select Settings</h1>
       <Form settings={settings} setSettings={setSettings} />
-      <button onClick={()=>setStartSim(true)}>Run Config</button></div></>
+      <button onClick={()=>setStartSim(true)}>Run Config</button></div><p>Explantion</p></>
     )}
   </>
 )
