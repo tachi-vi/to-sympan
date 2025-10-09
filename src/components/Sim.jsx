@@ -2,8 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import Form from "./Form";
 // import MetricsGraph from "./graph";
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend } from "recharts";
+import { MdOutlineDarkMode } from "react-icons/md";
 
-export default function Sim({ config, handleBackButton }) {
+export default function Sim({ config, handleBackButton, theme, setThemeState }) {
   const mainCanvasRef = useRef(null);
   const bgCanvasRef = useRef(null);
   const [startSim, setStartSim] = useState(false);
@@ -478,7 +479,9 @@ export default function Sim({ config, handleBackButton }) {
     bgCanvas.width = window_width;
     bgCanvas.height = window_height;
 
-    bgCanvas.style.background = "#000000";
+    if (theme === "light"){
+      bgCanvas.style.background = "#ffffff";
+    } else {bgCanvas.style.background = "#000000";}
     mainCanvas.style.background = "transparent";
 
     const originX =mainCanvas.width / 2;
@@ -525,7 +528,10 @@ export default function Sim({ config, handleBackButton }) {
       drawText(context, text) {
         let xpos = originX + this.x * scale;
         let ypos = originY + this.y * scale;
-        context.fillStyle = "white";
+        if (theme === "light"){
+          context.fillStyle = "black";
+        } else {
+        context.fillStyle = "#f7f5ef";}
         context.font = "11px system-ui";
         context.fillText(text, xpos + 10, ypos - 10);
       }
@@ -605,19 +611,20 @@ RunSim();
         <button onClick={handleBackButton} className="button">
           Home
         </button>
-        <div style={{ position: "absolute", zIndex: 20, top: 80, left: 30, background: "rgba(0,0,0,0.6)", padding: "10px", borderRadius: "8px" }}>
-  <LineChart width={300} height={600} data={metricsHistory}>
+        
+        <div style={{ position: "absolute", zIndex: 20, top: 50, left: 40, background: "transparent", padding: "10px", borderRadius: "8px" }}>
+  <LineChart width={300} height={400} data={metricsHistory}>
     <CartesianGrid strokeDasharray="3 3" stroke="#444" />
     <XAxis dataKey="time" stroke="#aaa" />
     <YAxis stroke="#aaa" />
     <Tooltip />
     <Legend />
-    <Line type="monotone" dataKey="energy" stroke="#00FF88" dot={false} />
-    <Line type="monotone" dataKey="momentum.px" stroke="#FF3CAC" dot={false} name="Momentum Px" />
+    <Line type="monotone" dataKey="energy" stroke="#00FF88" dot={false} name="E"/>
+    {/* <Line type="monotone" dataKey="momentum.px" stroke="#FF3CAC" dot={false} name="Momentum Px" />
     <Line type="monotone" dataKey="momentum.py" stroke="#3CAFFF" dot={false} name="Momentum Py" />
-    <Line type="monotone" dataKey="angularMomentum" stroke="#845EC2" dot={false} />
-    <Line type="monotone" dataKey="kineticEnergy" stroke="#FFD700" dot={false} />
-    <Line type="monotone" dataKey="potentialEnergy" stroke="#00BFFF" dot={false} />
+    <Line type="monotone" dataKey="angularMomentum" stroke="#845EC2" dot={false} /> */}
+    <Line type="monotone" dataKey="kineticEnergy" stroke="#FFD700" dot={false} name="K" />
+    <Line type="monotone" dataKey="potentialEnergy" stroke="#00BFFF" dot={false} name="U"/>
   </LineChart>
 </div>
         <button className="button2" onClick={handleStopButton}>stop</button>
@@ -631,12 +638,16 @@ RunSim();
 
     <div className="formPageContain">
           <button onClick={handleBackButton} className="button">
-          Home
+Home
         </button>
+        {theme=='light' ?
+              <button className="themeButton" onClick={setThemeState}><MdOutlineDarkMode color='black' size={30}/></button> :
+              <button className="themeButton" onClick={setThemeState}><MdOutlineDarkMode color='white' size={30}/></button>
+            }
       <h1>{config.name}</h1>
       <h1>Select Settings</h1>
       <Form settings={settings} setSettings={setSettings} />
-      <button onClick={()=>setStartSim(true)}>Run Config</button></div><p>Explantion</p></>
+      <button onClick={()=>setStartSim(true)}>Run Config</button></div></>
     )}
   </>
 )

@@ -1,8 +1,17 @@
 body {
   margin: 0;
-  background-color: #f7f5ef; /* off-white academic background */
+  position: absolute;/* off-white academic background */
   font-family: "Georgia", "Times New Roman", serif;
+}
+
+.light {
+  background-color: #f7f5ef; /* off-white academic background */
   color: #222;
+}
+
+.dark {
+  background-color: #121212; /* dark background */
+  color: #e2e0d8;            /* light text */
 }
 
 .mainCont, .formPageContain {
@@ -19,6 +28,14 @@ body {
   align-self: center;
 }
 
+.themeButton{
+  position: fixed;       /* makes it sticky wrt viewport (body) */
+  top: 20px;             /* adjust position */
+  left: 20px;
+  z-index: 1000;
+  background-color: transparent;
+  border: 0px;
+}
 
 /* Headings and text styling */
 h1 {
@@ -39,7 +56,6 @@ h2 {
 p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #222;
   text-align: justify;
 }
 .grid {
@@ -67,19 +83,31 @@ li {
 
 }
 
+.lghtBtn{
+    border: 1px solid #aaa;
+  background: #fdf9f9;
+}
+
+.lghtBtn:hover{
+    background: #e0dcdc;
+}
+.drkBtn{
+    border: 1px solid #555;
+  background: #333;
+  color: white;
+}
+.drkBtn:hover{
+    background: #555;
+}
 button {
   font-family: "Times New Roman", Georgia, serif;
   font-size: 0.rem;
   padding: 4px 8px;
-  border: 1px solid #aaa;
-  background: #fdf9f9;
   cursor: pointer;
   transition: background 0.2s;
 }
 
-button:hover {
-  background: #f0f0f0;
-}
+
 
 
 
@@ -92,6 +120,7 @@ button:hover {
 }
 
 .simCont {
+  background-color: transparent;
   position: relative;  /* parent for absolute children */
   width: 100vw;
   height: 100vh;       /* full viewport height */

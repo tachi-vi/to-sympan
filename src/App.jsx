@@ -1,13 +1,20 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import configs from './components/configs.js';
 import Sim from './components/Sim.jsx';
+import { MdOutlineDarkMode } from "react-icons/md";
 
 
 function App() {
   const [selectedSim, setSelectedSim] = useState(null);
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    document.body.classList.remove('light', 'dark');  // clear old theme
+    document.body.classList.add(theme);               // add current theme
+  }, [theme]);
 
   function handleSimClick(id) {
     const sim = configs.find((config) => config.id === id);
@@ -18,6 +25,17 @@ function App() {
     setSelectedSim(null);
   }
 
+  function setThemeState() {
+    if (theme=='light') {
+      setTheme('dark')
+    }
+    else {
+      setTheme('light')
+    }
+  }
+  
+
+
   if (selectedSim === null) {
   return (
     <>
@@ -27,6 +45,10 @@ function App() {
         'To Sympan' is my attempt at understanding the universe. 
       </p>
       <h1>The N-Body Problem</h1>
+      {theme=='light' ?
+      <button className="themeButton" onClick={()=>setTheme('dark')}><MdOutlineDarkMode color='black' size={30}/></button> :
+      <button className="themeButton" onClick={()=>setTheme('light')}><MdOutlineDarkMode color='white' size={30}/></button>
+    }
       <p>The N-body problem deals with predicting the motion of several objects that interact through gravity. While the two-body problem can be solved exactly with known mathematical formulas, adding even one more body makes the system far more complex.
 For three or more bodies, there is no general closed-form solution — no single equation where you can plug in the initial positions, velocities, and masses to find the exact future positions. Instead, numerical methods are used to calculate the motion step by step over time.
 These systems are often chaotic, meaning they are extremely sensitive to their starting conditions. A very small difference in an initial velocity or position can lead to a completely different outcome later. In a non-chaotic system, a small error usually stays small, but in an N-body system, even a tiny rounding or calculation error can grow rapidly.
@@ -44,13 +66,13 @@ Different configurations may require different numerical techniques. Some method
       <h2 className='centeredText'>3-Body Gallery: Sheen's</h2>
       <ul className='grid'>
         {configs.map((config)=> ((config.bodies.length === 3) &&
-          <li key={config.ids}><button onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>)
+          <li key={config.ids}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>)
         )}
       </ul>
       <h1>N Body Configrations</h1>
       <ul className='grid'>
         {configs.map((config)=> ((!(config.bodies.length === 3)) &&
-          <li key={config.id}><button onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>)
+          <li key={config.id}><button  className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>)
         )} </ul>
         <hr/>
       </div>
@@ -59,7 +81,7 @@ Different configurations may require different numerical techniques. Some method
     
   )}
   else {
-    return (<Sim config={selectedSim} handleBackButton={handleBackButtonStateChange}/>)
+    return (<Sim config={selectedSim} handleBackButton={handleBackButtonStateChange} theme={theme} setThemeState={setThemeState}/>)
   }
 }
 
