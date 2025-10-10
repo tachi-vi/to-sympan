@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import Form from "./Form";
 // import MetricsGraph from "./graph";
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend } from "recharts";
+import { MdOutlineDarkMode } from "react-icons/md";
+import ConfigDisplay from "./ConfigInfo";
 
 export default function Sim({ config, handleBackButton, theme }) {
   const mainCanvasRef = useRef(null);
@@ -573,7 +575,7 @@ elapsedTime.current += dt * stepsPerFrame;
 
 frameCounter++;
 // Only push every 10 frames
-if (frameCounter % 15 === 0) {
+if (frameCounter % 90 === 0) {
   systemMetricRecord.current.push({
     time: +elapsedTime.current.toFixed(2),
     energy: metrics.totalEnergy,
@@ -633,12 +635,12 @@ RunSim();
     <YAxis stroke="#aaa" />
     <Tooltip />
     <Legend />
-    <Line type="monotone" dataKey="energy" stroke="#00FF88" dot={false} name="E"/>
+    <Line type="monotone" dataKey="energy" stroke="#00FF88" dot={false} name="E (Total Energy)"/>
     {/* <Line type="monotone" dataKey="momentum.px" stroke="#FF3CAC" dot={false} name="Momentum Px" />
     <Line type="monotone" dataKey="momentum.py" stroke="#3CAFFF" dot={false} name="Momentum Py" />
     <Line type="monotone" dataKey="angularMomentum" stroke="#845EC2" dot={false} /> */}
-    <Line type="monotone" dataKey="kineticEnergy" stroke="#FFD700" dot={false} name="K" />
-    <Line type="monotone" dataKey="potentialEnergy" stroke="#00BFFF" dot={false} name="U"/>
+    <Line type="monotone" dataKey="kineticEnergy" stroke="#FFD700" dot={false} name="K (Kinetic Energy)" />
+    <Line type="monotone" dataKey="potentialEnergy" stroke="#00BFFF" dot={false} name="U (Potential Energy)"/>
   </LineChart>
 </div>
         <button className="button2" onClick={handleStopButton}>stop</button>
@@ -666,7 +668,11 @@ RunSim();
           <button onClick={handleBackButton} className="button">
           Home
         </button>
-      <h1>{config.name}</h1>
+        <ConfigDisplay  config={config} />
+        {theme=='light' ?
+              <button className="themeButton" onClick={()=>setTheme('dark')}><MdOutlineDarkMode color='black' size={30}/></button> :
+              <button className="themeButton" onClick={()=>setTheme('light')}><MdOutlineDarkMode color='white' size={30}/></button>
+            }
       <h1>Select Settings</h1>
       <Form settings={settings} setSettings={setSettings} />
       <button onClick={()=>setStartSim(true)}>Run Config</button></div><p>Explantion</p></>
