@@ -1,28 +1,42 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import configs from './components/configs.js';
 import Sim from './components/Sim.jsx';
-import { MdOutlineDarkMode } from "react-icons/md";
+import { MdOutlineDarkMode, MdWidthNormal } from "react-icons/md";
 
 
 function App() {
   const [selectedSim, setSelectedSim] = useState(null);
   const [theme, setTheme] = useState('light');
+  const scrollPos = useRef(0);
+
 
   useEffect(() => {
+    
     document.body.classList.remove('light', 'dark');  // clear old theme
     document.body.classList.add(theme);               // add current theme
   }, [theme]);
 
+   useEffect(() => {
+    if (selectedSim === null) {
+      window.scrollTo(0, scrollPos.current);
+    }
+  }, [selectedSim]);
+
   function handleSimClick(id) {
     const sim = configs.find((config) => config.id === id);
+    scrollPos.current = window.pageYOffset;
     setSelectedSim(sim);
+    
+    window.scrollTo(0, 0);
   }
 
   function handleBackButtonStateChange() {
     setSelectedSim(null);
+    
+
   }
 
   function setThemeState() {

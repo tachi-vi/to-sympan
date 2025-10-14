@@ -29,15 +29,20 @@ export default function Sim({ config, handleBackButton, theme, setThemeState }) 
   }
 
 
-// // bar graph on top left showing energy, momentum, angular momentum, potential energy, kinetic energy (something to note error)
+
 
 //(optional) make it pannable?
+
 //time analysis in days etc with irl days
+
 //sexy ui
-//light theme/darktheme
+//ediable config info 
+
 //astronomical units scale
-//fix for 3 orbits orbits
-//optinal (changing speed inbetween runs, changing scale inbetween runs, changing color scheme inbetween runs)
+//fix for 3 orbits
+
+//optinal (changing speed inbetween runs, changing scale inside runs, changing color scheme inside runs)
+
 //consider it done afet finishding non optinal and making tht home page with lots of configsv
   
 
