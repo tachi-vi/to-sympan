@@ -5,7 +5,7 @@ import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend } from "r
 import { MdOutlineDarkMode } from "react-icons/md";
 import ConfigDisplay from "./ConfigInfo";
 
-export default function Sim({ config, handleBackButton, theme }) {
+export default function Sim({ config, handleBackButton, theme, setThemeState }) {
   const mainCanvasRef = useRef(null);
   const bgCanvasRef = useRef(null);
   const [startSim, setStartSim] = useState(false);
@@ -670,8 +670,8 @@ RunSim();
         </button>
         <ConfigDisplay  config={config} />
         {theme=='light' ?
-              <button className="themeButton" onClick={()=>setTheme('dark')}><MdOutlineDarkMode color='black' size={30}/></button> :
-              <button className="themeButton" onClick={()=>setTheme('light')}><MdOutlineDarkMode color='white' size={30}/></button>
+              <button className="themeButton" onClick={setThemeState}><MdOutlineDarkMode color='black' size={30}/></button> :
+              <button className="themeButton" onClick={setThemeState}><MdOutlineDarkMode color='white' size={30}/></button>
             }
       <h1>Select Settings</h1>
       <Form settings={settings} setSettings={setSettings} />
