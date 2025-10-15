@@ -14,6 +14,8 @@ export default function Sim({ config, handleBackButton, theme, setThemeState }) 
   let systemMetricRecord = useRef([]);
   const elapsedTime = useRef(0);
 
+  const [configState, setConfig] = useState(config);
+
   const [settings, setSettings] = useState({
     scale: 50,
     simulator: "rk45",
@@ -543,7 +545,7 @@ export default function Sim({ config, handleBackButton, theme, setThemeState }) 
       }
     }
 
-    let bodies = config.bodies.map((b, idx) => {
+    let bodies = configState.bodies.map((b, idx) => {
     
       const colorKeys = Object.keys(colorScheme[i]);
       const color = colorScheme[i][colorKeys[idx % colorKeys.length]];
@@ -673,7 +675,7 @@ RunSim();
           <button onClick={handleBackButton} className="button">
           Home
         </button>
-        <ConfigDisplay  config={config} />
+        <ConfigDisplay config={configState} onConfigChange={setConfig} />
         {theme=='light' ?
               <button className="themeButton" onClick={setThemeState}><MdOutlineDarkMode color='black' size={30}/></button> :
               <button className="themeButton" onClick={setThemeState}><MdOutlineDarkMode color='white' size={30}/></button>

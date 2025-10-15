@@ -1,38 +1,36 @@
 .config-card {
-  max-width: 100%;
-  margin: 20px auto;
-  padding: 16px 20px;
-  font-family: system-ui, sans-serif;
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 500px;
 }
 
-
-.config-title {
-  text-align: center;
-  margin-bottom: 4px;
-  font-size: 1.4rem;
+.config-title-input {
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 100%;
+  border: none;
+  background: transparent;
+  margin-bottom: 0.5rem;
 }
 
-.config-id {
-  text-align: center;
-  color: #666;
-  font-size: 0.9rem;
-  margin-bottom: 16px;
-}
-
-.body-list {
+.body-list{
   display: flex;
   flex-direction: row;
-  gap: 10px;
-  overflow: scroll;
-  width: 80vw;
 }
 
 .body-item {
-  padding: 10px 14px;
   border-radius: 8px;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
 }
 
-.body-header {
-  margin: 0 0 6px 0;
-  font-size: 1rem;
+.body-item label {
+  display: block;
+  margin: 0.25rem 0;
+}
+
+.body-item input {
+  width: 100%;
+  border-radius: 0px;
+  border: 0px;
 }
