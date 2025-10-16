@@ -4,14 +4,13 @@ import "./ConfigDisplay.css";
 export default function ConfigDisplay({ config, onConfigChange }) {
   if (!config) return null;
 
-  // Handles edits to any field
   const handleChange = (index, field, value) => {
     const updatedBodies = config.bodies.map((body, i) =>
       i === index ? { ...body, [field]: parseFloat(value) || 0 } : body
     );
 
     const updatedConfig = { ...config, bodies: updatedBodies };
-    onConfigChange(updatedConfig); // propagate change upward
+    onConfigChange(updatedConfig); 
   };
 
   const handleNameChange = (e) => {

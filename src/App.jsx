@@ -15,8 +15,8 @@ function App() {
 
   useEffect(() => {
     
-    document.body.classList.remove('light', 'dark');  // clear old theme
-    document.body.classList.add(theme);               // add current theme
+    document.body.classList.remove('light', 'dark');  
+    document.body.classList.add(theme);               
   }, [theme]);
 
    useEffect(() => {
@@ -77,17 +77,34 @@ Different configurations may require different numerical techniques. Some method
 </p>
       <h1>3 Body Configurations</h1>
       <h2 className='centeredText'>Popular and Solved</h2>
-      <h2 className='centeredText'>3-Body Gallery: Sheen's</h2>
+      <p>These are the most popuar and old discovered configurations.</p>
+      {/* Popular 3-body configs */}
       <ul className='grid'>
-        {configs.map((config)=> ((config.bodies.length === 3) &&
-          <li key={config.ids}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>)
-        )}
+        {configs
+          .filter(c => Array.isArray(c.bodies) && c.bodies.length === 3 && c.category === 'popular')
+          .map(config => (
+            <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>
+          ))}
+      </ul>
+      <h2 className='centeredText'>3-Body Gallery: Sheen's</h2>
+      <p>These configurations were discovered by Robert Sheen in 2021. They are all periodic and have been numerically verified to be stable over long time periods. More information can be found <a href='https://robertsheen.com/3-body-problem/'>here</a>.</p>
+      <ul className='grid'>
+        <ul className='grid'>
+          {configs
+            .filter(c => Array.isArray(c.bodies) && c.bodies.length === 3 && c.category === 'sheen')
+            .map(config => (
+              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>
+            ))}
+        </ul>
       </ul>
       <h1>N Body Configrations</h1>
       <ul className='grid'>
-        {configs.map((config)=> ((!(config.bodies.length === 3)) &&
-          <li key={config.id}><button  className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>)
-        )} </ul>
+        {configs
+          .filter(c => !(Array.isArray(c.bodies) && c.bodies.length === 3))
+          .map(config => (
+            <li key={config.id}><button  className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>
+          ))}
+      </ul>
         <hr/>
       </div>
     

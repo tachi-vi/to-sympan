@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function SimulationSettings({ settings, setSettings }) {
   const handleChange = (key, value) => {
-    settings[key] = value; // direct mutation
-    setSettings({ ...settings }); // trigger re-render in parent
+    settings[key] = value; 
+    setSettings({ ...settings }); 
   };
 
   return (

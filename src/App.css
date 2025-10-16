@@ -14,7 +14,7 @@ body {
   color: #e2e0d8;            /* light text */
 }
 
-.mainCont, .formPageContain {
+.mainCont{
   display: flex;
   align-items: center;
   justify-content: flex-start; /* push content toward top */
@@ -31,10 +31,10 @@ body {
 .themeButton{
   position: fixed;       /* makes it sticky wrt viewport (body) */
   top: 20px;             /* adjust position */
-  right: 20px;
+  left: 20px;
+  z-index: 1000;
   background-color: transparent;
   border: 0px;
-
 }
 
 /* Headings and text styling */
@@ -75,13 +75,17 @@ p {
   border-radius: 5px;
 }
 
-.mainCont button{
-    font-size: 1.1rem;
+
+.formPageContain {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* push content toward top */
+  flex-direction: column;
+  padding: 4vh 15vw;
+  min-height: 100vh;
 }
 
-li {
 
-}
 
 .lghtBtn{
     border: 1px solid #aaa;
@@ -102,7 +106,9 @@ li {
 button {
   font-family: "Times New Roman", Georgia, serif;
   font-size: 0.rem;
+  padding: 4px 8px;
   cursor: pointer;
+  transition: background 0.2s;
 }
 
 
@@ -116,8 +122,6 @@ button {
     margin-top: 20px;
     width: 100%;
 }
-
-
 
 .simCont {
   background-color: transparent;
@@ -163,12 +167,5 @@ button {
   position: absolute; /* remove from normal flow */
   bottom: 20px;          /* distance from top */ 
   right: 20px;         /* distance from left */
-  z-index: 10;        /* on top of canvases */
-}
-
-.changePageButton {
-  position: fixed; /* remove from normal flow */
-  top: 20px;          /* distance from top */
-  left: 20px;         /* distance from left */
   z-index: 10;        /* on top of canvases */
 }

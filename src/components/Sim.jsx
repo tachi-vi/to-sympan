@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import Form from "./Form";
-// import MetricsGraph from "./graph";
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend } from "recharts";
 import { MdOutlineDarkMode } from "react-icons/md";
+import { MdOutlineSettingsInputComposite } from "react-icons/md";
+import { IoArrowBackOutline } from "react-icons/io5";
 import ConfigDisplay from "./ConfigInfo";
 
 export default function Sim({ config, handleBackButton, theme, setThemeState }) {
@@ -37,13 +38,12 @@ export default function Sim({ config, handleBackButton, theme, setThemeState }) 
 
 //time analysis in days etc with irl days
 
-//sexy ui
-//ediable config info 
+//sexy ui (both mobile and desktop)
 
 //astronomical units scale
 //fix for 3 orbits
 
-//optinal (changing speed inbetween runs, changing scale inside runs, changing color scheme inside runs)
+//(optinal) (changing speed inbetween runs, changing scale inside runs, changing color scheme inside runs)
 
 //consider it done afet finishding non optinal and making tht home page with lots of configsv
   
@@ -582,7 +582,7 @@ elapsedTime.current += dt * stepsPerFrame;
 
 frameCounter++;
 // Only push every 10 frames
-if (frameCounter % 90 === 0) {
+if (frameCounter % 40 === 0) {
   systemMetricRecord.current.push({
     time: +elapsedTime.current.toFixed(2),
     energy: metrics.totalEnergy,
@@ -592,10 +592,9 @@ if (frameCounter % 90 === 0) {
     kineticEnergy: metrics.kineticEnergy,
   });
 
-  // Keep history short (e.g., 200 points)
-  if (systemMetricRecord.current.length > 50) systemMetricRecord.current.shift();
 
-  // Update Recharts state
+  if (systemMetricRecord.current.length > 50) systemMetricRecord.current.shift();
+ 
   setMetricsHistory([...systemMetricRecord.current]);
   }
       
@@ -612,7 +611,7 @@ RunSim();
     return () => cancelAnimationFrame(animationId);
   }, [startSim]);
 
-  // Prepare a lightweight list for the UI info bar (use config as the source of truth for masses)
+
   const infoBodyList = (() => {
     if (!config || !Array.isArray(config.bodies)) return [];
     const colorScheme = [
@@ -632,9 +631,6 @@ RunSim();
   <>
     {startSim ? (
       <div className='simCont'>
-        <button onClick={handleBackButton} className="button">
-          Home
-        </button>
         <div style={{ position: "absolute", zIndex: 20, top: 50, left: 40, background: "transparent", padding: "10px", borderRadius: "8px" }}>
   <LineChart width={300} height={400} data={metricsHistory}>
     <CartesianGrid strokeDasharray="3 3" stroke="#444" />
@@ -650,7 +646,7 @@ RunSim();
     <Line type="monotone" dataKey="potentialEnergy" stroke="#00BFFF" dot={false} name="U (Potential Energy)"/>
   </LineChart>
 </div>
-        <button className="button2" onClick={handleStopButton}>stop</button>
+        <button className="button2" onClick={handleStopButton}><MdOutlineSettingsInputComposite /></button>
         {/* Info bar: show mass and color for each body (uses config as source of mass values) */}
         <div style={{ position: 'absolute', top: 12, right: 12, zIndex: 30, background: theme === 'light' ? 'rgba(255,255,255,0.9)' : 'rgba(0,0,0,0.6)', color: theme === 'light' ? '#000' : '#fff', padding: '8px 10px', borderRadius: 8, display: 'flex', gap: 12, alignItems: 'center', overflowX: 'auto' }}>
           {infoBodyList.map((b, idx) => (
@@ -672,8 +668,8 @@ RunSim();
     ) : (<>
 
     <div className="formPageContain">
-          <button onClick={handleBackButton} className="button">
-          Home
+          <button onClick={handleBackButton} className="backbutton">
+          <IoArrowBackOutline size={20}/>
         </button>
         <ConfigDisplay config={configState} onConfigChange={setConfig} />
         {theme=='light' ?
@@ -682,7 +678,7 @@ RunSim();
             }
       <h1>Select Settings</h1>
       <Form settings={settings} setSettings={setSettings} />
-      <button onClick={()=>setStartSim(true)}>Run Config</button></div><p>Explantion</p></>
+      <button onClick={()=>setStartSim(true)}>Run Config</button></div></>
     )}
   </>
 )
