@@ -7,7 +7,7 @@ export default function SimulationSettings({ settings, setSettings }) {
   };
 
   return (
-    <div>
+    <div class="simulation-settings">
 
       <div>
         <label>Scale ({settings.scale})</label>

@@ -646,7 +646,7 @@ RunSim();
     <Line type="monotone" dataKey="potentialEnergy" stroke="#00BFFF" dot={false} name="U (Potential Energy)"/>
   </LineChart>
 </div>
-        <button className="button2" onClick={handleStopButton}><MdOutlineSettingsInputComposite /></button>
+        <button className="config-page-button" onClick={handleStopButton}><MdOutlineSettingsInputComposite /></button>
         {/* Info bar: show mass and color for each body (uses config as source of mass values) */}
         <div style={{ position: 'absolute', top: 12, right: 12, zIndex: 30, background: theme === 'light' ? 'rgba(255,255,255,0.9)' : 'rgba(0,0,0,0.6)', color: theme === 'light' ? '#000' : '#fff', padding: '8px 10px', borderRadius: 8, display: 'flex', gap: 12, alignItems: 'center', overflowX: 'auto' }}>
           {infoBodyList.map((b, idx) => (
@@ -667,18 +667,21 @@ RunSim();
       </div>
     ) : (<>
 
-    <div className="formPageContain">
-          <button onClick={handleBackButton} className="backbutton">
+    <div className="info_page">
+          <button onClick={handleBackButton} className="back_button">
           <IoArrowBackOutline size={20}/>
         </button>
+        <h1>{config.name}</h1>
+        <p>ID: {config.id}</p>
         <ConfigDisplay config={configState} onConfigChange={setConfig} />
         {theme=='light' ?
               <button className="themeButton" onClick={setThemeState}><MdOutlineDarkMode color='black' size={30}/></button> :
               <button className="themeButton" onClick={setThemeState}><MdOutlineDarkMode color='white' size={30}/></button>
             }
-      <h1>Select Settings</h1>
+      <h1 className="heading">Select Settings</h1>
       <Form settings={settings} setSettings={setSettings} />
-      <button onClick={()=>setStartSim(true)}>Run Config</button></div></>
+      <button class="run-config-button" onClick={()=>setStartSim(true)}>Run Config</button>
+    </div></>
     )}
   </>
 )

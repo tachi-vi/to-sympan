@@ -4,33 +4,35 @@ import "./ConfigDisplay.css";
 export default function ConfigDisplay({ config, onConfigChange }) {
   if (!config) return null;
 
-  const handleChange = (index, field, value) => {
-    const updatedBodies = config.bodies.map((body, i) =>
-      i === index ? { ...body, [field]: parseFloat(value) || 0 } : body
-    );
+const handleChange = (index, field, value) => {
+  const updatedBodies = config.bodies.map((body, i) =>
+    i === index
+      ? { 
+          ...body, 
+          [field]: field === "name" ? value : parseFloat(value) || 0 
+        }
+      : body
+  );
 
-    const updatedConfig = { ...config, bodies: updatedBodies };
-    onConfigChange(updatedConfig); 
-  };
+  const updatedConfig = { ...config, bodies: updatedBodies };
+  onConfigChange(updatedConfig);
+};
 
-  const handleNameChange = (e) => {
-    onConfigChange({ ...config, name: e.target.value });
-  };
+
 
   return (
     <div className="config-card editable">
-      <input
-        className="config-title-input"
-        value={config.name}
-        onChange={handleNameChange}
-        placeholder="Config name"
-      />
-      <p className="config-id">ID: {config.id}</p>
 
       <div className="body-list">
         {config.bodies.map((body, index) => (
           <div key={index} className="body-item">
-            <h3 className="body-header">Body {index + 1}</h3>
+            <input
+  className="body-name"
+  type="text"
+  value={body.name || `Body ${index + 1}`}
+  placeholder={body.name || `Body ${index + 1}`}
+  onChange={(e) => handleChange(index, "name", e.target.value)}
+/>
             <label>
               Mass:
               <input

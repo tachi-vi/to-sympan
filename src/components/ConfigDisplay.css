@@ -1,6 +1,7 @@
 .config-card {
-  padding: 1rem;
   border-radius: 12px;
+  padding-left: 1rem;
+  padding-right: 1rem;
   max-width: 500px;
 }
 
