@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import configs from './components/configs.js';
+import sheensConfigs from './configs/sheen.js';
+import brouckeConfigs from './configs/broucke.js';
 import Sim from './components/Sim.jsx';
 import { MdOutlineDarkMode, MdWidthNormal } from "react-icons/md";
 
@@ -25,8 +27,8 @@ function App() {
     }
   }, [selectedSim]);
 
-  function handleSimClick(id) {
-    const sim = configs.find((config) => config.id === id);
+  function handleSimClick(configCat, id) {
+    const sim = configCat.find((config) => config.id === id);
     scrollPos.current = window.pageYOffset;
     setSelectedSim(sim);
     
@@ -75,36 +77,56 @@ The three-body problem is the first case where this behavior appears. It shows h
 The objective of this project is to identify and analyze these periodic solutions while testing how different numerical methods perform when simulating them. Since the N-body problem does not have a closed-form solution for most cases, numerical integration methods are required to compute motion over time. By comparing approaches such as Runge–Kutta methods and Velocity Verlet, the project evaluates how accurately each method preserves periodicity and energy over extended simulations.
 Different configurations may require different numerical techniques. Some methods remain stable and maintain the periodic motion, while others accumulate numerical errors that alter the system’s behavior. Through this comparison, the project aims to determine which numerical methods are most suitable for maintaining periodicity across a range of three (as well as N)-body configurations.
 </p>
-      <h1>3 Body Configurations</h1>
-      <h2 className='centeredText'>Popular and Solved</h2>
+
+     <h1>3 Body Configurations</h1>
+    <section>
+      <h2 className='centeredText'>Popular 3-Body Configurations</h2>
       <p>These are the most popuar and old discovered configurations.</p>
-      {/* Popular 3-body configs */}
       <ul className='grid'>
         {configs
           .filter(c => Array.isArray(c.bodies) && c.bodies.length === 3 && c.category === 'popular')
           .map(config => (
-            <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>
+            <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(configs, config.id)}>{config.name}</button></li>
           ))}
       </ul>
-      <h2 className='centeredText'>3-Body Gallery: Sheen's</h2>
-      <p>These configurations were discovered by Robert Sheen in 2021. They are all periodic and have been numerically verified to be stable over long time periods. More information can be found <a href='https://robertsheen.com/3-body-problem/'>here</a>.</p>
-      <ul className='grid'>
+      </section>
+      
+
+      <section>
+        <h2 className='centeredText'>Sheen's Orbits </h2>
+        <p>These configurations were discovered by Matthew Sheen in 2016. </p>
+          <ul className='grid'>
+            {sheensConfigs
+              .map(config => (
+                <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(sheensConfigs, config.id)}>{config.name}</button></li>
+              ))}
+          </ul>
+      </section>
+
+      <section>
+      <h2 className='centeredText'>Broucke's Orbits</h2>
+      <p>These configurations were discovered by Bourcke in 1985.</p>
         <ul className='grid'>
-          {configs
-            .filter(c => Array.isArray(c.bodies) && c.bodies.length === 3 && c.category === 'sheen')
+          {brouckeConfigs
             .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>
+              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(brouckeConfigs, config.id)}>{config.name}</button></li>
             ))}
         </ul>
-      </ul>
+      </section>
+      
       <h1>N Body Configrations</h1>
+
+      <section>
       <ul className='grid'>
         {configs
           .filter(c => !(Array.isArray(c.bodies) && c.bodies.length === 3))
           .map(config => (
-            <li key={config.id}><button  className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>
+            <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(config.id)}>{config.name}</button></li>
           ))}
       </ul>
+      </section>
+
+
         <hr/>
       </div>
     

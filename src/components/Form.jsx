@@ -31,6 +31,7 @@ export default function SimulationSettings({ settings, setSettings }) {
           <option value="rk4">Runge-Kutta 4</option>
           <option value="rk45">Runge-Kutta 45</option>
           <option value="vv">Velocity Verlet</option>
+          <option value="cash-karp">Cash-Karp</option>
         </select>
       </div>
 
