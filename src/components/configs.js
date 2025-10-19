@@ -1,4 +1,46 @@
 const configs = [
+
+  {
+    name: "Rotating Square",
+    id: "rotating-square",
+    bodies: [
+      { m: 1, x: 1, y: 1, vx: -0.8409, vy: 0.8409 },
+      { m: 1, x: -1, y: 1, vx: -0.8409, vy: -0.8409 },
+      { m: 1, x: -1, y: -1, vx: 0.8409, vy: -0.8409 },
+      { m: 1, x: 1, y: -1, vx: 0.8409, vy: 0.8409 }
+    ]
+  },
+  {
+    name: "4-Body Figure Eight (approx.)",
+    id: "figure-eight-4body",
+    bodies: [
+      { m: 1, x: 0.970, y: -0.243, vx: 0.466, vy: 0.432 },
+      { m: 1, x: -0.970, y: 0.243, vx: 0.466, vy: 0.432 },
+      { m: 1, x: 0.0, y: 0.0, vx: -0.932, vy: -0.864 },
+      { m: 1, x: 0.0, y: 0.486, vx: 0.0, vy: -0.864 }
+    ]
+  },
+  {
+    name: "Symmetric Binary Collision (SBC) Orbit",
+    id: "sbc-orbit",
+    bodies: [
+      { m: 1, x: 0.5, y: 0.5, vx: -0.5, vy: 0.5 },
+      { m: 1, x: -0.5, y: 0.5, vx: -0.5, vy: -0.5 },
+      { m: 1, x: 0.5, y: -0.5, vx: 0.5, vy: -0.5 },
+      { m: 1, x: -0.5, y: -0.5, vx: 0.5, vy: 0.5 }
+    ]
+  },
+  {
+    name: "Trisectrix Limaçon Choreography",
+    id: "trisectrix-limacon",
+    bodies: [
+      { m: 1, x: 0.5, y: 0.5, vx: -0.5, vy: 0.5 },
+      { m: 1, x: -0.5, y: 0.5, vx: -0.5, vy: -0.5 },
+      { m: 1, x: 0.5, y: -0.5, vx: 0.5, vy: -0.5 },
+      { m: 1, x: -0.5, y: -0.5, vx: 0.5, vy: 0.5 }
+    ]
+  }
+,
   {
     name: 'Butterfly',
     category: 'popular',
