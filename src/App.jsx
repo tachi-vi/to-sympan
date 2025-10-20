@@ -6,7 +6,7 @@ import configs from "./components/configs.js";
 import sheensConfigs from "./configs/sheen.js";
 import brouckeConfigs from "./configs/broucke.js";
 import henonConfigs from "./configs/henon.js";
-import {butterflyI} from "./configs/serbia.js";
+// import {butterflyI} from "./configs/serbia.js";
 import freeFallConfigs from "./configs/freeFall.js";
 import Sim from "./components/Sim.jsx";
 import { MdOutlineDarkMode, MdWidthNormal } from "react-icons/md";
@@ -228,10 +228,10 @@ function App() {
               2012
             </p>
             <ul className="grid">
-              {butterflyI
+              {/* {butterflyI
             .map(config => (
               <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(butterflyI, config.id)}>{config.name}</button></li>
-            ))}
+            ))} */}
             </ul>
           </section>
 

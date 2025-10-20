@@ -172,7 +172,7 @@ const butterflyI = [
   }
 ];
 
-const dragonflyII = [
+const dragonfly = [
   {
     name: "Dragonfly II.4.A",
     id: "ii-4-a",
@@ -319,7 +319,7 @@ const dragonflyII = [
   }
 ];
 
-const yinYangIII = [
+const yinYang = [
   {
     name: "YinYang III.3.A.α",
     id: "iii-3-a-alpha",
@@ -502,7 +502,7 @@ const yinYangIII = [
   }
 ];
 
-const mothIVa = [
+const mothI = [
   {
     name: "Moth IVa.2.A",
     id: "iva-2-a",
@@ -836,7 +836,7 @@ const mothIVa = [
   }
 ];
 
-const butterflyIVb = [
+const butterflyIII = [
   {
     name: "Butterfly IVb.3.A",
     id: "ivb-3-a",
@@ -1126,7 +1126,7 @@ const butterflyIVb = [
   }
 ];
 
-const mothIVc = [
+const mothIII = [
   {
     name: "Moth IVc.5.A",
     id: "ivc-5-a",
@@ -1327,8 +1327,21 @@ const mothIVc = [
   
 ];
 
+const figure8 =[
 
 
+]
 
+const mothVIIa = [
 
-export {butterflyI, dragonflyII, yinYangIII, mothIVa, butterflyIVb, mothIVc};
+]
+
+const mothVIIb = []
+
+const yarn =[
+
+]
+
+const other = [
+
+]
