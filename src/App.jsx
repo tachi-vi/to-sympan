@@ -8,7 +8,10 @@ import brouckeConfigs from "./configs/broucke.js";
 import henonConfigs from "./configs/henon.js";
 // import {butterflyI} from "./configs/serbia.js";
 import freeFallConfigs from "./configs/freeFall.js";
+import eulerConfigs from "./configs/euler.js";
+import lagrange from "./configs/lagrange.js";
 import Sim from "./components/Sim.jsx";
+import NEWORBITS from "./configs/NEWORBITS.js";
 import { MdOutlineDarkMode, MdWidthNormal } from "react-icons/md";
 
 function App() {
@@ -67,7 +70,7 @@ function App() {
           <p className="centeredText" style={{ fontSize: "1rem" }}>
             'To Sympan' is my attempt at understanding the universe.
           </p>
-          <h1>The N-Body Problem</h1>
+          <h1>The 3-Body Problem</h1>
           {theme == "light" ? (
             <button className="themeButton" onClick={() => setTheme("dark")}>
               <MdOutlineDarkMode color="black" size={30} />
@@ -78,76 +81,95 @@ function App() {
             </button>
           )}
           <p>
-            The N-body problem deals with predicting the motion of several
-            objects that interact through gravity. While the two-body problem
-            can be solved exactly with known mathematical formulas, adding even
-            one more body makes the system far more complex. For three or more
-            bodies, there is no general closed-form solution — no single
-            equation where you can plug in the initial positions, velocities,
-            and masses to find the exact future positions. Instead, numerical
-            methods are used to calculate the motion step by step over time.
-            These systems are often chaotic, meaning they are extremely
-            sensitive to their starting conditions. A very small difference in
-            an initial velocity or position can lead to a completely different
-            outcome later. In a non-chaotic system, a small error usually stays
-            small, but in an N-body system, even a tiny rounding or calculation
-            error can grow rapidly.
+            The three-body problem involves predicting the motion of three
+            objects that interact through gravity. Unlike the two-body problem —
+            which can be solved exactly using known mathematical formulas — the
+            three-body problem cannot be expressed through a single, closed-form
+            solution. Even a small change in the initial positions or velocities
+            can lead to drastically different outcomes, making the system highly
+            sensitive and often chaotic. To study such motion, numerical methods
+            are required to approximate the trajectories step by step over time.
           </p>
+
           <p>
-            Because of this, all numerical methods are approximations. Reducing
-            the time step or increasing precision can improve the results, but
-            no method can produce a perfectly exact prediction. The real motion
-            of the bodies — what would happen in nature — is the true solution,
-            even though it cannot be written as a simple formula. The three-body
-            problem is the first case where this behavior appears. It shows how
-            quickly a system can move from predictable and stable to chaotic and
-            unpredictable once more bodies are involved.
+            Since these methods are approximations, their accuracy depends on
+            factors such as time step size and numerical precision. Reducing the
+            time step can improve accuracy, but no method can perfectly
+            reproduce the exact motion that would occur in nature. The
+            three-body problem therefore serves as a classic example of how
+            deterministic systems can still display unpredictable, chaotic
+            behavior due to small computational or initial-condition errors.
           </p>
           <h1>Project Introduction</h1>
           <p>
-            This project focuses on simulating periodic solutions in the N-body
-            problem — cases where, despite the general chaotic nature of the
-            system, the bodies follow repeating paths over time. The objective
-            of this project is to identify and analyze these periodic solutions
-            while testing how different numerical methods perform when
-            simulating them. Since the N-body problem does not have a
-            closed-form solution for most cases, numerical integration methods
-            are required to compute motion over time. By comparing approaches
-            such as Runge–Kutta methods and Velocity Verlet, the project
-            evaluates how accurately each method preserves periodicity and
-            energy over extended simulations. Different configurations may
-            require different numerical techniques. Some methods remain stable
-            and maintain the periodic motion, while others accumulate numerical
-            errors that alter the system’s behavior. Through this comparison,
-            the project aims to determine which numerical methods are most
-            suitable for maintaining periodicity across a range of three (as
-            well as N)-body configurations.
+            This project focuses on simulating periodic orbits in the three-body
+            problem — rare configurations where, despite the system’s general
+            tendency toward chaos, the three bodies follow repeating paths over
+            time. The goal is to identify and analyze these periodic solutions
+            while testing how different numerical integration methods perform in
+            preserving their motion. Methods such as Runge–Kutta and Velocity
+            Verlet are compared based on their ability to maintain energy
+            stability and periodicity over extended simulations.
           </p>
-
+          <p>
+            The orbits presented here were chosen for two main reasons: (i) some
+            hold historical significance as among the first periodic orbits ever
+            discovered, and (ii) others exhibit visually interesting and elegant
+            trajectories while remaining sufficiently stable for a complete
+            period without becoming chaotic. Although many more periodic
+            solutions exist, certain configurations proved too sensitive for my
+            current integrators, becoming unstable or chaotic before completing
+            a full period.
+          </p>
           <h1>3 Body Configurations</h1>
-
           <section>
-            <h2 className="centeredText">Eulers Orbits</h2>
-            <p>Euler</p>
+            <h2 className="centeredText">
+              Euler’s Collinear Three-Body Solutions (1765)
+            </h2>
+            <p>
+              The Euler collinear three-body solutions, discovered by Leonhard
+              Euler in 1765, are the first exact and periodic solutions to the
+              three-body problem. In these configurations, all three bodies
+              remain perfectly aligned on a straight line while rotating around
+              the system’s center of mass, with gravitational and centrifugal
+              forces exactly balanced. They are considered "exact" because they
+              satisfy Newton’s laws analytically: the positions and velocities
+              can be expressed in closed-form equations that repeat perfectly
+              over time, without requiring numerical approximation.{" "}
+            </p>
             <ul className="grid">
-              {/* {brouckeConfigs
-            .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(brouckeConfigs, config.id)}>{config.name}</button></li>
-            ))} */}
+               {NEWORBITS.map((config) => (
+                <li key={config.id}>
+                  <button
+                    className={theme == "light" ? "lghtBtn" : "drkBtn"}
+                    onClick={() => handleSimClick(NEWORBITS, config.id)}
+                  >
+                    {config.name}
+                  </button>
+                </li>
+              ))}
+              {eulerConfigs.map((config) => (
+                <li key={config.id}>
+                  <button
+                    className={theme == "light" ? "lghtBtn" : "drkBtn"}
+                    onClick={() => handleSimClick(eulerConfigs, config.id)}
+                  >
+                    {config.name}
+                  </button>
+                </li>
+              ))}
             </ul>
           </section>
-
           <section>
-            <h2 className="centeredText">Lagrenges Orbits</h2>
+            <h2 className="centeredText">Lagrenge's Solution (1772)</h2>
             <p>Lagrenge</p>
             <ul className="grid">
-              {/* {brouckeConfigs
+              {lagrange
             .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(brouckeConfigs, config.id)}>{config.name}</button></li>
-            ))} */}
+              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(lagrange, config.id)}>{config.name}</button></li>
+            ))}
             </ul>
           </section>
-
           <section>
             <h2 className="centeredText">Popular 3-Body Configurations</h2>
             <p>These are the most popuar and old discovered configurations.</p>
@@ -164,7 +186,6 @@ function App() {
               ))}
             </ul>
           </section>
-
           <section>
             <h2 className="centeredText">Sheen's Orbits </h2>
             <p>
@@ -183,7 +204,6 @@ function App() {
               ))}
             </ul>
           </section>
-
           <section>
             <h2 className="centeredText">Broucke's Orbits</h2>
             <p>These configurations were discovered by Bourcke in 1985.</p>
@@ -200,7 +220,6 @@ function App() {
               ))}
             </ul>
           </section>
-
           <section>
             <h2 className="centeredText">Henon's Orbits</h2>
             <p>
@@ -220,7 +239,6 @@ function App() {
               ))}
             </ul>
           </section>
-
           <section>
             <h2 className="centeredText">Universiy of Serbia</h2>
             <p>
@@ -234,18 +252,22 @@ function App() {
             ))} */}
             </ul>
           </section>
-
           <section>
             <h2 className="centeredText">Free Fall Orbits</h2>
             <p>Free Fall Orbits Discovered by China</p>
             <ul className="grid">
-              {freeFallConfigs
-            .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(freeFallConfigs, config.id)}>{config.name}</button></li>
-            ))}
+              {freeFallConfigs.map((config) => (
+                <li key={config.id}>
+                  <button
+                    className={theme == "light" ? "lghtBtn" : "drkBtn"}
+                    onClick={() => handleSimClick(freeFallConfigs, config.id)}
+                  >
+                    {config.name}
+                  </button>
+                </li>
+              ))}
             </ul>
           </section>
-
           <section>
             <h2 className="centeredText">
               Circular Restricted Three-Body Problem (CR3BP)
@@ -258,7 +280,6 @@ function App() {
             ))} */}
             </ul>
           </section>
-
           <section>
             <h2 className="centeredText">
               Elliptic Restricted Three-Body Problem (ER3BP):
@@ -271,9 +292,7 @@ function App() {
             ))} */}
             </ul>
           </section>
-
           <h1>N Body Configrations</h1>
-
           <section>
             <ul className="grid">
               {configs
@@ -292,7 +311,6 @@ function App() {
                 ))}
             </ul>
           </section>
-
           <hr />
         </div>
       </>
