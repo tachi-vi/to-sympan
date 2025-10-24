@@ -65,10 +65,8 @@ export default function Sim({
     const bgCanvas = bgCanvasRef.current;
     const mainCanvasContext = mainCanvas.getContext("2d");
     const bgCanvasContext = bgCanvas.getContext("2d");
-
     const window_width = window.innerWidth;
     const window_height = window.innerHeight;
-
     mainCanvas.width = window_width;
     mainCanvas.height = window_height;
     bgCanvas.width = window_width;
@@ -81,16 +79,14 @@ export default function Sim({
     }
     mainCanvas.style.background = "transparent";
 
-
-
-    let scale = settings.scale;
     const colorScheme = [
       { body1: "red", body2: "green", body3: "blue" },
       { body1: "#00FFC5", body2: "#FF3CAC", body3: "#845EC2" },
       { body1: "#FFB86F", body2: "#8BE9FD", body3: "#BD93F9" },
     ];
     let i = 1;
-
+    
+    // Initialize bodies from config
     let bodies = configState.bodies.map((b, idx) => {
       const colorKeys = Object.keys(colorScheme[i]);
       const color = colorScheme[i][colorKeys[idx % colorKeys.length]];

@@ -2,12 +2,6 @@ import { ComputeAcceleration } from "./computeAcceleration";
 import { Body } from "./bodyClass.js";
 
 export function rk2(g, bodies, dt) {
-    //   for (let b of bodies) {
-    //     if ((b.x - b.oldx) * scale >= 3) {
-    //       b.oldx = b.x;
-    //       b.oldy = b.y;
-    //     }
-    //   }
 
       for (let i = 0; i < bodies.length; i++) {
         ComputeAcceleration(g, i, bodies);
