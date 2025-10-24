@@ -6,7 +6,7 @@ export function ComputeAcceleration(g, i, bodies) {
         let deltax = bodies[j].x - bodies[i].x;
         let deltay = bodies[j].y - bodies[i].y;
         const distSq = deltax * deltax + deltay * deltay;
-        const distCubed = Math.pow(distSq, 1.5) + 1e-8; // avoid division by 0
+        const distCubed = Math.pow(distSq, 1.5) + 1e-8; 
         const force = (g * bodies[j].m) / distCubed;
         ax += deltax * force;
         ay += deltay * force;

@@ -14,8 +14,12 @@ import { MdOutlineSettingsInputComposite } from "react-icons/md";
 import { IoArrowBackOutline } from "react-icons/io5";
 import ConfigDisplay from "./ConfigInfo";
 import { rk2 } from "../integrators/rk2.js";
+import { vv } from "../integrators/vv.js";
+import { rk4 } from "../integrators/rk4.js";
 import { Body } from "../integrators/bodyClass.js";
-
+import { rkck } from "../integrators/rkck.js";
+import { doprin } from "../integrators/imported_dopri.js";
+import { dopri } from "../integrators/dopri.js"
 
 export default function Sim({
   config,
@@ -84,8 +88,8 @@ export default function Sim({
       { body1: "#00FFC5", body2: "#FF3CAC", body3: "#845EC2" },
       { body1: "#FFB86F", body2: "#8BE9FD", body3: "#BD93F9" },
     ];
-    let i = 1;
-    
+    let i = 2;
+
     // Initialize bodies from config
     let bodies = configState.bodies.map((b, idx) => {
       const colorKeys = Object.keys(colorScheme[i]);
@@ -137,6 +141,25 @@ export default function Sim({
       };
     }
 
+    function recenterToCOM(bodies) {
+      let totalMass = 0;
+      let xCOM = 0;
+      let yCOM = 0;
+
+      for (let b of bodies) {
+        totalMass += b.m;
+        xCOM += b.m * b.x;
+        yCOM += b.m * b.y;
+      }
+      xCOM /= totalMass;
+      yCOM /= totalMass;
+
+      for (let b of bodies) {
+        b.x -= xCOM;
+        b.y -= yCOM;
+      }
+    }
+
     const RunSim = () => {
       animationId = requestAnimationFrame(RunSim);
       mainCanvasContext.clearRect(0, 0, window_width, window_height);
@@ -146,33 +169,16 @@ export default function Sim({
         if (settings.simulator === "rk2") {
           rk2(1, bodies, dt);
         } else if (settings.simulator === "rk4") {
-          rk4_safe(bodies, dt);
+          rk4(1, bodies, dt);
         } else if (settings.simulator === "vv") {
-          vv(bodies, dt);
-        } else if (settings.simulator === "rk45") {
-          adaptiveIntegrate(bodies, dt, { eps: 1e-2, tol: 1e-8 });
+          vv(1, bodies, dt);
         } else if (settings.simulator === "cash-karp") {
-          const tol = 1e-10; // desired accuracy
-          let done = false;
+          rkck(1, bodies, dt);
+        } 
+        else if (settings.simulator === "dopri") {
+          dopri(1, bodies, dt);}
 
-          // Perform adaptive RK step(s) until we've advanced roughly dt per iteration
-          while (!done) {
-            const { newBodies, err } = rkckStep(bodies, dt);
-
-            // Adaptive step size
-            const scale = tol / (err + 1e-12);
-            const dtNew =
-              dt * Math.min(4, Math.max(0.1, 0.9 * Math.pow(scale, 0.2)));
-
-            if (err < tol) {
-              // Accept step
-              bodies = newBodies;
-              done = true; // advance only one "simulation step" per iteration of stepsPerFrame
-            }
-
-            dt = dtNew; // update step size for next step
-          }
-        }
+        recenterToCOM(bodies);
       }
 
       const metrics = computeSystemMetrics(bodies);
@@ -198,16 +204,17 @@ export default function Sim({
         setMetricsHistory([...systemMetricRecord.current]);
       }
 
-      if (config.movingcom) {
-        shiftToCOM(bodies);
-      }
-
       for (let [index, body] of bodies.entries()) {
         if (settings.trails) {
           body.drawSmallCircle(settings.scale, bgCanvasContext);
         }
         body.drawCircle(settings.scale, mainCanvasContext);
-        body.drawText(theme, settings.scale, mainCanvasContext, body.name || `Body ${index + 1}`);
+        body.drawText(
+          theme,
+          settings.scale,
+          mainCanvasContext,
+          body.name || `Body ${index + 1}`
+        );
       }
     };
 

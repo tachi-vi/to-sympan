@@ -29,9 +29,9 @@ export default function SimulationSettings({ settings, setSettings }) {
         >
           <option value="rk2">Runge-Kutta 2</option>
           <option value="rk4">Runge-Kutta 4</option>
-          <option value="rk45">Runge-Kutta 45</option>
-          <option value="vv">Velocity Verlet</option>
-          <option value="cash-karp">Cash-Karp</option>
+          <option value="vv">Symplectic: Velocity Verlet</option>
+          <option value="cash-karp">Adaptive Runge Kutta: Cash-Karp</option>
+          <option value="dopri">Adaptive Runge Kutta: Dormand Prince</option>
         </select>
       </div>
 
