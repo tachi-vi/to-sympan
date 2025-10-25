@@ -1,5 +1,5 @@
-         const originX = window.innerWidth / 2;
-        const originY = window.innerHeight / 2;
+const originX = window.innerWidth / 2;
+const originY = window.innerHeight / 2;
 
 export class Body{
       constructor(x, y, vx, vy, m, name, color) {
