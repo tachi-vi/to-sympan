@@ -17,6 +17,7 @@ h1 {
   font-style: italic;
   align-self: flex-start; /* aligns to top-left of the paper */
   margin-bottom: 0px;
+  letter-spacing: 1px;
   margin-top: 5vh;
 }
 
@@ -27,6 +28,7 @@ h2 {
 }
 
 p {
+  letter-spacing: 0.5px;
   font-size: 1rem;
   line-height: 1.6;
   text-align: justify;
@@ -130,12 +132,19 @@ button {
   padding-bottom: 5rem;
 }
 
+.dark .other-items input{
+  border: 1px solid rgb(122, 122, 122);
+  padding: 4px 6px;    
+}
+
+
+
 .info_page .body-name{
-font-size: 1.5rem;   /* roughly h3 size */
-  font-weight: bold;   /* makes it look like a heading */
-  font-family: inherit; /* match page font */
-  border: none;         /* optional, remove default box look */
-  outline: none;        /* optional, remove focus ring */
+font-size: 1.5rem;   
+  font-weight: bold;   
+  font-family: inherit; 
+  border: none;         
+  outline: none;       
   background: transparent; 
 }
 
@@ -178,6 +187,37 @@ font-size: 1.5rem;   /* roughly h3 size */
   top: 20px;          /* distance from top */
   left: 20px;         /* distance from left */
   z-index: 10;        /* on top of canvases */
+}
+
+/* Style simulation / info buttons to match main page light/dark buttons
+   Uses `.light` or `.dark` on a parent (e.g., body) so colors follow theme */
+
+.dark .config-page-button,
+.dark .run-config-button{
+  border: 1px solid #555;
+  background: #333;
+  color: #ffffff;
+}
+
+.dark .info_page .back_button{
+color: #ffffff;
+}
+
+.dark .config-page-button:hover,
+.dark .run-config-button:hover {
+  background: #555;
+}
+
+.light .config-page-button,
+.light .run-config-button {
+  border: 1px solid #aaa;
+  background: #fdf9f9;
+  color: #000000;
+}
+
+.light .config-page-button:hover,
+.light .run-config-button:hover {
+  background: #e0dcdc;
 }
 
 

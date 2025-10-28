@@ -2,6 +2,7 @@ const henon = [
   {
     name: "Henon 2",
     id: "henon-2",
+    showcase: false,
     bodies: [
       { m: 1, x: -1.0207041786, y: 0, vx: 0, vy: 9.126569314 },
       { m: 1, x: 2.0532718983, y: 0, vx: 0, vy: 0.0660238922 },
@@ -155,6 +156,10 @@ const henon = [
   {
     name: "Henon 19",
     id: "henon-19",
+    scale: 200,
+    sim: "rk4",
+    dt: 0.0001,
+    spf: 300,
     bodies: [
       { m: 1, x: -0.6457903644, y: 0, vx: 0, vy: 1.5668813073 },
       { m: 1, x: 1.6289614401, y: 0, vx: 0, vy: 0.1679100987 },

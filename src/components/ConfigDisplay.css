@@ -9,9 +9,17 @@
   font-size: 1.2rem;
   font-weight: bold;
   width: 100%;
-  border: none;
   background: transparent;
   margin-bottom: 0.5rem;
+}
+
+/* ensure the editable body name inherits page color (works with .dark or .light on root) */
+.body-name {
+  color: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
 }
 
 .body-list{
@@ -32,6 +40,13 @@
 
 .body-item input {
   width: 100%;
-  border-radius: 0px;
-  border: 0px;
+  background: transparent;
+  color: inherit; /* inherit text color from .dark / .light */
+  caret-color: currentColor;
+}
+
+/* placeholder should be readable in dark mode; browsers may not inherit placeholder color, so give a gentle opacity */
+.body-item input::placeholder,
+.body-name::placeholder {
+  color: rgba(255,255,255,0.6);
 }

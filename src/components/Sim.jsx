@@ -12,7 +12,7 @@ import {
 import { MdOutlineDarkMode } from "react-icons/md";
 import { MdOutlineSettingsInputComposite } from "react-icons/md";
 import { IoArrowBackOutline } from "react-icons/io5";
-import ConfigDisplay from "./ConfigInfo";
+import ConfigDisplay from "./ConfigDisplay.jsx";
 import { rk2 } from "../integrators/rk2.js";
 import { vv } from "../integrators/vv.js";
 import { rk4 } from "../integrators/rk4.js";
@@ -38,10 +38,10 @@ export default function Sim({
   const [configState, setConfig] = useState(config);
 
   const [settings, setSettings] = useState({
-    scale: 200,
-    simulator: "rk2",
-    spf: 4,
-    dt: 1e-3,
+    scale: config.scale || 200,
+    simulator: config.sim || "rk4",
+    spf: config.spf || 100,
+    dt: config.dt || 0.0001,
     trails: true,
   });
 

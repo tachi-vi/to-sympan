@@ -170,7 +170,7 @@ function App() {
             ))}
             </ul>
           </section>
-          <section>
+          {/* <section>
             <h2 className="centeredText">Popular 3-Body Configurations</h2>
             <p>These are the most popuar and old discovered configurations.</p>
             <ul className="grid">
@@ -185,7 +185,7 @@ function App() {
                 </li>
               ))}
             </ul>
-          </section>
+          </section> */}
           <section>
             <h2 className="centeredText">Sheen's Orbits </h2>
             <p>
@@ -206,7 +206,7 @@ function App() {
           </section>
           <section>
             <h2 className="centeredText">Broucke's Orbits</h2>
-            <p>These configurations were discovered by Bourcke in 1985.</p>
+            <p>These configurations were discovered by Bourcke in 1975.</p>
             <ul className="grid">
               {brouckeConfigs.map((config) => (
                 <li key={config.id}>
@@ -239,6 +239,39 @@ function App() {
               ))}
             </ul>
           </section>
+          
+          <section>
+            <h2 className="centeredText">Chenciner and Montgomery (1993)</h2>
+            <p>Popular Figure 8 Solution</p>
+            <ul className="grid">
+              {freeFallConfigs.map((config) => (
+                <li key={config.id}>
+                  <button
+                    className={theme == "light" ? "lghtBtn" : "drkBtn"}
+                    onClick={() => handleSimClick(freeFallConfigs, config.id)}
+                  >
+                    {config.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </section>
+           <section>
+            <h2 className="centeredText">Carles Simo, Chenciner, Féjoz, Montgomery (2001-2004)</h2>
+            <p>Proved stability and figure 8 and gave rotating variatns</p>
+            <ul className="grid">
+              {freeFallConfigs.map((config) => (
+                <li key={config.id}>
+                  <button
+                    className={theme == "light" ? "lghtBtn" : "drkBtn"}
+                    onClick={() => handleSimClick(freeFallConfigs, config.id)}
+                  >
+                    {config.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </section>
           <section>
             <h2 className="centeredText">Universiy of Serbia</h2>
             <p>
@@ -253,7 +286,7 @@ function App() {
             </ul>
           </section>
           <section>
-            <h2 className="centeredText">Free Fall Orbits</h2>
+            <h2 className="centeredText">Lee and Lao (2015,2017,2018,2019)</h2>
             <p>Free Fall Orbits Discovered by China</p>
             <ul className="grid">
               {freeFallConfigs.map((config) => (
@@ -266,6 +299,18 @@ function App() {
                   </button>
                 </li>
               ))}
+            </ul>
+          </section>
+          <section>
+            <h2 className="centeredText">
+              Hristov (2022)
+            </h2>
+            <p>Rediscovered moores figure 8 + more</p>
+            <ul className="grid">
+              {/* {brouckeConfigs
+            .map(config => (
+              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(brouckeConfigs, config.id)}>{config.name}</button></li>
+            ))} */}
             </ul>
           </section>
           <section>

@@ -4,35 +4,33 @@ import "./ConfigDisplay.css";
 export default function ConfigDisplay({ config, onConfigChange }) {
   if (!config) return null;
 
-const handleChange = (index, field, value) => {
-  const updatedBodies = config.bodies.map((body, i) =>
-    i === index
-      ? { 
-          ...body, 
-          [field]: field === "name" ? value : parseFloat(value) || 0 
-        }
-      : body
-  );
+  const handleChange = (index, field, value) => {
+    const updatedBodies = config.bodies.map((body, i) =>
+      i === index
+        ? {
+            ...body,
+            [field]: field === "name" ? value : parseFloat(value) || 0,
+          }
+        : body
+    );
 
-  const updatedConfig = { ...config, bodies: updatedBodies };
-  onConfigChange(updatedConfig);
-};
-
-
+    const updatedConfig = { ...config, bodies: updatedBodies };
+    onConfigChange(updatedConfig);
+  };
 
   return (
     <div className="config-card editable">
-
       <div className="body-list">
         {config.bodies.map((body, index) => (
           <div key={index} className="body-item">
             <input
-  className="body-name"
-  type="text"
-  value={body.name || `Body ${index + 1}`}
-  placeholder={body.name || `Body ${index + 1}`}
-  onChange={(e) => handleChange(index, "name", e.target.value)}
-/>
+              className="body-name"
+              type="text"
+              value={body.name || `Body ${index + 1}`}
+              placeholder={body.name || `Body ${index + 1}`}
+              onChange={(e) => handleChange(index, "name", e.target.value)}
+            />
+            <div className="other-items">
             <label>
               Mass:
               <input
@@ -73,6 +71,7 @@ const handleChange = (index, field, value) => {
                 onChange={(e) => handleChange(index, "vy", e.target.value)}
               />
             </label>
+          </div>
           </div>
         ))}
       </div>
