@@ -43,6 +43,7 @@ export default function Sim({
     spf: config.spf || 100,
     dt: config.dt || 0.0001,
     trails: true,
+    recentertocom:true,
   });
 
   function handleStopButton() {
@@ -90,7 +91,7 @@ export default function Sim({
     ];
     let i = 2;
 
-    // Initialize bodies from config
+  
     let bodies = configState.bodies.map((b, idx) => {
       const colorKeys = Object.keys(colorScheme[i]);
       const color = colorScheme[i][colorKeys[idx % colorKeys.length]];
@@ -112,23 +113,22 @@ export default function Sim({
 
       const n = bodies.length;
 
-      // Kinetic energy and linear momentum
+   
       for (let body of bodies) {
         totalPx += body.m * body.vx;
         totalPy += body.m * body.vy;
         totalK += 0.5 * body.m * (body.vx ** 2 + body.vy ** 2);
       }
 
-      // Potential energy and angular momentum
       for (let i = 0; i < n; i++) {
         const b1 = bodies[i];
-        totalL += b1.x * b1.m * b1.vy - b1.y * b1.m * b1.vx; // angular momentum
+        totalL += b1.x * b1.m * b1.vy - b1.y * b1.m * b1.vx; 
         for (let j = i + 1; j < n; j++) {
           const b2 = bodies[j];
           const dx = b2.x - b1.x;
           const dy = b2.y - b1.y;
-          const r = Math.sqrt(dx * dx + dy * dy) + 1e-8; // prevent div 0
-          totalU += (-1 * b1.m * b2.m) / r; // sum potential once per pair
+          const r = Math.sqrt(dx * dx + dy * dy) + 1e-8;
+          totalU += (-1 * b1.m * b2.m) / r; 
         }
       }
 
@@ -177,8 +177,8 @@ export default function Sim({
         } 
         else if (settings.simulator === "dopri") {
           dopri(1, bodies, dt);}
-
-        recenterToCOM(bodies);
+        
+        if (settings.recentertocom){recenterToCOM(bodies);}
       }
 
       const metrics = computeSystemMetrics(bodies);
@@ -196,12 +196,11 @@ export default function Sim({
           kineticEnergy: metrics.kineticEnergy,
         });
 
-        function shiftToCOM(bodies) {}
 
-        if (systemMetricRecord.current.length > 50)
-          systemMetricRecord.current.shift();
+        // if (systemMetricRecord.current.length > 50)
+        //   systemMetricRecord.current.shift();
 
-        setMetricsHistory([...systemMetricRecord.current]);
+        // setMetricsHistory([...systemMetricRecord.current]);
       }
 
       for (let [index, body] of bodies.entries()) {
@@ -242,7 +241,7 @@ export default function Sim({
     <>
       {startSim ? (
         <div className="simCont">
-          <div
+          {/* <div
             style={{
               position: "absolute",
               zIndex: 20,
@@ -273,9 +272,9 @@ export default function Sim({
                 dot={false}
                 name="E (Total Energy)"
               />
-              {/* <Line type="monotone" dataKey="momentum.px" stroke="#FF3CAC" dot={false} name="Momentum Px" />
+              <Line type="monotone" dataKey="momentum.px" stroke="#FF3CAC" dot={false} name="Momentum Px" />
     <Line type="monotone" dataKey="momentum.py" stroke="#3CAFFF" dot={false} name="Momentum Py" />
-    <Line type="monotone" dataKey="angularMomentum" stroke="#845EC2" dot={false} /> */}
+    <Line type="monotone" dataKey="angularMomentum" stroke="#845EC2" dot={false} />
               <Line
                 type="monotone"
                 dataKey="potentialEnergy"
@@ -284,11 +283,11 @@ export default function Sim({
                 name="U (Potential Energy)"
               />
             </LineChart>
-          </div>
+          </div> */}
           <button className="config-page-button" onClick={handleStopButton}>
             <MdOutlineSettingsInputComposite />
           </button>
-          {/* Info bar: show mass and color for each body (uses config as source of mass values) */}
+          
           <div
             style={{
               position: "absolute",
@@ -299,7 +298,7 @@ export default function Sim({
                 theme === "light" ? "rgba(255,255,255,0.9)" : "rgba(0,0,0,0.6)",
               color: theme === "light" ? "#000" : "#fff",
               padding: "8px 10px",
-              borderRadius: 8,
+              
               display: "flex",
               gap: 12,
               alignItems: "center",
@@ -318,18 +317,18 @@ export default function Sim({
               >
                 <div
                   style={{
-                    width: 16,
-                    height: 16,
+                    width: 12,
+                    height: 12,
                     borderRadius: 3,
                     background: b.color,
-                    boxShadow: "0 0 6px rgba(0,0,0,0.4)",
+                    
                   }}
                 />
                 <div style={{ fontSize: 12 }}>
-                  <div style={{ fontWeight: 700 }}>
+                  <div style={{ fontWeight: 500 }}>
                     {b.name || `Body ${idx + 1}`}
                   </div>
-                  <div style={{ fontSize: 11, opacity: 0.85 }}>
+                  <div style={{ fontSize: 10, opacity: 0.85 }}>
                     m: {Number(b.m).toFixed(3)}
                   </div>
                 </div>
