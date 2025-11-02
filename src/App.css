@@ -8,34 +8,46 @@ body {
   width: 100%;
   margin: 0;
   position: absolute;
-  font-family: "Georgia", "Times New Roman", serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", serif;
 }
 
+.centered{
+  align-self: center;
+}
 h1 {
-  font-size: 1.5rem;
-  font-weight: normal;
-  font-style: italic;
-  align-self: flex-start; /* aligns to top-left of the paper */
+  font-size: 23px;
+  font-weight: bold;
+  align-self: flex-start; 
   margin-bottom: 0px;
-  letter-spacing: 1px;
-  margin-top: 5vh;
+ 
+}
+
+section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 }
 
 h2 {
   font-size: 1.2rem;
-  font-weight: normal;
+  font-weight: 500;
+  font-style: italic;
+  align-self: flex-start;
   margin-bottom: 0;
 }
 
 p {
-  letter-spacing: 0.5px;
-  font-size: 1rem;
+  font-size: 15.5px;
   line-height: 1.6;
   text-align: justify;
+  text-indent: 2em;
 }
 
 .light {
-  background-color: #f7f5ef; /* off-white academic background */
+  background-color: #ffffff; /* off-white academic background */
   color: #222;
 }
 
@@ -62,36 +74,26 @@ button {
   min-height: 100vh;
 }
 
-.centeredText {
-  text-align: center;
-  align-self: center;
+@media (max-width: 768px) {
+  .mainCont {
+    padding: 4vh 30px;
+  }
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); 
-  gap: 5px;      
-  justify-content: center;       
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-wrap: wrap;           /* allows wrapping */
+  justify-content: center;   /* centers buttons horizontally */
+  gap: 13px;    
+  align-self: center;             /* space between buttons */
 }
 
-.grid li {
-  color: white;
-  margin-bottom: 8px;
-  text-align: center;
-  border-radius: 5px;
+.grid li{
+  list-style-type: none;
 }
 
-.cyoButton{
-    position: sticky;
-    bottom: 0px;
-    margin-top: 20px;
-    width: 100%;
-}
 
-/* Common Change Theme Button */
+/*Common to Main and Configruation Page: Change Theme Button */
 
 .themeButton{
   position: fixed;       
@@ -101,10 +103,9 @@ button {
   background-color: transparent;
   border: 0px;
 }
-
-
+/* light classes for buttons */
 .lghtBtn{
-    border: 1px solid #aaa;
+  border: 1px solid #aaa;
   background: #fdf9f9;
 }
 
@@ -122,6 +123,10 @@ button {
 
 /* Form Page  */
 
+
+
+/* Configuration Info Page */
+
 .info_page {
   display: flex;
   flex-direction: column;
@@ -131,12 +136,6 @@ button {
   width: 100%;
   padding-bottom: 5rem;
 }
-
-.dark .other-items input{
-  border: 1px solid rgb(122, 122, 122);
-  padding: 4px 6px;    
-}
-
 
 
 .info_page .body-name{

@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import Form from "./Form";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  CartesianGrid,
-  Legend,
-} from "recharts";
+// import {
+//   LineChart,
+//   Line,
+//   XAxis,
+//   YAxis,
+//   Tooltip,
+//   CartesianGrid,
+//   Legend,
+// } from "recharts";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { MdOutlineSettingsInputComposite } from "react-icons/md";
 import { IoArrowBackOutline } from "react-icons/io5";
@@ -18,7 +18,7 @@ import { vv } from "../integrators/vv.js";
 import { rk4 } from "../integrators/rk4.js";
 import { Body } from "../integrators/bodyClass.js";
 import { rkck } from "../integrators/rkck.js";
-import { doprin } from "../integrators/imported_dopri.js";
+// import { doprin } from "../integrators/imported_dopri.js";
 import { dopri } from "../integrators/dopri.js"
 
 export default function Sim({
@@ -178,7 +178,7 @@ export default function Sim({
         else if (settings.simulator === "dopri") {
           dopri(1, bodies, dt);}
         
-        if (settings.recentertocom){recenterToCOM(bodies);}
+        // if (settings.recentertocom){recenterToCOM(bodies);}
       }
 
       const metrics = computeSystemMetrics(bodies);
@@ -360,7 +360,7 @@ export default function Sim({
               </button>
             )}
             <h1 className="heading">Select Settings</h1>
-            <Form settings={settings} setSettings={setSettings} />
+            <Form settings={settings} setSettings={setSettings} theme={theme}/>
             <button class="run-config-button" onClick={() => setStartSim(true)}>
               Run Config
             </button>

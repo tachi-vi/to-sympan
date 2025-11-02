@@ -1,31 +1,35 @@
 import React from 'react';
 
-export default function SimulationSettings({ settings, setSettings }) {
+export default function SimulationSettings({ theme, settings, setSettings }) {
   const handleChange = (key, value) => {
-    settings[key] = value; 
-    setSettings({ ...settings }); 
+    settings[key] = value;
+    setSettings({ ...settings });
   };
 
+  // Choose the class based on theme
+  const inputClass = theme === "dark" ? "drkBtn" : "lghtBtn";
+
   return (
-    <div class="simulation-settings">
+    <div className="simulation-settings">
 
       <div>
         <label>Scale ({settings.scale})</label>
         <input
+          className={inputClass}
           type="range"
           min="10"
           max="400"
           value={settings.scale}
-          onChange={(e) => handleChange('scale', Number(e.target.value))}
+          onChange={(e) => handleChange("scale", Number(e.target.value))}
         />
       </div>
 
-      
       <div>
         <label>Simulation Method</label>
         <select
+          className={inputClass}
           value={settings.simulator}
-          onChange={(e) => handleChange('simulator', e.target.value)}
+          onChange={(e) => handleChange("simulator", e.target.value)}
         >
           <option value="rk2">Runge-Kutta 2</option>
           <option value="rk4">Runge-Kutta 4</option>
@@ -35,24 +39,25 @@ export default function SimulationSettings({ settings, setSettings }) {
         </select>
       </div>
 
-   
       <div>
         <label>Δt (time step)</label>
         <input
+          className={inputClass}
           type="number"
           step="any"
           value={settings.dt}
-          onChange={(e) => handleChange('dt', parseFloat(e.target.value))}
+          onChange={(e) => handleChange("dt", parseFloat(e.target.value))}
         />
       </div>
 
       <div>
         <label>Steps per Frame</label>
         <input
+          className={inputClass}
           type="number"
           min="1"
           value={settings.spf}
-          onChange={(e) => handleChange('spf', parseInt(e.target.value))}
+          onChange={(e) => handleChange("spf", parseInt(e.target.value))}
         />
       </div>
     </div>

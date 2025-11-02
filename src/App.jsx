@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import configs from "./components/configs.js";
+
 import sheensConfigs from "./configs/sheen.js";
 import brouckeConfigs from "./configs/broucke.js";
 import henonConfigs from "./configs/henon.js";
@@ -55,7 +55,7 @@ function App() {
       <>
         <div className="mainCont">
           <h1
-            className="centeredText"
+            className="centered"
             style={{
               fontSize: "1.7rem",
               marginTop: "0px",
@@ -81,7 +81,7 @@ function App() {
             </button>
           )}
           <p>
-            The three-body problem involves predicting the motion of three
+              The three-body problem involves predicting the motion of three
             objects that interact through gravity. Unlike the two-body problem —
             which can be solved exactly using known mathematical formulas — the
             three-body problem cannot be expressed through a single, closed-form
@@ -102,7 +102,7 @@ function App() {
           </p>
           <h1>Project Introduction</h1>
           <p>
-            This project focuses on simulating periodic orbits in the three-body
+              This project focuses on simulating periodic orbits in the three-body
             problem — rare configurations where, despite the system’s general
             tendency toward chaos, the three bodies follow repeating paths over
             time. The goal is to identify and analyze these periodic solutions
@@ -135,18 +135,18 @@ function App() {
               forces exactly balanced. They are considered "exact" because they
               satisfy Newton’s laws analytically: the positions and velocities
               can be expressed in closed-form equations that repeat perfectly
-              over time, without requiring numerical approximation.{" "}
+              over time, without requiring numerical approximation.
             </p>
-            <ul className="grid">
+            <div className="grid">
                {NEWORBITS.map((config) => (
-                <li key={config.id}>
-                  <button
+                
+                  <button key={config.id}
                     className={theme == "light" ? "lghtBtn" : "drkBtn"}
                     onClick={() => handleSimClick(NEWORBITS, config.id)}
                   >
                     {config.name}
                   </button>
-                </li>
+                
               ))}
               {eulerConfigs.map((config) => (
                 <li key={config.id}>
@@ -158,7 +158,7 @@ function App() {
                   </button>
                 </li>
               ))}
-            </ul>
+            </div>
           </section>
           <section>
             <h2 className="centeredText">Lagrenge's Solution (1772)</h2>
@@ -340,20 +340,7 @@ function App() {
           <h1>N Body Configrations</h1>
           <section>
             <ul className="grid">
-              {configs
-                .filter(
-                  (c) => !(Array.isArray(c.bodies) && c.bodies.length === 3)
-                )
-                .map((config) => (
-                  <li key={config.id}>
-                    <button
-                      className={theme == "light" ? "lghtBtn" : "drkBtn"}
-                      onClick={() => handleSimClick(config.id)}
-                    >
-                      {config.name}
-                    </button>
-                  </li>
-                ))}
+        
             </ul>
           </section>
           <hr />
