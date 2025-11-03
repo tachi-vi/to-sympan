@@ -26,8 +26,8 @@ export default function ConfigDisplay({ config, onConfigChange }) {
             <input
               className="body-name"
               type="text"
-              value={body.name || `Body ${index + 1}`}
-              placeholder={body.name || `Body ${index + 1}`}
+              value={body.name ?? ""}
+              placeholder={`Body ${index + 1}`}
               onChange={(e) => handleChange(index, "name", e.target.value)}
             />
             <div className="other-items">

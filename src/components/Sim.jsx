@@ -84,20 +84,49 @@ export default function Sim({
     }
     mainCanvas.style.background = "transparent";
 
-    const colorScheme = [
-      { body1: "red", body2: "green", body3: "blue" },
-      { body1: "#00FFC5", body2: "#FF3CAC", body3: "#845EC2" },
-      { body1: "#FFB86F", body2: "#8BE9FD", body3: "#BD93F9" },
-    ];
-    let i = 2;
+   const darkSchemes = [
+  // Neon mix
+  ["#FF3CAC", "#784BA0", "#2B86C5", "#00FFC5", "#FFD93D", "#FF6F91", "#845EC2", "#FF9671", "#4E8397", "#FFC75F"],
 
-  
-    let bodies = configState.bodies.map((b, idx) => {
-      const colorKeys = Object.keys(colorScheme[i]);
-      const color = colorScheme[i][colorKeys[idx % colorKeys.length]];
+  // Cyber glow
+  ["#08F7FE", "#09FBD3", "#FE53BB", "#F5D300", "#00FF41", "#FF7300", "#F53844", "#3A86FF", "#FFBE0B", "#8338EC"],
 
-      return new Body(b.x, b.y, b.vx, b.vy, b.m, b.name || null, color);
-    });
+  // Space tones
+  ["#FF6B6B", "#FFE66D", "#4ECDC4", "#1A535C", "#F7FFF7", "#C0FDFB", "#5D737E", "#64B6AC", "#F25F5C", "#FFE066"],
+
+  // Electric contrast
+  ["#00EAD3", "#FFF5B7", "#FF449F", "#005F99", "#E40066", "#F7F052", "#00A8E8", "#FFB5A7", "#FFD6A5", "#9B5DE5"],
+
+  // Pastel neon
+  ["#C3F0CA", "#A9DEF9", "#E4C1F9", "#FCF6BD", "#FF99C8", "#B8E1FF", "#BFD200", "#E36414", "#F9844A", "#FFB5A7"]
+];
+
+
+const lightSchemes = [
+  // Gentle tones
+  ["#0077B6", "#FF6B6B", "#6A4C93", "#4CC9F0", "#F72585", "#4361EE", "#F8961E", "#43AA8B", "#90BE6D", "#577590"],
+
+  // Soft pastel
+  ["#FFB5A7", "#FCD5CE",  "#F9DCC4", "#FEC89A", "#A0C4FF", "#BDB2FF", "#FFC6FF", "#9BF6FF", "#FDFFB6"],
+
+  // Elegant neutrals
+  ["#1E6091", "#168AAD", "#34A0A4", "#52B69A", "#76C893", "#99D98C", "#B5E48C", "#D9ED92", "#FFADAD", "#FFD6A5"],
+
+  // Nature inspired
+  ["#606C38", "#283618",  "#DDA15E", "#BC6C25", "#8D99AE", "#EF233C", "#FFBF69", "#6D597A", "#B56576"],
+
+  // Bright but flat
+  ["#FF595E", "#FFCA3A", "#8AC926", "#1982C4", "#6A4C93", "#F15BB5", "#00BBF9", "#00F5D4", "#9B5DE5", "#FF5400"]
+];
+
+ const activeScheme = (theme === "dark" ? darkSchemes : lightSchemes)[
+  Math.floor(Math.random() * (theme === "dark" ? darkSchemes.length : lightSchemes.length))
+];
+
+let bodies = configState.bodies.map((b, idx) => {
+  const color = activeScheme[idx % activeScheme.length]; // pick color by index
+  return new Body(b.x, b.y, b.vx, b.vy, b.m, b.name || null, color);
+});
 
     let dt = settings.dt;
     let stepsPerFrame = settings.spf;
@@ -222,20 +251,20 @@ export default function Sim({
     return () => cancelAnimationFrame(animationId);
   }, [startSim]);
 
-  const infoBodyList = (() => {
-    if (!config || !Array.isArray(config.bodies)) return [];
-    const colorScheme = [
-      { body1: "red", body2: "green", body3: "blue" },
-      { body1: "#00FFC5", body2: "#FF3CAC", body3: "#845EC2" },
-      { body1: "#FFB86F", body2: "#8BE9FD", body3: "#BD93F9" },
-    ];
-    const i = 1;
-    return config.bodies.map((b, idx) => {
-      const colorKeys = Object.keys(colorScheme[i]);
-      const color = colorScheme[i][colorKeys[idx % colorKeys.length]];
-      return { name: b.name || null, m: b.m, color };
-    });
-  })();
+  // const infoBodyList = (() => {
+  //   if (!config || !Array.isArray(config.bodies)) return [];
+  //   const colorScheme = [
+  //     { body1: "red", body2: "green", body3: "blue" },
+  //     { body1: "#00FFC5", body2: "#FF3CAC", body3: "#845EC2" },
+  //     { body1: "#FFB86F", body2: "#8BE9FD", body3: "#BD93F9" },
+  //   ];
+  //   const i = 1;
+  //   return config.bodies.map((b, idx) => {
+  //     const colorKeys = Object.keys(colorScheme[i]);
+  //     const color = colorScheme[i][colorKeys[idx % colorKeys.length]];
+  //     return { name: b.name || null, m: b.m, color };
+  //   });
+  // })();
 
   return (
     <>
@@ -287,7 +316,7 @@ export default function Sim({
           <button className="config-page-button" onClick={handleStopButton}>
             <MdOutlineSettingsInputComposite />
           </button>
-          
+{/*           
           <div
             style={{
               position: "absolute",
@@ -334,7 +363,7 @@ export default function Sim({
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
           {/* <button className="button3">Time: {elapsedTime.toFixed(1)}</button> */}
           <div className="canvas">
             <canvas ref={bgCanvasRef} className="bg-canvas"></canvas>

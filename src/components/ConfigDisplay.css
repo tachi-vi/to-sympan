@@ -14,12 +14,17 @@
 }
 
 /* ensure the editable body name inherits page color (works with .dark or .light on root) */
-.body-name {
-  color: inherit;
+
+.dark .body-name {
+  color: rgb(91, 91, 91);
   background: transparent;
   border: none;
   outline: none;
   font-family: inherit;
+}
+
+.light .body-name{
+  color: rgb(46, 41, 41);
 }
 
 .body-list{
@@ -31,6 +36,7 @@
   border-radius: 8px;
   padding: 0.75rem;
   margin-top: 0.5rem;
+
 }
 
 .body-item label {
@@ -50,3 +56,9 @@
 .body-name::placeholder {
   color: rgba(255,255,255,0.6);
 }
+
+.light .body-item input::placeholder,
+.light .body-name::placeholder {
+  color: rgba(24, 21, 21, 0.6);
+}
+
