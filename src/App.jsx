@@ -7,7 +7,7 @@ import sheensConfigs from "./configs/sheen.js";
 import brouckeConfigs from "./configs/broucke.js";
 import henonConfigs from "./configs/henon.js";
 // import {butterflyI} from "./configs/serbia.js";
-import freeFallConfigs from "./configs/freeFall.js";
+import freeFallConfigs from "./configs/freefall.js";
 import eulerConfigs from "./configs/euler.js";
 import lagrange from "./configs/lagrange.js";
 import Sim from "./components/Sim.jsx";
