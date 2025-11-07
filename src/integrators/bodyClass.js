@@ -19,7 +19,7 @@ export class Body{
         let ypos = originY + this.y * scale;
         context.beginPath();
         context.fillStyle = this.color;
-        context.arc(xpos, ypos, 10, 0, Math.PI * 2, false);
+        context.arc(xpos, ypos, 6, 0, Math.PI * 2, false);
         context.fill();
       }
 

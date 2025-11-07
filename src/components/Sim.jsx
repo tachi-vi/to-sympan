@@ -189,6 +189,9 @@ let bodies = configState.bodies.map((b, idx) => {
       }
     }
 
+    function shiftToOrigin(bodies){
+      
+    }
     const RunSim = () => {
       animationId = requestAnimationFrame(RunSim);
       mainCanvasContext.clearRect(0, 0, window_width, window_height);
@@ -207,7 +210,7 @@ let bodies = configState.bodies.map((b, idx) => {
         else if (settings.simulator === "dopri") {
           dopri(1, bodies, dt);}
         
-        // if (settings.recentertocom){recenterToCOM(bodies);}
+        if (settings.recentertocom){recenterToCOM(bodies);}
       }
 
       const metrics = computeSystemMetrics(bodies);

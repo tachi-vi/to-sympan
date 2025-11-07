@@ -1,6 +1,6 @@
 const I_butterfly = [
   {
-    name: "I.2.A",
+    name: "Butterfly I.2.A",
     id: "i-2-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.306893, vy: 0.125507 },
@@ -9,7 +9,7 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.2.B",
+    name: "Butterfly I.2.B",
     id: "i-2-b",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.392955, vy: 0.097579 },
@@ -18,7 +18,7 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.5.A",
+    name: "Butterfly I.5.A",
     id: "i-5-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.411293, vy: 0.260755 },
@@ -27,7 +27,7 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.8.A",
+    name: "Butterfly I.8.A",
     id: "i-8-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.412103, vy: 0.283384 },
@@ -36,7 +36,7 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.9.A",
+    name: "Butterfly I.9.A",
     id: "i-9-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.402712, vy: 0.210016 },
@@ -45,7 +45,7 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.11.A",
+    name: "Butterfly I.11.A",
     id: "i-11-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.415251, vy: 0.291346 },
@@ -54,7 +54,7 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.12.A",
+    name: "Butterfly I.12.A",
     id: "i-12-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.408211, vy: 0.243685 },
@@ -63,7 +63,7 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.13.A",
+    name: "Butterfly I.13.A",
     id: "i-13-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.399129, vy: 0.184708 },
@@ -72,7 +72,7 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.14.A",
+    name: "Butterfly I.14.A",
     id: "i-14-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.415169, vy: 0.295341 },
@@ -81,7 +81,7 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.16.A",
+    name: "Butterfly I.16.A",
     id: "i-16-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.404132, vy: 0.219164 },
@@ -90,7 +90,7 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.17.A",
+    name: "Butterfly I.17.A",
     id: "i-17-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.397220, vy: 0.169198 },
@@ -99,7 +99,7 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.18.A",
+    name: "Butterfly I.18.A",
     id: "i-18-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.413537, vy: 0.271006 },
@@ -108,7 +108,7 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.19.A",
+    name: "Butterfly I.19.A",
     id: "i-19-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.407376, vy: 0.238843 },
@@ -117,8 +117,8 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.20.A",
-    id: "i-20-a",
+    name: "Butterfly I.20.A",
+    id: "Butterfly i-20-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.401559, vy: 0.202266 },
       { m: 1, x: 0, y: 0, vx: -0.803118, vy: -0.404532 },
@@ -126,7 +126,7 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.21.A",
+    name: "Butterfly I.21.A",
     id: "i-21-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.396058, vy: 0.158601 },
@@ -135,7 +135,7 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.22.A",
+    name: "Butterfly I.22.A",
     id: "i-22-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.409622, vy: 0.251696 },
@@ -144,7 +144,7 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.23.A",
+    name: "Butterfly I.23.A",
     id: "i-23-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.404679, vy: 0.222598 },
@@ -153,7 +153,7 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.24.A",
+    name: "Butterfly I.24.A",
     id: "i-24-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.399807, vy: 0.189807 },
@@ -162,7 +162,7 @@ const I_butterfly = [
     ]
   },
   {
-    name: "I.25.A",
+    name: "Butterfly I.25.A",
     id: "i-25-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.395290, vy: 0.150852 },
@@ -2961,3 +2961,5 @@ const VIII_other = [
     ],
   },
 ];
+
+export {I_butterfly, II_dragonfly, III_yinYang, IVa_moth, IVb_butterfly, IVc_moth, V_figure8, VI_yarn, VIIa_moth, VIIb_moth, VIII_other } 
