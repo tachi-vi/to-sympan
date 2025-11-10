@@ -2,6 +2,7 @@ const configs = [
   {
     name: "Figure Eight",
     id: "figure-eight",
+    sim: "rk2",
     bodies: [
       { m: 1, x: -0.97000436, y: 0.24308753, vx: 0.4662036850, vy: 0.4323657300 },
       { m: 1, x:  0.97000436, y: -0.24308753, vx: 0.4662036850, vy: 0.4323657300 },

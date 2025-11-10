@@ -2,6 +2,8 @@ const broucke = [
   {
     name: "Broucke A 1",
     id: "broucke-a-1",
+    scale: 150,
+    spf: 300,
     bodies: [
       { m: 1, x: -0.9892620043, y: 0, vx: 0, vy: 1.9169244185 },
       { m: 1, x: 2.2096177241, y: 0, vx: 0, vy: 0.1910268738 },
@@ -19,6 +21,8 @@ const broucke = [
   },
   {
     name: "Broucke A 11",
+    scale: 130,
+    spf: 300,
     id: "broucke-a-11",
     bodies: [
       { m: 1, x: 0.0132604844, y: 0, vx: 0, vy: 1.054151921 },
@@ -29,6 +33,8 @@ const broucke = [
   {
     name: "Broucke A 12",
     id: "broucke-a-12",
+    scale: 130,
+    spf: 300,
     bodies: [
       { m: 1, x: -0.337076702, y: 0, vx: 0, vy: 0.9174260238 },
       { m: 1, x: 2.1164029743, y: 0, vx: 0, vy: -0.0922665014 },
@@ -38,6 +44,8 @@ const broucke = [
   {
     name: "Broucke A 13",
     id: "broucke-a-13",
+    spf: 300,
+    scale: 130,
     bodies: [
       { m: 1, x: -0.8965015243, y: 0, vx: 0, vy: 0.8285556923 },
       { m: 1, x: 3.2352526189, y: 0, vx: 0, vy: -0.0056478094 },
@@ -46,7 +54,9 @@ const broucke = [
   },
   {
     name: "Broucke A 14",
+    scale: 130,
     id: "broucke-a-14",
+    spf: 300,
     bodies: [
       { m: 1, x: -0.2637815221, y: 0, vx: 0, vy: 0.9371630895 },
       { m: 1, x: 1.9698126146, y: 0, vx: 0, vy: -0.1099503287 },
@@ -56,6 +66,8 @@ const broucke = [
   {
     name: "Broucke A 15",
     id: "broucke-a-15",
+    scale: 80,
+    spf: 300,
     bodies: [
       { m: 1, x: -1.1889693067, y: 0, vx: 0, vy: 0.8042120498 },
       { m: 1, x: 3.8201881837, y: 0, vx: 0, vy: 0.0212794833 },
@@ -65,6 +77,7 @@ const broucke = [
   {
     name: "Broucke A 16",
     id: "broucke-a-16",
+    scale: 130,
     bodies: [
       { m: 1, x: -0.7283341038, y: 0, vx: 0, vy: 0.8475982451 },
       { m: 1, x: 2.8989177778, y: 0, vx: 0, vy: -0.0255162097 },
@@ -74,6 +87,8 @@ const broucke = [
   {
     name: "Broucke R 1",
     id: "broucke-r-1",
+    fav: true,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: 0.808310623, y: 0, vx: 0, vy: 0.9901979166 },
       { m: 1, x: -0.4954148566, y: 0, vx: 0, vy: -2.7171431768 },
@@ -83,6 +98,7 @@ const broucke = [
   {
     name: "Broucke R 2",
     id: "broucke-r-2",
+    fav: true,
     bodies: [
       { m: 1, x: 0.9060893715, y: 0, vx: 0, vy: 0.9658548899 },
       { m: 1, x: -0.6909723536, y: 0, vx: 0, vy: -1.6223214842 },
@@ -92,6 +108,7 @@ const broucke = [
   {
     name: "Broucke R 3",
     id: "broucke-r-3",
+    fav: true,
     bodies: [
       { m: 1, x: 0.8920281421, y: 0, vx: 0, vy: 0.9957939373 },
       { m: 1, x: -0.6628498947, y: 0, vx: 0, vy: -1.6191613336 },
@@ -110,6 +127,7 @@ const broucke = [
   {
     name: "Broucke A 3",
     id: "broucke-a-3",
+    scale: 150,
     bodies: [
       { m: 1, x: 0.3149337497, y: 0, vx: 0, vy: 1.4601869417 },
       { m: 1, x: 0.812382071, y: 0, vx: 0, vy: -0.5628292375 },
@@ -173,6 +191,7 @@ const broucke = [
   {
     name: "Broucke R 11",
     id: "broucke-r-11",
+    fav: true,
     bodies: [
       { m: 1, x: 0.898348747, y: 0, vx: 0, vy: 0.9475564971 },
       { m: 1, x: -0.6754911045, y: 0, vx: 0, vy: -1.7005860354 },
@@ -182,6 +201,7 @@ const broucke = [
   {
     name: "Broucke R 12",
     id: "broucke-r-12",
+    fav: true,
     bodies: [
       { m: 1, x: 0.9040866398, y: 0, vx: 0, vy: 0.9789534005 },
       { m: 1, x: -0.6869668901, y: 0, vx: 0, vy: -1.6017790202 },
@@ -191,6 +211,7 @@ const broucke = [
   {
     name: "Broucke R 13",
     id: "broucke-r-13",
+    fav: true,
     bodies: [
       { m: 1, x: 0.9017748598, y: 0, vx: 0, vy: 0.9526089117 },
       { m: 1, x: -0.6823433302, y: 0, vx: 0, vy: -1.6721104565 },
@@ -200,6 +221,7 @@ const broucke = [
   {
     name: "Broucke A 4",
     id: "broucke-a-4",
+    scale: 150,
     bodies: [
       { m: 1, x: 0.2843198916, y: 0, vx: 0, vy: 1.377417957 },
       { m: 1, x: 0.8736097872, y: 0, vx: 0, vy: -0.4884226932 },
@@ -209,6 +231,8 @@ const broucke = [
   {
     name: "Broucke A 5",
     id: "broucke-a-5",
+    scale: 150,
+    fav: true,
     bodies: [
       { m: 1, x: 0.2355245585, y: 0, vx: 0, vy: 1.2795329643 },
       { m: 1, x: 0.9712004534, y: 0, vx: 0, vy: -0.4021329019 },
@@ -218,6 +242,7 @@ const broucke = [
   {
     name: "Broucke A 6",
     id: "broucke-a-6",
+    scale: 150,
     bodies: [
       { m: 1, x: 0.1432778606, y: 0, vx: 0, vy: 1.1577475241 },
       { m: 1, x: 1.1556938491, y: 0, vx: 0, vy: -0.2974667752 },
@@ -227,6 +252,8 @@ const broucke = [
   {
     name: "Broucke A 7",
     id: "broucke-a-7",
+    scale: 130,
+    fav:true,
     bodies: [
       { m: 1, x: -0.1095519101, y: 0, vx: 0, vy: 0.9913358338 },
       { m: 1, x: 1.6613533905, y: 0, vx: 0, vy: -0.1569959746 },
@@ -236,6 +263,7 @@ const broucke = [
   {
     name: "Broucke A 8",
     id: "broucke-a-8",
+    scale: 160,
     bodies: [
       { m: 1, x: 0.1979259967, y: 0, vx: 0, vy: 1.2224733132 },
       { m: 1, x: 1.0463975768, y: 0, vx: 0, vy: -0.3527351133 },
@@ -245,6 +273,7 @@ const broucke = [
   {
     name: "Broucke A 9",
     id: "broucke-a-9",
+    scale: 160,
     bodies: [
       { m: 1, x: 0.0557080334, y: 0, vx: 0, vy: 1.0824099428 },
       { m: 1, x: 1.3308335036, y: 0, vx: 0, vy: -0.2339059386 },
@@ -253,6 +282,9 @@ const broucke = [
   },
   {
     name: "Broucke A 10",
+    scale: 90,
+    spf: 300,
+    fav: true,
     id: "broucke-a-10",
     bodies: [
       { m: 1, x: -0.5426216182, y: 0, vx: 0, vy: 0.8750200467 },

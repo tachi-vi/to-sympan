@@ -39,11 +39,11 @@ export default function Sim({
 
   const [settings, setSettings] = useState({
     scale: config.scale || 200,
-    simulator: config.sim || "rk4",
-    spf: config.spf || 100,
+    simulator: config.sim || "cash-karp",
+    spf: config.spf || 300,
     dt: config.dt || 0.0001,
     trails: true,
-    recentertocom:true,
+    recentertocom: config.com_drift || false,
   });
 
   function handleStopButton() {

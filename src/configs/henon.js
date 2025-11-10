@@ -2,7 +2,7 @@ const henon = [
   {
     name: "Henon 2",
     id: "henon-2",
-    showcase: false,
+    hide: true,
     bodies: [
       { m: 1, x: -1.0207041786, y: 0, vx: 0, vy: 9.126569314 },
       { m: 1, x: 2.0532718983, y: 0, vx: 0, vy: 0.0660238922 },
@@ -12,6 +12,9 @@ const henon = [
   {
     name: "Henon 3",
     id: "henon-3",
+    scale: 150,
+    spf: 300,
+    fav: true,
     bodies: [
       { m: 1, x: -0.973830058, y: 0, vx: 0, vy: 4.3072892019 },
       { m: 1, x: 1.9988948637, y: 0, vx: 0, vy: 0.133382168 },
@@ -21,6 +24,8 @@ const henon = [
   {
     name: "Henon 4",
     id: "henon-4",
+    scale: 150,
+    spf: 300,
     bodies: [
       { m: 1, x: -0.9418961718, y: 0, vx: 0, vy: 3.4407426089 },
       { m: 1, x: 1.9620504351, y: 0, vx: 0, vy: 0.1608086204 },
@@ -30,6 +35,8 @@ const henon = [
   {
     name: "Henon 5",
     id: "henon-5",
+    scale: 150,
+    spf: 300,
     bodies: [
       { m: 1, x: -0.9353825545, y: 0, vx: 0, vy: 3.3166932522 },
       { m: 1, x: 1.9545571553, y: 0, vx: 0, vy: 0.1654488998 },
@@ -39,6 +46,8 @@ const henon = [
   {
     name: "Henon 6",
     id: "henon-6",
+    scale: 150,
+    spf: 300,
     bodies: [
       { m: 1, x: -0.9213822197, y: 0, vx: 0, vy: 3.0865413013 },
       { m: 1, x: 1.9384775293, y: 0, vx: 0, vy: 0.1745212698 },
@@ -48,6 +57,8 @@ const henon = [
   {
     name: "Henon 7",
     id: "henon-7",
+    scale: 150,
+    spf: 300,
     bodies: [
       { m: 1, x: -0.8961968933, y: 0, vx: 0, vy: 2.7626477723 },
       { m: 1, x: 1.9096454316, y: 0, vx: 0, vy: 0.1880576473 },
@@ -57,6 +68,8 @@ const henon = [
   {
     name: "Henon 8",
     id: "henon-8",
+    scale: 150,
+    spf: 300,
     bodies: [
       { m: 1, x: -0.8630680168, y: 0, vx: 0, vy: 2.4494921664 },
       { m: 1, x: 1.8719091735, y: 0, vx: 0, vy: 0.2009780545 },
@@ -66,6 +79,8 @@ const henon = [
   {
     name: "Henon 9",
     id: "henon-9",
+    scale: 150,
+    spf: 300,
     bodies: [
       { m: 1, x: -0.8406614871, y: 0, vx: 0, vy: 2.2849981945 },
       { m: 1, x: 1.8465095288, y: 0, vx: 0, vy: 0.2067721191 },
@@ -75,6 +90,9 @@ const henon = [
   {
     name: "Henon 10",
     id: "henon-10",
+    scale: 150,
+    spf: 300,
+    fav: true,
     bodies: [
       { m: 1, x: -0.8189887884, y: 0, vx: 0, vy: 2.1515812682 },
       { m: 1, x: 1.8220335296, y: 0, vx: 0, vy: 0.2101820298 },
@@ -84,6 +102,9 @@ const henon = [
   {
     name: "Henon 11",
     id: "henon-11",
+    scale: 150,
+    spf: 300,
+    fav: true,
     bodies: [
       { m: 1, x: -0.8124282691, y: 0, vx: 0, vy: 2.1152813609 },
       { m: 1, x: 1.8146415679, y: 0, vx: 0, vy: 0.2107937022 },
@@ -93,6 +114,8 @@ const henon = [
   {
     name: "Henon 12",
     id: "henon-12",
+    scale: 150,
+    spf: 300,
     bodies: [
       { m: 1, x: -0.8081346489, y: 0, vx: 0, vy: 2.0924392285 },
       { m: 1, x: 1.8098115895, y: 0, vx: 0, vy: 0.2110889451 },
@@ -102,6 +125,8 @@ const henon = [
   {
     name: "Henon 13",
     id: "henon-13",
+    scale: 150,
+    spf: 300,
     bodies: [
       { m: 1, x: -0.7860197276, y: 0, vx: 0, vy: 1.9850897951 },
       { m: 1, x: 1.7849608938, y: 0, vx: 0, vy: 0.2113050518 },
@@ -111,6 +136,8 @@ const henon = [
   {
     name: "Henon 14",
     id: "henon-14",
+    scale: 150,
+    spf: 300,
     bodies: [
       { m: 1, x: -0.7622772277, y: 0, vx: 0, vy: 1.8863506925 },
       { m: 1, x: 1.758370326, y: 0, vx: 0, vy: 0.2091522491 },
@@ -120,6 +147,8 @@ const henon = [
   {
     name: "Henon 15",
     id: "henon-15",
+    scale: 150,
+    spf: 300,
     bodies: [
       { m: 1, x: -0.7522501606, y: 0, vx: 0, vy: 1.849021293 },
       { m: 1, x: 1.7471643064, y: 0, vx: 0, vy: 0.2075244686 },
@@ -129,6 +158,9 @@ const henon = [
   {
     name: "Henon 16",
     id: "henon-16",
+    scale: 150,
+    spf: 300,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -0.7420388318, y: 0, vx: 0, vy: 1.8133748834 },
       { m: 1, x: 1.735765761, y: 0, vx: 0, vy: 0.2054433457 },
@@ -138,6 +170,9 @@ const henon = [
   {
     name: "Henon 17",
     id: "henon-17",
+  scale: 150,
+    spf: 300,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -0.716276793, y: 0, vx: 0, vy: 1.7329086357 },
       { m: 1, x: 1.7070647638, y: 0, vx: 0, vy: 0.1983866493 },
@@ -147,6 +182,9 @@ const henon = [
   {
     name: "Henon 18",
     id: "henon-18",
+    scale: 150,
+    spf: 300,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -0.6899477627, y: 0, vx: 0, vy: 1.6627255843 },
       { m: 1, x: 1.6778126109, y: 0, vx: 0, vy: 0.1887271973 },
@@ -156,7 +194,7 @@ const henon = [
   {
     name: "Henon 19",
     id: "henon-19",
-    scale: 200,
+    scale: 150,
     sim: "rk4",
     dt: 0.0001,
     spf: 300,
@@ -169,6 +207,9 @@ const henon = [
   {
     name: "Henon 20",
     id: "henon-20",
+      scale: 150,
+    spf: 200,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -0.609992807, y: 0, vx: 0, vy: 1.5049370344 },
       { m: 1, x: 1.589627631, y: 0, vx: 0, vy: 0.1478049666 },
@@ -178,6 +219,9 @@ const henon = [
   {
     name: "Henon 21",
     id: "henon-21",
+      scale: 150,
+    spf: 200,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -0.5433320751, y: 0, vx: 0, vy: 1.4166447368 },
       { m: 1, x: 1.5174715966, y: 0, vx: 0, vy: 0.1056882937 },
@@ -187,6 +231,9 @@ const henon = [
   {
     name: "Henon 22",
     id: "henon-22",
+      scale: 150,
+    spf: 200,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -0.5086428577, y: 0, vx: 0, vy: 1.3809917649 },
       { m: 1, x: 1.4807683786, y: 0, vx: 0, vy: 0.0825018243 },
@@ -196,6 +243,9 @@ const henon = [
   {
     name: "Henon 23",
     id: "henon-23",
+      scale: 150,
+    spf: 200,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -0.4707530144, y: 0, vx: 0, vy: 1.348035021 },
       { m: 1, x: 1.4415959428, y: 0, vx: 0, vy: 0.0568279502 },
@@ -205,6 +255,9 @@ const henon = [
   {
     name: "Henon 24",
     id: "henon-24",
+      scale: 150,
+    spf: 200,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -0.4267312885, y: 0, vx: 0, vy: 1.316010576 },
       { m: 1, x: 1.3975840674, y: 0, vx: 0, vy: 0.0270059213 },
@@ -214,6 +267,9 @@ const henon = [
   {
     name: "Henon 25",
     id: "henon-25",
+      scale: 150,
+    spf: 200,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -0.369048589, y: 0, vx: 0, vy: 1.2820257965 },
       { m: 1, x: 1.3429451203, y: 0, vx: 0, vy: -0.0114813594 },
@@ -223,6 +279,10 @@ const henon = [
   {
     name: "Henon 26",
     id: "henon-26",
+      scale: 150,
+    spf: 200,
+    sim: "cash-karp",
+    fav: true,
     bodies: [
       { m: 1, x: -0.3362325077, y: 0, vx: 0, vy: 1.2659472954 },
       { m: 1, x: 1.3136838813, y: 0, vx: 0, vy: -0.0329092795 },
@@ -232,6 +292,10 @@ const henon = [
   {
     name: "Henon 27",
     id: "henon-27",
+      scale: 150,
+    spf: 200,
+    fav: true,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -0.2785224487, y: 0, vx: 0, vy: 1.2423239397 },
       { m: 1, x: 1.2659846497, y: 0, vx: 0, vy: -0.0696105505 },
@@ -241,6 +305,10 @@ const henon = [
   {
     name: "Henon 28",
     id: "henon-28",
+      scale: 150,
+    spf: 200,
+    fav:true,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -0.2465723806, y: 0, vx: 0, vy: 1.231438013 },
       { m: 1, x: 1.2418797845, y: 0, vx: 0, vy: -0.0893701628 },
@@ -250,16 +318,22 @@ const henon = [
   {
     name: "Henon 29",
     id: "henon-29",
+      scale: 150,
+    spf: 200,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -0.2142473852, y: 0, vx: 0, vy: 1.2218112279 },
       { m: 1, x: 1.2193274145, y: 0, vx: 0, vy: -0.1089634117 },
       { m: 1, x: -1.0050800294, y: 0, vx: 0, vy: -1.1128478162 },
-      {m: 0.00000001, x: 0, y: 0, vx: 0, vy: 0}  // Tiny distant body to fix center of mass issues
+
     ]
   },
   {
     name: "Henon 30",
     id: "henon-30",
+      scale: 150,
+    spf: 200,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -0.1539168309, y: 0, vx: 0, vy: 1.2071375933 },
       { m: 1, x: 1.1825813762, y: 0, vx: 0, vy: -0.1445299063 },
@@ -269,6 +343,9 @@ const henon = [
   {
     name: "Henon 31",
     id: "henon-31",
+      scale: 150,
+    spf: 200,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -0.1184831386, y: 0, vx: 0, vy: 1.2002882491 },
       { m: 1, x: 1.1644627554, y: 0, vx: 0, vy: -0.1648687837 },
@@ -278,6 +355,10 @@ const henon = [
   {
     name: "Henon 32",
     id: "henon-32",
+      scale: 150,
+    spf: 200,
+    fav:true,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -0.0543136477, y: 0, vx: 0, vy: 1.1907461096 },
       { m: 1, x: 1.1385599242, y: 0, vx: 0, vy: -0.2008078114 },
@@ -287,6 +368,10 @@ const henon = [
   {
     name: "Henon 33",
     id: "henon-33",
+      scale: 150,
+    spf: 200,
+    fav: true,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -0.0039949015, y: 0, vx: 0, vy: 1.1854800959 },
       { m: 1, x: 1.1246615709, y: 0, vx: 0, vy: -0.2282781803 },
@@ -296,6 +381,10 @@ const henon = [
   {
     name: "Henon 34",
     id: "henon-34",
+      scale: 150,
+    spf: 200,
+    sim: "cash-karp",
+    fav: true,
     bodies: [
       { m: 1, x: 0.0398173377, y: 0, vx: 0, vy: 1.1822181889 },
       { m: 1, x: 1.1171847905, y: 0, vx: 0, vy: -0.2517241681 },
@@ -305,6 +394,10 @@ const henon = [
   {
     name: "Henon 35",
     id: "henon-35",
+      scale: 150,
+    spf: 200,
+    fav: true,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: 0.0797756841, y: 0, vx: 0, vy: 1.1801414216 },
       { m: 1, x: 1.114066618, y: 0, vx: 0, vy: -0.2727205239 },
@@ -314,6 +407,9 @@ const henon = [
   {
     name: "Henon 36",
     id: "henon-36",
+      scale: 150,
+    spf: 300,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: 0.1171973587, y: 0, vx: 0, vy: 1.178841075 },
       { m: 1, x: 1.1142599949, y: 0, vx: 0, vy: -0.2920271257 },
@@ -323,6 +419,9 @@ const henon = [
   {
     name: "Henon 37",
     id: "henon-37",
+      scale: 150,
+    spf: 300,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: 0.1528503739, y: 0, vx: 0, vy: 1.1780768702 },
       { m: 1, x: 1.1171406576, y: 0, vx: 0, vy: -0.3100703745 },
@@ -332,6 +431,10 @@ const henon = [
   {
     name: "Henon 38",
     id: "henon-38",
+      scale: 150,
+    spf: 300,
+    fav: true,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: 0.2206754338, y: 0, vx: 0, vy: 1.1775806065 },
       { m: 1, x: 1.1294387918, y: 0, vx: 0, vy: -0.3433244671 },
@@ -341,6 +444,9 @@ const henon = [
   {
     name: "Henon 39",
     id: "henon-39",
+      scale: 150,
+    spf: 300,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: 0.3492734869, y: 0, vx: 0, vy: 1.1785487598 },
       { m: 1, x: 1.1741828108, y: 0, vx: 0, vy: -0.4017802411 },
@@ -350,6 +456,10 @@ const henon = [
   {
     name: "Henon 40",
     id: "henon-40",
+      scale: 110,
+    spf: 300,
+    fav: true,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: 0.4752073013, y: 0, vx: 0, vy: 1.1801113507 },
       { m: 1, x: 1.2395152885, y: 0, vx: 0, vy: -0.4523369153 },
@@ -359,6 +469,9 @@ const henon = [
   {
     name: "Henon 41",
     id: "henon-41",
+      scale: 110,
+    spf: 300,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: 0.8008933013, y: 0, vx: 0, vy: 1.1815913872 },
       { m: 1, x: 1.4695233462, y: 0, vx: 0, vy: -0.5532095521 },
@@ -368,6 +481,9 @@ const henon = [
   {
     name: "Henon 42",
     id: "henon-42",
+      scale: 70,
+    spf: 300,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: 1.1593879407, y: 0, vx: 0, vy: 1.1787714143 },
       { m: 1, x: 1.7740754142, y: 0, vx: 0, vy: -0.6271771385 },
@@ -377,6 +493,9 @@ const henon = [
   {
     name: "Henon 43",
     id: "henon-43",
+      scale: 50,
+    spf: 300,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: 2.0050371306, y: 0, vx: 0, vy: 1.166593506 },
       { m: 1, x: 2.5641346089, y: 0, vx: 0, vy: -0.7252357445 },
@@ -386,6 +505,10 @@ const henon = [
   {
     name: "Henon 44",
     id: "henon-44",
+      scale: 40,
+    spf: 300,
+    fav: true,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: 3.0372729887, y: 0, vx: 0, vy: 1.1526391069 },
       { m: 1, x: 3.5696472554, y: 0, vx: 0, vy: -0.7857412148 },
@@ -395,6 +518,9 @@ const henon = [
   {
     name: "Henon 45",
     id: "henon-45",
+      scale: 30,
+    spf: 300,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: 4.2616145281, y: 0, vx: 0, vy: 1.1398455888 },
       { m: 1, x: 4.7790413059, y: 0, vx: 0, vy: -0.8262397702 },
@@ -404,6 +530,9 @@ const henon = [
   {
     name: "Henon 46",
     id: "henon-46",
+      scale: 30,
+    spf: 300,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: 5.6797205666, y: 0, vx: 0, vy: 1.1287662997 },
       { m: 1, x: 6.1879151587, y: 0, vx: 0, vy: -0.8550660412 },

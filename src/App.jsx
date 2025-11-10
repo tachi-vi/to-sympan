@@ -6,15 +6,26 @@ import "./App.css";
 import sheensConfigs from "./configs/sheen.js";
 import brouckeConfigs from "./configs/broucke.js";
 import henonConfigs from "./configs/henon.js";
-import {I_butterfly, II_dragonfly, III_yinYang, IVa_moth, IVb_butterfly, IVc_moth, V_figure8, VI_yarn, VIIa_moth, VIIb_moth, VIII_other } from "./configs/serbia.js"
+import {
+  I_butterfly,
+  II_dragonfly,
+  III_yinYang,
+  IVa_moth,
+  IVb_butterfly,
+  IVc_moth,
+  V_figure8,
+  VI_yarn,
+  VIIa_moth,
+  VIIb_moth,
+  VIII_other,
+} from "./configs/serbia.js";
 import freeFallConfigs from "./configs/freefall.js";
 import eulerConfigs from "./configs/euler.js";
-import figure8 from "./configs/originalFigure8.js"
-import afterfigure8 from "./configs/figure8new.js"
+import figure8 from "./configs/originalFigure8.js";
+import afterfigure8 from "./configs/figure8new.js";
 import lagrange from "./configs/lagrange.js";
 import Sim from "./components/Sim.jsx";
-import NEWORBITS from "./configs/NEWORBITS.js";
-import circularResticred from "./configs/cr3bp.js"
+import circularResticred from "./configs/cr3bp.js";
 import { MdOutlineDarkMode, MdWidthNormal } from "react-icons/md";
 
 function App() {
@@ -138,18 +149,12 @@ function App() {
               forces exactly balanced. They are considered "exact" because they
               satisfy Newton’s laws analytically: the positions and velocities
               can be expressed in closed-form equations that repeat perfectly
-              over time, without requiring numerical approximation.
+              over time, without requiring numerical approximation. The E2 orbit
+              is very unstable and I i was only able to simulate on period for
+              it. Included for sake for accuracy, I could not find a set of
+              paraemters for Eulers third orbit.
             </p>
             <div className="grid">
-              {NEWORBITS.map((config) => (
-                <button
-                  key={config.id}
-                  className={theme == "light" ? "lghtBtn" : "drkBtn"}
-                  onClick={() => handleSimClick(NEWORBITS, config.id)}
-                >
-                  {config.name}
-                </button>
-              ))}
               {eulerConfigs.map((config) => (
                 <li key={config.id}>
                   <button
@@ -164,7 +169,17 @@ function App() {
           </section>
           <section>
             <h2 className="centeredText">Lagrenge's Solution (1772)</h2>
-            <p>Lagrenge</p>
+            <p>
+              Lagrange’s solution to the three-body problem describes an
+              equilateral triangular configuration in which all three bodies
+              maintain constant relative distances while rotating around their
+              common center of mass. What’s special about this solution is that,
+              in its general form, the entire system can possess a net linear
+              momentum, causing it to drift through space while repeating its
+              motion periodically. I’ve added an option to account for this by
+              removing the center-of-mass drift, keeping the system stationary
+              in the simulation frame.
+            </p>
             <ul className="grid">
               {lagrange.map((config) => (
                 <li key={config.id}>
@@ -194,10 +209,10 @@ function App() {
               ))}
             </ul>
           </section> */}
-          
+
           <section>
             <h2 className="centeredText">Broucke's Orbits</h2>
-            <p>These configurations were discovered by Bourcke in 1975.</p>
+            <p>These configurations were discovered by Bourcke in 1975. They are all very mesmerizing to look at and also very stable. I realise the ammont of configs may seem overwhlming dor you to check out, so ive highlited the ones that are personal favourites of mine. <a href="https://link.springer.com/article/10.1007/BF01228732">Original Paper Link</a></p>
             <ul className="grid">
               {brouckeConfigs.map((config) => (
                 <li key={config.id}>
@@ -242,7 +257,7 @@ function App() {
               solution of the three-body problem in the case of equal masses”
               (Annals of Mathematics, 2000). They verified it as a
               mathematically exact periodic solution of the Newtonian equations,
-              not just a numerical curiosity.
+              not just a numerical curiosity. Due to its stability, its very less prone to errors and periodic for a long time even with my most primitve integrator.
             </p>
             <ul className="grid">
               {figure8.map((config) => (
@@ -280,37 +295,117 @@ function App() {
             <h2 className="centeredText">Universiy of Serbia</h2>
             <p>
               Orbits of Various Sequences Discovered by University of Serbia in
-              2012
+              2012. These are some very complicated and intricate patterns. There were  a lot of orbits discovered, I had to filter out those that could be appropriately simulated for atleast two periods using my most advanced integrator. The full sequence of orbits can be found at:
             </p>
             <ul className="grid">
-              {I_butterfly
-            .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(I_butterfly, config.id)}>{config.name}</button></li>
-            ))}{II_dragonfly
-            .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(II_dragonfly, config.id)}>{config.name}</button></li>
-            ))}{III_yinYang
-            .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(III_yinYang, config.id)}>{config.name}</button></li>
-            ))}{IVa_moth
-            .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(IVa_moth, config.id)}>{config.name}</button></li>
-            ))}{V_figure8
-            .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(V_figure8, config.id)}>{config.name}</button></li>
-            ))}{VI_yarn
-            .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(VI_yarn, config.id)}>{config.name}</button></li>
-            ))}{VIIa_moth
-            .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(VIIa_moth, config.id)}>{config.name}</button></li>
-            ))}{VIIb_moth
-            .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(VIIb_moth, config.id)}>{config.name}</button></li>
-            ))}{VIII_other
-            .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(VIII_other, config.id)}>{config.name}</button></li>
-            ))}
+              {I_butterfly.map((config) => (config.show==true &&
+                <li key={config.id}>
+                  <button
+                    className={theme == "light" ? "lghtBtn" : "drkBtn"}
+                    onClick={() => handleSimClick(I_butterfly, config.id)}
+                  >
+                    {config.name}
+                  </button>
+                </li>
+              ))}
+              {II_dragonfly.map((config) => (config.show==true &&
+                <li key={config.id}>
+                  <button
+                    className={theme == "light" ? "lghtBtn" : "drkBtn"}
+                    onClick={() => handleSimClick(II_dragonfly, config.id)}
+                  >
+                    {config.name}
+                  </button>
+                </li>
+              ))}
+              {III_yinYang.map((config) => (config.show==true &&
+                <li key={config.id}>
+                  <button
+                    className={theme == "light" ? "lghtBtn" : "drkBtn"}
+                    onClick={() => handleSimClick(III_yinYang, config.id)}
+                  >
+                    {config.name}
+                  </button>
+                </li>
+              ))}
+              {IVa_moth.map((config) => (config.show==true &&
+                <li key={config.id}>
+                  <button
+                    className={theme == "light" ? "lghtBtn" : "drkBtn"}
+                    onClick={() => handleSimClick(IVa_moth, config.id)}
+                  >
+                    {config.name}
+                  </button>
+                </li>
+              ))}  {IVb_butterfly.map((config) => (config.show==true &&
+                <li key={config.id}>
+                  <button
+                    className={theme == "light" ? "lghtBtn" : "drkBtn"}
+                    onClick={() => handleSimClick(IVb_butterfly, config.id)}
+                  >
+                    {config.name}
+                  </button>
+                </li>
+              ))}{IVc_moth.map((config) => (config.show==true &&
+                <li key={config.id}>
+                  <button
+                    className={theme == "light" ? "lghtBtn" : "drkBtn"}
+                    onClick={() => handleSimClick(IVc_moth, config.id)}
+                  >
+                    {config.name}
+                  </button>
+                </li>
+              ))}
+              {V_figure8.map((config) => (config.show==true &&
+                <li key={config.id}>
+                  <button
+                    className={theme == "light" ? "lghtBtn" : "drkBtn"}
+                    onClick={() => handleSimClick(V_figure8, config.id)}
+                  >
+                    {config.name}
+                  </button>
+                </li>
+              ))}
+              {VI_yarn.map((config) => (config.show==true &&
+                <li key={config.id}>
+                  <button
+                    className={theme == "light" ? "lghtBtn" : "drkBtn"}
+                    onClick={() => handleSimClick(VI_yarn, config.id)}
+                  >
+                    {config.name}
+                  </button>
+                </li>
+              ))}
+              {VIIa_moth.map((config) => (config.show==true &&
+                <li key={config.id}>
+                  <button
+                    className={theme == "light" ? "lghtBtn" : "drkBtn"}
+                    onClick={() => handleSimClick(VIIa_moth, config.id)}
+                  >
+                    {config.name}
+                  </button>
+                </li>
+              ))}
+              {VIIb_moth.map((config) => (config.show==true &&
+                <li key={config.id}>
+                  <button
+                    className={theme == "light" ? "lghtBtn" : "drkBtn"}
+                    onClick={() => handleSimClick(VIIb_moth, config.id)}
+                  >
+                    {config.name}
+                  </button>
+                </li>
+              ))}
+              {/* {VIII_other.map((config) => (
+                <li key={config.id}>
+                  <button
+                    className={theme == "light" ? "lghtBtn" : "drkBtn"}
+                    onClick={() => handleSimClick(VIII_other, config.id)}
+                  >
+                    {config.name}
+                  </button>
+                </li>
+              ))} */}
             </ul>
           </section>
           {/* <section>
@@ -329,7 +424,7 @@ function App() {
               ))}
             </ul>
           </section> */}
-            <section>
+          <section>
             <h2 className="centeredText">Sheen's Orbits </h2>
             <p>
               These configurations were discovered by Matthew Sheen in 2016.{" "}
@@ -363,10 +458,16 @@ function App() {
             </h2>
             <p>Pertubation Theory</p>
             <ul className="grid">
-              {circularResticred
-            .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(circularResticred, config.id)}>{config.name}</button></li>
-            ))}
+              {circularResticred.map((config) => (
+                <li key={config.id}>
+                  <button
+                    className={theme == "light" ? "lghtBtn" : "drkBtn"}
+                    onClick={() => handleSimClick(circularResticred, config.id)}
+                  >
+                    {config.name}
+                  </button>
+                </li>
+              ))}
             </ul>
           </section>
           <section>
@@ -381,11 +482,13 @@ function App() {
             ))} */}
             </ul>
           </section>
-           <section>
-            <h2 className="centeredText">
-              Tachi's solutions :p (2025)
-            </h2>
-            <p>Random configs i found while messing around, didnt research or dwelved too deep into it hehe. I have too many nobels crowding my desk already</p>
+          <section>
+            <h2 className="centeredText">Tachi's solutions :p (2025)</h2>
+            <p>
+              Random configs i found while messing around, didnt research or
+              dwelved too deep into it hehe. I have too many nobels crowding my
+              desk already
+            </p>
             <ul className="grid">
               {/* {brouckeConfigs
             .map(config => (
@@ -394,18 +497,13 @@ function App() {
             </ul>
           </section>
           <section>
-            <h2 className="centeredText">
-              Beyond these...
-            </h2>
+            <h2 className="centeredText">Beyond these...</h2>
             <p>I am limited by my own capabilities</p>
-    
           </section>
           <h1>N Body Configurations</h1>
           <p>I built a N-body simulator, didnt I?</p>
           <section>
-            <h2 className="centeredText">
-              N-Body Problem (Simo's Periods):
-            </h2>
+            <h2 className="centeredText">N-Body Problem (Simo's Periods):</h2>
             <p>Very cool</p>
             <ul className="grid">
               {/* {brouckeConfigs
@@ -415,9 +513,7 @@ function App() {
             </ul>
           </section>
           <section>
-            <h2 className="centeredText">
-              N-Body Problem (Trisolar):
-            </h2>
+            <h2 className="centeredText">N-Body Problem (Trisolar):</h2>
             <p>Trisolar with random planet just for fun</p>
             <ul className="grid">
               {/* {brouckeConfigs
@@ -426,7 +522,7 @@ function App() {
             ))} */}
             </ul>
           </section>
-           <section>
+          <section>
             <h2 className="centeredText">
               Restricted N-Body Problem (IRL Systems):
             </h2>

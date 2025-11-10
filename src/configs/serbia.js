@@ -1,7 +1,10 @@
+//done
+
 const I_butterfly = [
   {
     name: "Butterfly I.2.A",
     id: "i-2-a",
+    show: true,
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.306893, vy: 0.125507 },
       { m: 1, x: 0, y: 0, vx: -0.613786, vy: -0.251014 },
@@ -323,6 +326,7 @@ const III_yinYang = [
   {
     name: "YinYang III.3.A.α",
     id: "iii-3-a-alpha",
+    show: true,
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.513938, vy: 0.304736 },
       { m: 1, x: 0, y: 0, vx: -1.027876, vy: -0.609472 },
@@ -506,6 +510,8 @@ const IVa_moth = [
   {
     name: "Moth IVa.2.A",
     id: "iva-2-a",
+    show: true,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.464445, vy: 0.396060 },
       { m: 1, x: 0, y: 0, vx: -0.92889, vy: -0.79212 },
@@ -514,6 +520,7 @@ const IVa_moth = [
   },
   {
     name: "Moth IVa.4.A",
+    show: true,
     id: "iva-4-a",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.439166, vy: 0.452968 },
@@ -533,6 +540,8 @@ const IVa_moth = [
   {
     name: "Moth IVa.6.A",
     id: "iva-6-a",
+    show: true,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.429090, vy: 0.475313 },
       { m: 1, x: 0, y: 0, vx: -0.85818, vy: -0.950626 },
@@ -551,6 +560,8 @@ const IVa_moth = [
   {
     name: "Moth IVa.8.B",
     id: "iva-8-b",
+     show: true,
+    sim: "cash-karp",
     bodies: [
       { m: 1, x: -1, y: 0, vx: 0.556677, vy: 0.434231 },
       { m: 1, x: 0, y: 0, vx: -1.113354, vy: -0.868462 },
@@ -1329,8 +1340,9 @@ const IVc_moth = [
 
 const V_figure8 = [
   {
-    name: "V.1.A",
+    name: "Figure 8 - V.1.A",
     id: "v-1-a",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1356,8 +1368,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.1.B",
+    name: "Figure 8 - V.1.B",
     id: "v-1-b",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1383,7 +1396,7 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.8.B",
+    name: "Figure 8 - V.8.B",
     id: "v-8-b",
     bodies: [
       {
@@ -1410,8 +1423,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.11.A",
+    name: "Figure 8 -  V.11.A",
     id: "v-11-a",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1437,8 +1451,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.11.B",
+    name: "Figure 8 -  V.11.B",
     id: "v-11-b",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1464,7 +1479,7 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.12.A",
+    name: "Figure 8 - V.12.A",
     id: "v-12-a",
     bodies: [
       {
@@ -1491,8 +1506,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.14.A",
+    name: "Figure 8 - V.14.A",
     id: "v-14-a",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1518,8 +1534,10 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.15.A",
+    name: "Figure 8 - V.15.A",
     id: "v-15-a",
+    show: true,
+    scale: 250,
     bodies: [
       {
         m: 1,
@@ -1545,7 +1563,7 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.16.A",
+    name: "Figure 8 - V.16.A",
     id: "v-16-a",
     bodies: [
       {
@@ -1572,8 +1590,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.17.A",
+    name: "Figure 8 - V.17.A",
     id: "v-17-a",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1599,8 +1618,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.17.B",
+    name: "Figure 8 - V.17.B",
     id: "v-17-b",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1626,8 +1646,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.17.C",
+    name: "Figure 8 - V.17.C",
     id: "v-17-c",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1653,8 +1674,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.4.A.\u03b1",
+    name: "Figure 8 - V.4.A.\u03b1",
     id: "v-4-a-alpha",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1680,8 +1702,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.17.D",
+    name: "Figure 8 - V.17.D",
     id: "v-17-d",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1707,8 +1730,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.17.E",
+    name: "Figure 8 - V.17.E",
     id: "v-17-e",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1734,8 +1758,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.17.F",
+    name: "Figure 8 - V.17.F",
     id: "v-17-f",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1761,8 +1786,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.17.G",
+    name: "Figure 8 - V.17.G",
     id: "v-17-g",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1788,8 +1814,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.17.H",
+    name: "Figure 8 - V.17.H",
     id: "v-17-h",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1815,8 +1842,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.17.I",
+    name: "Figure 8 - V.17.I",
     id: "v-17-i",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1842,8 +1870,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.17.J",
+    name: "Figure 8 - V.17.J",
     id: "v-17-j",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1869,7 +1898,7 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.20.A",
+    name: "Figure 8 - V.20.A",
     id: "v-20-a",
     bodies: [
       {
@@ -1896,8 +1925,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.4.A.\u03b2",
+    name: "Figure 8 - V.4.A.\u03b2",
     id: "v-4-a-beta",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1923,8 +1953,10 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.5.A",
+    name: "Figure 8 - V.5.A",
+    show: true,
     id: "v-5-a",
+    fav: true,
     bodies: [
       {
         m: 1,
@@ -1950,8 +1982,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.7.A",
+    name: "Figure 8 - V.7.A",
     id: "v-7-a",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -1977,8 +2010,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.7.B",
+    name: "Figure 8 - V.7.B",
     id: "v-7-b",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -2004,8 +2038,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.7.C",
+    name: "Figure 8 - V.7.C",
     id: "v-7-c",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -2031,8 +2066,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.7.D",
+    name: "Figure 8 - V.7.D",
     id: "v-7-d",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -2058,8 +2094,9 @@ const V_figure8 = [
     ],
   },
   {
-    name: "V.8.A",
+    name: "Figure 8 - V.8.A",
     id: "v-8-a",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -2088,8 +2125,9 @@ const V_figure8 = [
 
 const VI_yarn = [
   {
-    name: "VI.2.A",
+    name: "Yarn - VI.2.A",
     id: "vi-2-a",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -2115,8 +2153,9 @@ const VI_yarn = [
     ],
   },
   {
-    name: "VI.4.A",
+    name: "Yarn - VI.4.A",
     id: "vi-4-a",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -2142,7 +2181,7 @@ const VI_yarn = [
     ],
   },
   {
-    name: "VI.6.A",
+    name: "Yarn - VI.6.A",
     id: "vi-6-a",
     bodies: [
       {
@@ -2169,7 +2208,7 @@ const VI_yarn = [
     ],
   },
   {
-    name: "VI.6.B",
+    name: "Yarn - VI.6.B",
     id: "vi-6-b",
     bodies: [
       {
@@ -2196,7 +2235,7 @@ const VI_yarn = [
     ],
   },
   {
-    name: "VI.6.C",
+    name: "Yarn - VI.6.C",
     id: "vi-6-c",
     bodies: [
       {
@@ -2223,7 +2262,7 @@ const VI_yarn = [
     ],
   },
   {
-    name: "VI.12.A",
+    name: "Yarn - VI.12.A",
     id: "vi-12-a",
     bodies: [
       {
@@ -2250,7 +2289,7 @@ const VI_yarn = [
     ],
   },
   {
-    name: "VI.14.A",
+    name: "Yarn - VI.14.A",
     id: "vi-14-a",
     bodies: [
       {
@@ -2280,7 +2319,7 @@ const VI_yarn = [
 
 const VIIa_moth = [
   {
-    name: "VIIa.6.A",
+    name: "Moth - VIIa.6.A",
     id: "viia-6-a",
     bodies: [
       {
@@ -2307,7 +2346,7 @@ const VIIa_moth = [
     ],
   },
   {
-    name: "VIIa.7.A.\u03b1",
+    name: "Moth - VIIa.7.A.\u03b1",
     id: "viia-7-a-alpha",
     bodies: [
       {
@@ -2334,7 +2373,7 @@ const VIIa_moth = [
     ],
   },
   {
-    name: "VIIa.7.A.\u03b2",
+    name: "Moth - VIIa.7.A.\u03b2",
     id: "viia-7-a-beta",
     bodies: [
       {
@@ -2361,7 +2400,7 @@ const VIIa_moth = [
     ],
   },
   {
-    name: "VIIa.10.A",
+    name: "Moth - VIIa.10.A",
     id: "viia-10-a",
     bodies: [
       {
@@ -2388,7 +2427,7 @@ const VIIa_moth = [
     ],
   },
   {
-    name: "VIIa.11.A",
+    name: "Moth - VIIa.11.A",
     id: "viia-11-a",
     bodies: [
       {
@@ -2415,7 +2454,7 @@ const VIIa_moth = [
     ],
   },
   {
-    name: "VIIa.13.A",
+    name: "Moth - VIIa.13.A",
     id: "viia-13-a",
     bodies: [
       {
@@ -2442,7 +2481,7 @@ const VIIa_moth = [
     ],
   },
   {
-    name: "VIIa.13.B",
+    name: "Moth - VIIa.13.B",
     id: "viia-13-b",
     bodies: [
       {
@@ -2469,7 +2508,7 @@ const VIIa_moth = [
     ],
   },
   {
-    name: "VIIa.13.C",
+    name: "Moth - VIIa.13.C",
     id: "viia-13-c",
     bodies: [
       {
@@ -2499,8 +2538,9 @@ const VIIa_moth = [
 
 const VIIb_moth = [
   {
-    name: "VIIb.4.A",
+    name: "Moth - VIIb.4.A",
     id: "viib-4-a",
+    show: true,
     bodies: [
       {
         m: 1,
@@ -2526,7 +2566,7 @@ const VIIb_moth = [
     ],
   },
   {
-    name: "VIIb.7.A",
+    name: "Moth - VIIb.7.A",
     id: "viib-7-a",
     bodies: [
       {
@@ -2553,7 +2593,7 @@ const VIIb_moth = [
     ],
   },
   {
-    name: "VIIb.18.A",
+    name: "Moth - VIIb.18.A",
     id: "viib-18-a",
     bodies: [
       {
@@ -2580,7 +2620,7 @@ const VIIb_moth = [
     ],
   },
   {
-    name: "VIIb.20.A",
+    name: "Moth - VIIb.20.A",
     id: "viib-20-a",
     bodies: [
       {
@@ -2607,7 +2647,7 @@ const VIIb_moth = [
     ],
   },
   {
-    name: "VIIb.7.B",
+    name: "Moth - VIIb.7.B",
     id: "viib-7-b",
     bodies: [
       {
@@ -2634,7 +2674,7 @@ const VIIb_moth = [
     ],
   },
   {
-    name: "VIIb.9.A",
+    name: "Moth - VIIb.9.A",
     id: "viib-9-a",
     bodies: [
       {
@@ -2661,7 +2701,7 @@ const VIIb_moth = [
     ],
   },
   {
-    name: "VIIb.10.A",
+    name: "Moth - VIIb.10.A",
     id: "viib-10-a",
     bodies: [
       {
@@ -2688,7 +2728,7 @@ const VIIb_moth = [
     ],
   },
   {
-    name: "VIIb.13.A",
+    name: "Moth - VIIb.13.A",
     id: "viib-13-a",
     bodies: [
       {
@@ -2715,7 +2755,7 @@ const VIIb_moth = [
     ],
   },
   {
-    name: "VIIb.15.A",
+    name: "Moth - VIIb.15.A",
     id: "viib-15-a",
     bodies: [
       {
@@ -2742,7 +2782,7 @@ const VIIb_moth = [
     ],
   },
   {
-    name: "VIIb.15.B",
+    name: "Moth - VIIb.15.B",
     id: "viib-15-b",
     bodies: [
       {
@@ -2769,7 +2809,7 @@ const VIIb_moth = [
     ],
   },
   {
-    name: "VIIb.16.A",
+    name: "Moth - VIIb.16.A",
     id: "viib-16-a",
     bodies: [
       {
@@ -2796,7 +2836,7 @@ const VIIb_moth = [
     ],
   },
   {
-    name: "VIIb.17.A",
+    name: "Moth - VIIb.17.A",
     id: "viib-17-a",
     bodies: [
       {
@@ -2826,7 +2866,7 @@ const VIIb_moth = [
 
 const VIII_other = [
   {
-    name: "VIII.4.A",
+    name: "Other - VIII.4.A",
     id: "viii-4-a",
     bodies: [
       {
@@ -2853,7 +2893,7 @@ const VIII_other = [
     ],
   },
   {
-    name: "VIII.8.A",
+    name: "Other - VIII.8.A",
     id: "viii-8-a",
     bodies: [
       {
@@ -2880,7 +2920,7 @@ const VIII_other = [
     ],
   },
   {
-    name: "VIII.10.A",
+    name: "Other - VIII.10.A",
     id: "viii-10-a",
     bodies: [
       {
@@ -2907,7 +2947,7 @@ const VIII_other = [
     ],
   },
   {
-    name: "VIII.15.A",
+    name: "Other - VIII.15.A",
     id: "viii-15-a",
     bodies: [
       {
@@ -2934,7 +2974,7 @@ const VIII_other = [
     ],
   },
   {
-    name: "VIII.15.B",
+    name: "Other - VIII.15.B",
     id: "viii-15-b",
     bodies: [
       {
