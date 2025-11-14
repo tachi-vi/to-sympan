@@ -6,6 +6,8 @@ import "./App.css";
 import sheensConfigs from "./configs/sheen.js";
 import brouckeConfigs from "./configs/broucke.js";
 import henonConfigs from "./configs/henon.js";
+import restrictedNBody from "./configs/restrictedNBody.js"
+import trisolar from "./configs/trisolar.js"
 import {
   I_butterfly,
   II_dragonfly,
@@ -22,9 +24,11 @@ import {
 import freeFallConfigs from "./configs/freefall.js";
 import eulerConfigs from "./configs/euler.js";
 import figure8 from "./configs/originalFigure8.js";
+import tachis from "./configs/mine.js"
 import afterfigure8 from "./configs/figure8new.js";
 import lagrange from "./configs/lagrange.js";
 import Sim from "./components/Sim.jsx";
+
 import circularResticred from "./configs/cr3bp.js";
 import { MdOutlineDarkMode, MdWidthNormal } from "react-icons/md";
 import SimoNBody from "./configs/simoNBody.js"
@@ -491,10 +495,10 @@ function App() {
               desk already
             </p>
             <ul className="grid">
-              {/* {brouckeConfigs
+              {tachis
             .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(brouckeConfigs, config.id)}>{config.name}</button></li>
-            ))} */}
+              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(tachis, config.id)}>{config.name}</button></li>
+            ))}
             </ul>
           </section>
           <section>
@@ -503,7 +507,7 @@ function App() {
           </section>
           <h1>N Body Configurations</h1>
           <p>I built a N-body simulator, didnt I?</p>
-          <section>
+          {/* <section>
             <h2 className="centeredText">N-Body Problem (Simo's Periods):</h2>
             <p>Guy named simo discovered a few solutions to the n body problem in early 2000s</p>
             <ul className="grid">
@@ -512,27 +516,27 @@ function App() {
               <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(SimoNBody, config.id)}>{config.name}</button></li>
             ))}
             </ul>
-          </section>
+          </section> */}
           <section>
-            <h2 className="centeredText">N-Body Problem (Trisolar):</h2>
-            <p>Trisolar with random planet just for fun</p>
+            <h2 className="centeredText">3 Body With some Planets</h2>
+            <p>Potenital Unstable and Stable Configs for the Trisolar ssytem from the 3 body problem novels/show. I took some 3 body orbits and added some planets orbitting the stars for fun</p>
             <ul className="grid">
-              {/* {brouckeConfigs
+              {trisolar
             .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(brouckeConfigs, config.id)}>{config.name}</button></li>
-            ))} */}
+              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(trisolar, config.id)}>{config.name}</button></li>
+            ))}
             </ul>
           </section>
           <section>
             <h2 className="centeredText">
               Restricted N-Body Problem (IRL Systems):
             </h2>
-            <p>Earth-Sun ssytem, ALpha Centuri etc</p>
+            <p>These include solar ssytem that i moddled aswellas the alpha centuri systemc</p>
             <ul className="grid">
-              {/* {brouckeConfigs
+              {restrictedNBody
             .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(brouckeConfigs, config.id)}>{config.name}</button></li>
-            ))} */}
+              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(restrictedNBody, config.id)}>{config.name}</button></li>
+            ))}
             </ul>
           </section>
         </div>
