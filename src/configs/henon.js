@@ -265,17 +265,22 @@ const henon = [
     ]
   },
   {
-    name: "Henon 25",
-    id: "henon-25",
-      scale: 150,
-    spf: 200,
-    sim: "cash-karp",
-    bodies: [
-      { m: 1, x: -0.369048589, y: 0, vx: 0, vy: 1.2820257965 },
-      { m: 1, x: 1.3429451203, y: 0, vx: 0, vy: -0.0114813594 },
-      { m: 1, x: -0.9738965313, y: 0, vx: 0, vy: -1.2705444371 }
-    ]
-  },
+  name: "Henon 25 (with field tracers)",
+  id: "henon-25-field",
+  scale: 150,
+  spf: 200,
+  sim: "cash-karp",
+  bodies: [
+    // Main three equal-mass bodies
+    { m: 1, x: -0.369048589, y: 0, vx: 0, vy: 1.2820257965 },
+    { m: 1, x: 1.3429451203, y: 0, vx: 0, vy: -0.0114813594 },
+    { m: 1, x: -0.9738965313, y: 0, vx: 0, vy: -1.2705444371 },
+
+    // --- Field tracers (massless) ---
+    // distributed along and between the x positions of the main bodies
+
+  ]
+}, 
   {
     name: "Henon 26",
     id: "henon-26",

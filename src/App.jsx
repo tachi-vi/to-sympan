@@ -27,6 +27,7 @@ import lagrange from "./configs/lagrange.js";
 import Sim from "./components/Sim.jsx";
 import circularResticred from "./configs/cr3bp.js";
 import { MdOutlineDarkMode, MdWidthNormal } from "react-icons/md";
+import SimoNBody from "./configs/simoNBody.js"
 
 function App() {
   const [selectedSim, setSelectedSim] = useState(null);
@@ -452,7 +453,7 @@ function App() {
             ))}
             </ul>
           </section> */}
-          <section>
+          {/* <section>
             <h2 className="centeredText">
               Circular Restricted Three-Body Problem (CR3BP)
             </h2>
@@ -469,19 +470,19 @@ function App() {
                 </li>
               ))}
             </ul>
-          </section>
-          <section>
+          </section> */}
+          {/* <section>
             <h2 className="centeredText">
               Elliptic Restricted Three-Body Problem (ER3BP):
             </h2>
             <p>Pertubation Theory</p>
             <ul className="grid">
-              {/* {brouckeConfigs
+              {brouckeConfigs
             .map(config => (
               <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(brouckeConfigs, config.id)}>{config.name}</button></li>
-            ))} */}
+            ))}
             </ul>
-          </section>
+          </section> */}
           <section>
             <h2 className="centeredText">Tachi's solutions :p (2025)</h2>
             <p>
@@ -504,12 +505,12 @@ function App() {
           <p>I built a N-body simulator, didnt I?</p>
           <section>
             <h2 className="centeredText">N-Body Problem (Simo's Periods):</h2>
-            <p>Very cool</p>
+            <p>Guy named simo discovered a few solutions to the n body problem in early 2000s</p>
             <ul className="grid">
-              {/* {brouckeConfigs
+              {SimoNBody
             .map(config => (
-              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(brouckeConfigs, config.id)}>{config.name}</button></li>
-            ))} */}
+              <li key={config.id}><button className={theme=="light"?"lghtBtn":"drkBtn" } onClick={()=>handleSimClick(SimoNBody, config.id)}>{config.name}</button></li>
+            ))}
             </ul>
           </section>
           <section>

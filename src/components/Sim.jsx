@@ -59,6 +59,7 @@ export default function Sim({
 
   //astronomical units scale
   //fix for 3 orbits
+  // You should include a swarm of zero-mass objects in the simulation to show how the shape of the field changes with time.
 
   //(optinal) (changing speed inbetween runs, changing scale inside runs, changing color scheme inside runs)
 
@@ -396,6 +397,10 @@ let bodies = configState.bodies.map((b, idx) => {
             <button class="run-config-button" onClick={() => setStartSim(true)}>
               Run Config
             </button>
+            <h3>Scale: </h3><p>This is how big or small the simukation renders on your screen, it as been deafulted to render appropriaptely for 1080p screens.</p>
+            <h3>Simulation Neth: </h3><p>RK2 and rk4 fore simplest and more advanced integraotr, vv for energy preseavtion,cash karp for dynamic time step, dormond prince is a wip.</p>
+              <h3>Time step </h3><p>Samller the timestep, the slower the sim, but more accuracy, irreleevnt for adaptive inteagraots tho.</p>
+              <h3>SPF </h3><p>Speed up the sim.</p>
           </div>
         </>
       )}
