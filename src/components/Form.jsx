@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function SimulationSettings({ theme, settings, setSettings }) {
+export default function SimulationSettings({ theme, settings, setSettings, config }) {
   const handleChange = (key, value) => {
     settings[key] = value;
     setSettings({ ...settings });
@@ -35,7 +35,7 @@ export default function SimulationSettings({ theme, settings, setSettings }) {
           <option value="rk4">Runge-Kutta 4</option>
           <option value="vv">Symplectic: Velocity Verlet</option>
           <option value="cash-karp">Adaptive Runge Kutta: Cash-Karp</option>
-          <option value="dopri">Adaptive Runge Kutta: Dormand Prince</option>
+          <option value="dopri">(!!WIP!!)Dormand Prince</option>
         </select>
       </div>
 
@@ -60,6 +60,25 @@ export default function SimulationSettings({ theme, settings, setSettings }) {
           onChange={(e) => handleChange("spf", parseInt(e.target.value))}
         />
       </div>
+      
+      {config.com_drift != null && (
+  <>
+
+  <div>
+    <label>Recenter to Center of Mass </label>
+    <input
+      type="checkbox"
+      checked={settings.recentertocom}
+      onChange={() =>
+        setSettings(s => ({
+          ...s,
+          recentertocom: !s.recentertocom
+        }))
+      }
+    /></div>
+  </>
+)}
+
     </div>
   );
 }

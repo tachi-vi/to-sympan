@@ -1,5 +1,7 @@
 /* Universal styles */
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -11,17 +13,18 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Times New Roman", serif;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 .centered{
   align-self: center;
 }
 h1 {
+  font-family: "IBM Plex Sans", sans-serif;
   font-size: 23px;
-  font-weight: bold;
+  font-weight: 480;
   align-self: flex-start; 
-  margin-bottom: 0px;
+
  
 }
 
@@ -29,19 +32,24 @@ section {
   display: flex;
   width: 100%;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
+
+
 h2 {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 450;
   font-style: italic;
   align-self: flex-start;
   margin-bottom: 0;
 }
 
 p {
-  font-size: 15.5px;
+  font-size: 16.5px;
   line-height: 1.6;
+  font-family: "IBM Plex Sans", sans-serif;
   text-align: justify;
   text-indent: 2em;
 }
@@ -51,13 +59,29 @@ p {
   color: #222;
 }
 
+.light a{
+  color: #222;
+}
+
+.dark a{
+  color: #989182;
+}
+
+a{
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 .dark {
   background-color: #121212; /* dark background */
   color: #e2e0d8;            /* light text */
 }
 
+
 button {
-  font-family: "Times New Roman", Georgia, serif;
+  font-family: "IBM Plex Sans", sans-serif;
   padding: 4px 8px;
   cursor: pointer;
   transition: background 0.2s;
@@ -76,10 +100,14 @@ button {
 
 @media (max-width: 768px) {
   .mainCont {
-    padding: 4vh 30px;
+    padding: 4vh 15px;
   }
 }
-
+ul{
+margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    }
 .grid {
   display: flex;
   flex-wrap: wrap;           /* allows wrapping */
@@ -104,18 +132,32 @@ button {
   border: 0px;
 }
 /* light classes for buttons */
+
+
+
+
 .lghtBtn{
   border: 1px solid #aaa;
   background: #fdf9f9;
+}
+
+.light .highlight{
+  border: 1px solid #aaa;
+  background: #ffeaea;
 }
 
 .lghtBtn:hover{
     background: #e0dcdc;
 }
 .drkBtn{
-    border: 1px solid #555;
+  border: 1px solid #555;
   background: #333;
   color: white;
+}
+
+.dark .highlight{
+  border: 1px solid #aaa;
+  background: #503d3d;
 }
 .drkBtn:hover{
     background: #555;
@@ -135,6 +177,25 @@ button {
   flex-direction: column;
   width: 100%;
   padding-bottom: 5rem;
+}
+
+.config-para-text-container {
+    padding: 4vh 15vw;
+  }
+
+@media (max-width: 768px) {
+  .config-para-text-container {
+    padding: 4vh 15px;
+  }
+}
+.config-para-text-container h3{
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+
+.config-para-text-container p{
+  text-indent: 0%;
 }
 
 
@@ -162,6 +223,7 @@ font-size: 1.5rem;
   font-size: 1rem;
   border-radius: 8px;
   border: 1px solid ;
+  margin-bottom: 2rem;
   cursor: pointer;
 
 }

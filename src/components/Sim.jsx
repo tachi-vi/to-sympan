@@ -19,7 +19,7 @@ import { rk4 } from "../integrators/rk4.js";
 import { Body } from "../integrators/bodyClass.js";
 import { rkck } from "../integrators/rkck.js";
 // import { doprin } from "../integrators/imported_dopri.js";
-import { dopri } from "../integrators/dopri.js"
+import { dopri } from "../integrators/dopri.js";
 
 export default function Sim({
   config,
@@ -39,8 +39,8 @@ export default function Sim({
 
   const [settings, setSettings] = useState({
     scale: config.scale || 200,
-    simulator: config.sim || "cash-karp",
-    spf: config.spf || 300,
+    simulator: config.sim || "rk4",
+    spf: config.spf || 100,
     dt: config.dt || 0.0001,
     trails: true,
     recentertocom: config.com_drift || false,
@@ -85,49 +85,159 @@ export default function Sim({
     }
     mainCanvas.style.background = "transparent";
 
-   const darkSchemes = [
-  // Neon mix
-  ["#FF3CAC", "#784BA0", "#2B86C5", "#00FFC5", "#FFD93D", "#FF6F91", "#845EC2", "#FF9671", "#4E8397", "#FFC75F"],
+    const darkSchemes = [
+      // Neon mix
+      [
+        "#FF3CAC",
+        "#784BA0",
+        "#2B86C5",
+        "#00FFC5",
+        "#FFD93D",
+        "#FF6F91",
+        "#845EC2",
+        "#FF9671",
+        "#4E8397",
+        "#FFC75F",
+      ],
 
-  // Cyber glow
-  ["#08F7FE", "#09FBD3", "#FE53BB", "#F5D300", "#00FF41", "#FF7300", "#F53844", "#3A86FF", "#FFBE0B", "#8338EC"],
+      // Cyber glow
+      [
+        "#08F7FE",
+        "#09FBD3",
+        "#FE53BB",
+        "#F5D300",
+        "#00FF41",
+        "#FF7300",
+        "#F53844",
+        "#3A86FF",
+        "#FFBE0B",
+        "#8338EC",
+      ],
 
-  // Space tones
-  ["#FF6B6B", "#FFE66D", "#4ECDC4", "#1A535C", "#F7FFF7", "#C0FDFB", "#5D737E", "#64B6AC", "#F25F5C", "#FFE066"],
+      // Space tones
+      [
+        "#FF6B6B",
+        "#FFE66D",
+        "#4ECDC4",
+        "#1A535C",
+        "#F7FFF7",
+        "#C0FDFB",
+        "#5D737E",
+        "#64B6AC",
+        "#F25F5C",
+        "#FFE066",
+      ],
 
-  // Electric contrast
-  ["#00EAD3", "#FFF5B7", "#FF449F", "#005F99", "#E40066", "#F7F052", "#00A8E8", "#FFB5A7", "#FFD6A5", "#9B5DE5"],
+      // Electric contrast
+      [
+        "#00EAD3",
+        "#FFF5B7",
+        "#FF449F",
+        "#005F99",
+        "#E40066",
+        "#F7F052",
+        "#00A8E8",
+        "#FFB5A7",
+        "#FFD6A5",
+        "#9B5DE5",
+      ],
 
-  // Pastel neon
-  ["#C3F0CA", "#A9DEF9", "#E4C1F9", "#FCF6BD", "#FF99C8", "#B8E1FF", "#BFD200", "#E36414", "#F9844A", "#FFB5A7"]
-];
+      // Pastel neon
+      [
+        "#C3F0CA",
+        "#A9DEF9",
+        "#E4C1F9",
+        "#FCF6BD",
+        "#FF99C8",
+        "#B8E1FF",
+        "#BFD200",
+        "#E36414",
+        "#F9844A",
+        "#FFB5A7",
+      ],
+    ];
 
+    const lightSchemes = [
+      // Gentle tones
+      [
+        "#0077B6",
+        "#FF6B6B",
+        "#6A4C93",
+        "#4CC9F0",
+        "#F72585",
+        "#4361EE",
+        "#F8961E",
+        "#43AA8B",
+        "#90BE6D",
+        "#577590",
+      ],
 
-const lightSchemes = [
-  // Gentle tones
-  ["#0077B6", "#FF6B6B", "#6A4C93", "#4CC9F0", "#F72585", "#4361EE", "#F8961E", "#43AA8B", "#90BE6D", "#577590"],
+      // Soft pastel
+      [
+        "#FFB5A7",
+        "#FCD5CE",
+        "#F9DCC4",
+        "#FEC89A",
+        "#A0C4FF",
+        "#BDB2FF",
+        "#FFC6FF",
+        "#9BF6FF",
+        "#FDFFB6",
+      ],
 
-  // Soft pastel
-  ["#FFB5A7", "#FCD5CE",  "#F9DCC4", "#FEC89A", "#A0C4FF", "#BDB2FF", "#FFC6FF", "#9BF6FF", "#FDFFB6"],
+      // Elegant neutrals
+      [
+        "#1E6091",
+        "#168AAD",
+        "#34A0A4",
+        "#52B69A",
+        "#76C893",
+        "#99D98C",
+        "#B5E48C",
+        "#D9ED92",
+        "#FFADAD",
+        "#FFD6A5",
+      ],
 
-  // Elegant neutrals
-  ["#1E6091", "#168AAD", "#34A0A4", "#52B69A", "#76C893", "#99D98C", "#B5E48C", "#D9ED92", "#FFADAD", "#FFD6A5"],
+      // Nature inspired
+      [
+        "#606C38",
+        "#283618",
+        "#DDA15E",
+        "#BC6C25",
+        "#8D99AE",
+        "#EF233C",
+        "#FFBF69",
+        "#6D597A",
+        "#B56576",
+      ],
 
-  // Nature inspired
-  ["#606C38", "#283618",  "#DDA15E", "#BC6C25", "#8D99AE", "#EF233C", "#FFBF69", "#6D597A", "#B56576"],
+      // Bright but flat
+      [
+        "#FF595E",
+        "#FFCA3A",
+        "#8AC926",
+        "#1982C4",
+        "#6A4C93",
+        "#F15BB5",
+        "#00BBF9",
+        "#00F5D4",
+        "#9B5DE5",
+        "#FF5400",
+      ],
+    ];
 
-  // Bright but flat
-  ["#FF595E", "#FFCA3A", "#8AC926", "#1982C4", "#6A4C93", "#F15BB5", "#00BBF9", "#00F5D4", "#9B5DE5", "#FF5400"]
-];
+    const activeScheme = (theme === "dark" ? darkSchemes : lightSchemes)[
+      Math.floor(
+        Math.random() *
+          (theme === "dark" ? darkSchemes.length : lightSchemes.length)
+      )
+    ];
 
- const activeScheme = (theme === "dark" ? darkSchemes : lightSchemes)[
-  Math.floor(Math.random() * (theme === "dark" ? darkSchemes.length : lightSchemes.length))
-];
-
-let bodies = configState.bodies.map((b, idx) => {
-  const color = activeScheme[idx % activeScheme.length]; // pick color by index
-  return new Body(b.x, b.y, b.vx, b.vy, b.m, b.name || null, color);
-});
+    let bodies = configState.bodies.map((b, idx) => {
+      const color = activeScheme[idx % activeScheme.length]; // pick color by index
+      return new Body(b.x, b.y, b.vx, b.vy, b.m, b.name || null, color);
+    });
 
     let dt = settings.dt;
     let stepsPerFrame = settings.spf;
@@ -143,7 +253,6 @@ let bodies = configState.bodies.map((b, idx) => {
 
       const n = bodies.length;
 
-   
       for (let body of bodies) {
         totalPx += body.m * body.vx;
         totalPy += body.m * body.vy;
@@ -152,13 +261,13 @@ let bodies = configState.bodies.map((b, idx) => {
 
       for (let i = 0; i < n; i++) {
         const b1 = bodies[i];
-        totalL += b1.x * b1.m * b1.vy - b1.y * b1.m * b1.vx; 
+        totalL += b1.x * b1.m * b1.vy - b1.y * b1.m * b1.vx;
         for (let j = i + 1; j < n; j++) {
           const b2 = bodies[j];
           const dx = b2.x - b1.x;
           const dy = b2.y - b1.y;
           const r = Math.sqrt(dx * dx + dy * dy) + 1e-8;
-          totalU += (-1 * b1.m * b2.m) / r; 
+          totalU += (-1 * b1.m * b2.m) / r;
         }
       }
 
@@ -190,9 +299,7 @@ let bodies = configState.bodies.map((b, idx) => {
       }
     }
 
-    function shiftToOrigin(bodies){
-      
-    }
+    function shiftToOrigin(bodies) {}
     const RunSim = () => {
       animationId = requestAnimationFrame(RunSim);
       mainCanvasContext.clearRect(0, 0, window_width, window_height);
@@ -207,11 +314,13 @@ let bodies = configState.bodies.map((b, idx) => {
           vv(1, bodies, dt);
         } else if (settings.simulator === "cash-karp") {
           rkck(1, bodies, dt);
-        } 
-        else if (settings.simulator === "dopri") {
-          dopri(1, bodies, dt);}
-        
-        if (settings.recentertocom){recenterToCOM(bodies);}
+        } else if (settings.simulator === "dopri") {
+          dopri(1, bodies, dt);
+        }
+
+        if (settings.recentertocom) {
+          recenterToCOM(bodies);
+        }
       }
 
       const metrics = computeSystemMetrics(bodies);
@@ -228,7 +337,6 @@ let bodies = configState.bodies.map((b, idx) => {
           potentialEnergy: metrics.potentialEnergy,
           kineticEnergy: metrics.kineticEnergy,
         });
-
 
         // if (systemMetricRecord.current.length > 50)
         //   systemMetricRecord.current.shift();
@@ -320,7 +428,7 @@ let bodies = configState.bodies.map((b, idx) => {
           <button className="config-page-button" onClick={handleStopButton}>
             <MdOutlineSettingsInputComposite />
           </button>
-{/*           
+          {/*           
           <div
             style={{
               position: "absolute",
@@ -382,6 +490,7 @@ let bodies = configState.bodies.map((b, idx) => {
             </button>
             <h1>{config.name}</h1>
             <p>ID: {config.id}</p>
+
             <ConfigDisplay config={configState} onConfigChange={setConfig} />
             {theme == "light" ? (
               <button className="themeButton" onClick={setThemeState}>
@@ -392,15 +501,52 @@ let bodies = configState.bodies.map((b, idx) => {
                 <MdOutlineDarkMode color="white" size={30} />
               </button>
             )}
+            {config.text != null && (
+              <>
+                <p>Authors' Notes: {config.text}</p>
+              </>
+            )}
             <h1 className="heading">Select Settings</h1>
-            <Form settings={settings} setSettings={setSettings} theme={theme}/>
+            <Form
+              settings={settings}
+              setSettings={setSettings}
+              config={config}
+              theme={theme}
+            />
             <button class="run-config-button" onClick={() => setStartSim(true)}>
               Run Config
             </button>
-            <h3>Scale: </h3><p>This is how big or small the simukation renders on your screen, it as been deafulted to render appropriaptely for 1080p screens.</p>
-            <h3>Simulation Neth: </h3><p>RK2 and rk4 fore simplest and more advanced integraotr, vv for energy preseavtion,cash karp for dynamic time step, dormond prince is a wip.</p>
-              <h3>Time step </h3><p>Samller the timestep, the slower the sim, but more accuracy, irreleevnt for adaptive inteagraots tho.</p>
-              <h3>SPF </h3><p>Speed up the sim.</p>
+            <div className="config-para-text-container">
+              <h3>Scale:</h3>
+              <p>
+                This controls how large or small the simulation appears on your
+                screen. The default value is optimized for 1080p displays. For some configurations, you might need to reduce this if you're on a vertical display or switch to landscape mod.
+              </p>
+
+              <h3>Simulation Method:</h3>
+              <p>
+                RK2 and RK4 are simple and advanced integrators. Velocity Verlet
+                (VV) is good for energy preservation. Cash–Karp uses a dynamic
+                time step. Dormand–Prince is still a WIP.
+              </p>
+
+              <h3>Time Step:</h3>
+              <p>
+                Smaller time steps make the simulation slower but more accurate.
+                This setting does not matter for adaptive integrators.
+              </p>
+
+              <h3>SPF (Steps per Frame):</h3>
+              <p>
+                Increases how many steps the simulation takes per rendered
+                frame, effectively speeding up the simulation.
+              </p>
+
+              <p>
+                For all these metrics, I’ve used the best possible settings to
+                ensure an ideal simulation experience.
+              </p>
+            </div>
           </div>
         </>
       )}

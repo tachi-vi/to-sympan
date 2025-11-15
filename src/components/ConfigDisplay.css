@@ -1,8 +1,12 @@
+
+
 .config-card {
+  align-self: center;
   border-radius: 12px;
   padding-left: 1rem;
   padding-right: 1rem;
   max-width: 500px;
+  overflow: scroll;
 }
 
 .config-title-input {

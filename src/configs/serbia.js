@@ -4,8 +4,9 @@ const I_butterfly = [
   {
     name: "Butterfly I.2.A",
     id: "i-2-a",
+    scale: 300,
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.306893, vy: 0.125507 },
       { m: 1, x: 0, y: 0, vx: -0.613786, vy: -0.251014 },
       { m: 1, x: 1, y: 0, vx: 0.306893, vy: 0.125507 }
@@ -14,7 +15,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.2.B",
     id: "i-2-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.392955, vy: 0.097579 },
       { m: 1, x: 0, y: 0, vx: -0.78591, vy: -0.195158 },
       { m: 1, x: 1, y: 0, vx: 0.392955, vy: 0.097579 }
@@ -23,7 +24,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.5.A",
     id: "i-5-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.411293, vy: 0.260755 },
       { m: 1, x: 0, y: 0, vx: -0.822586, vy: -0.52151 },
       { m: 1, x: 1, y: 0, vx: 0.411293, vy: 0.260755 }
@@ -32,7 +33,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.8.A",
     id: "i-8-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.412103, vy: 0.283384 },
       { m: 1, x: 0, y: 0, vx: -0.824206, vy: -0.566768 },
       { m: 1, x: 1, y: 0, vx: 0.412103, vy: 0.283384 }
@@ -41,7 +42,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.9.A",
     id: "i-9-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.402712, vy: 0.210016 },
       { m: 1, x: 0, y: 0, vx: -0.805424, vy: -0.420032 },
       { m: 1, x: 1, y: 0, vx: 0.402712, vy: 0.210016 }
@@ -50,7 +51,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.11.A",
     id: "i-11-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.415251, vy: 0.291346 },
       { m: 1, x: 0, y: 0, vx: -0.830502, vy: -0.582692 },
       { m: 1, x: 1, y: 0, vx: 0.415251, vy: 0.291346 }
@@ -59,7 +60,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.12.A",
     id: "i-12-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.408211, vy: 0.243685 },
       { m: 1, x: 0, y: 0, vx: -0.816422, vy: -0.48737 },
       { m: 1, x: 1, y: 0, vx: 0.408211, vy: 0.243685 }
@@ -68,7 +69,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.13.A",
     id: "i-13-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.399129, vy: 0.184708 },
       { m: 1, x: 0, y: 0, vx: -0.798258, vy: -0.369416 },
       { m: 1, x: 1, y: 0, vx: 0.399129, vy: 0.184708 }
@@ -77,7 +78,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.14.A",
     id: "i-14-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.415169, vy: 0.295341 },
       { m: 1, x: 0, y: 0, vx: -0.830338, vy: -0.590682 },
       { m: 1, x: 1, y: 0, vx: 0.415169, vy: 0.295341 }
@@ -86,7 +87,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.16.A",
     id: "i-16-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.404132, vy: 0.219164 },
       { m: 1, x: 0, y: 0, vx: -0.808264, vy: -0.438328 },
       { m: 1, x: 1, y: 0, vx: 0.404132, vy: 0.219164 }
@@ -95,7 +96,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.17.A",
     id: "i-17-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.397220, vy: 0.169198 },
       { m: 1, x: 0, y: 0, vx: -0.79444, vy: -0.338396 },
       { m: 1, x: 1, y: 0, vx: 0.397220, vy: 0.169198 }
@@ -104,7 +105,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.18.A",
     id: "i-18-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.413537, vy: 0.271006 },
       { m: 1, x: 0, y: 0, vx: -0.827074, vy: -0.542012 },
       { m: 1, x: 1, y: 0, vx: 0.413537, vy: 0.271006 }
@@ -113,7 +114,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.19.A",
     id: "i-19-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.407376, vy: 0.238843 },
       { m: 1, x: 0, y: 0, vx: -0.814752, vy: -0.477686 },
       { m: 1, x: 1, y: 0, vx: 0.407376, vy: 0.238843 }
@@ -122,7 +123,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.20.A",
     id: "Butterfly i-20-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.401559, vy: 0.202266 },
       { m: 1, x: 0, y: 0, vx: -0.803118, vy: -0.404532 },
       { m: 1, x: 1, y: 0, vx: 0.401559, vy: 0.202266 }
@@ -131,7 +132,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.21.A",
     id: "i-21-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.396058, vy: 0.158601 },
       { m: 1, x: 0, y: 0, vx: -0.792116, vy: -0.317202 },
       { m: 1, x: 1, y: 0, vx: 0.396058, vy: 0.158601 }
@@ -140,7 +141,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.22.A",
     id: "i-22-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.409622, vy: 0.251696 },
       { m: 1, x: 0, y: 0, vx: -0.819244, vy: -0.503392 },
       { m: 1, x: 1, y: 0, vx: 0.409622, vy: 0.251696 }
@@ -149,7 +150,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.23.A",
     id: "i-23-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.404679, vy: 0.222598 },
       { m: 1, x: 0, y: 0, vx: -0.809358, vy: -0.445196 },
       { m: 1, x: 1, y: 0, vx: 0.404679, vy: 0.222598 }
@@ -158,7 +159,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.24.A",
     id: "i-24-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.399807, vy: 0.189807 },
       { m: 1, x: 0, y: 0, vx: -0.799614, vy: -0.379614 },
       { m: 1, x: 1, y: 0, vx: 0.399807, vy: 0.189807 }
@@ -167,7 +168,7 @@ const I_butterfly = [
   {
     name: "Butterfly I.25.A",
     id: "i-25-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.395290, vy: 0.150852 },
       { m: 1, x: 0, y: 0, vx: -0.79058, vy: -0.301704 },
       { m: 1, x: 1, y: 0, vx: 0.395290, vy: 0.150852 }
@@ -179,7 +180,7 @@ const II_dragonfly = [
   {
     name: "Dragonfly II.4.A",
     id: "ii-4-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.080584, vy: 0.588836 },
       { m: 1, x: 0, y: 0, vx: -0.161168, vy: -1.177672 },
       { m: 1, x: 1, y: 0, vx: 0.080584, vy: 0.588836 }
@@ -188,7 +189,7 @@ const II_dragonfly = [
   {
     name: "Dragonfly II.6.A",
     id: "ii-6-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.186238, vy: 0.578714 },
       { m: 1, x: 0, y: 0, vx: -0.372476, vy: -1.157428 },
       { m: 1, x: 1, y: 0, vx: 0.186238, vy: 0.578714 }
@@ -197,7 +198,7 @@ const II_dragonfly = [
   {
     name: "Dragonfly II.8.A",
     id: "ii-8-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.144812, vy: 0.542898 },
       { m: 1, x: 0, y: 0, vx: -0.289624, vy: -1.085796 },
       { m: 1, x: 1, y: 0, vx: 0.144812, vy: 0.542898 }
@@ -206,7 +207,7 @@ const II_dragonfly = [
   {
     name: "Dragonfly II.11.A",
     id: "ii-11-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.184279, vy: 0.587188 },
       { m: 1, x: 0, y: 0, vx: -0.368558, vy: -1.174376 },
       { m: 1, x: 1, y: 0, vx: 0.184279, vy: 0.587188 }
@@ -215,7 +216,7 @@ const II_dragonfly = [
   {
     name: "Dragonfly II.14.A",
     id: "ii-14-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.108253, vy: 0.609812 },
       { m: 1, x: 0, y: 0, vx: -0.216506, vy: -1.219624 },
       { m: 1, x: 1, y: 0, vx: 0.108253, vy: 0.609812 }
@@ -224,7 +225,7 @@ const II_dragonfly = [
   {
     name: "Dragonfly II.14.B",
     id: "ii-14-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.074732, vy: 0.567936 },
       { m: 1, x: 0, y: 0, vx: -0.149464, vy: -1.135872 },
       { m: 1, x: 1, y: 0, vx: 0.074732, vy: 0.567936 }
@@ -233,7 +234,7 @@ const II_dragonfly = [
   {
     name: "Dragonfly II.15.A",
     id: "ii-15-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.049051, vy: 0.590194 },
       { m: 1, x: 0, y: 0, vx: -0.098102, vy: -1.180388 },
       { m: 1, x: 1, y: 0, vx: 0.049051, vy: 0.590194 }
@@ -242,7 +243,7 @@ const II_dragonfly = [
   {
     name: "Dragonfly II.15.B",
     id: "ii-15-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.058685, vy: 0.560793 },
       { m: 1, x: 0, y: 0, vx: -0.11737, vy: -1.121586 },
       { m: 1, x: 1, y: 0, vx: 0.058685, vy: 0.560793 }
@@ -251,7 +252,7 @@ const II_dragonfly = [
   {
     name: "Dragonfly II.15.C",
     id: "ii-15-c",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.047547, vy: 0.564659 },
       { m: 1, x: 0, y: 0, vx: -0.095094, vy: -1.129318 },
       { m: 1, x: 1, y: 0, vx: 0.047547, vy: 0.564659 }
@@ -260,7 +261,7 @@ const II_dragonfly = [
   {
     name: "Dragonfly II.15.D",
     id: "ii-15-d",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.179107, vy: 0.572603 },
       { m: 1, x: 0, y: 0, vx: -0.358214, vy: -1.145206 },
       { m: 1, x: 1, y: 0, vx: 0.179107, vy: 0.572603 }
@@ -269,7 +270,7 @@ const II_dragonfly = [
   {
     name: "Dragonfly II.16.A",
     id: "ii-16-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.073903, vy: 0.619865 },
       { m: 1, x: 0, y: 0, vx: -0.147806, vy: -1.23973 },
       { m: 1, x: 1, y: 0, vx: 0.073903, vy: 0.619865 }
@@ -278,7 +279,7 @@ const II_dragonfly = [
   {
     name: "Dragonfly II.16.B",
     id: "ii-16-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.155182, vy: 0.57929 },
       { m: 1, x: 0, y: 0, vx: -0.310364, vy: -1.15858 },
       { m: 1, x: 1, y: 0, vx: 0.155182, vy: 0.57929 }
@@ -287,7 +288,7 @@ const II_dragonfly = [
   {
     name: "Dragonfly II.17.A",
     id: "ii-17-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.061053, vy: 0.609177 },
       { m: 1, x: 0, y: 0, vx: -0.122106, vy: -1.218354 },
       { m: 1, x: 1, y: 0, vx: 0.061053, vy: 0.609177 }
@@ -296,7 +297,7 @@ const II_dragonfly = [
   {
     name: "Dragonfly II.17.B",
     id: "ii-17-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.050367, vy: 0.570341 },
       { m: 1, x: 0, y: 0, vx: -0.100734, vy: -1.140682 },
       { m: 1, x: 1, y: 0, vx: 0.050367, vy: 0.570341 }
@@ -305,7 +306,7 @@ const II_dragonfly = [
   {
     name: "Dragonfly II.17.C",
     id: "ii-17-c",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.179557, vy: 0.5813 },
       { m: 1, x: 0, y: 0, vx: -0.359114, vy: -1.1626 },
       { m: 1, x: 1, y: 0, vx: 0.179557, vy: 0.5813 }
@@ -314,7 +315,7 @@ const II_dragonfly = [
   {
     name: "Dragonfly II.17.D",
     id: "ii-17-d",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.170632, vy: 0.5804 },
       { m: 1, x: 0, y: 0, vx: -0.341264, vy: -1.1608 },
       { m: 1, x: 1, y: 0, vx: 0.170632, vy: 0.5804 }
@@ -327,7 +328,7 @@ const III_yinYang = [
     name: "YinYang III.3.A.α",
     id: "iii-3-a-alpha",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.513938, vy: 0.304736 },
       { m: 1, x: 0, y: 0, vx: -1.027876, vy: -0.609472 },
       { m: 1, x: 1, y: 0, vx: 0.513938, vy: 0.304736 }
@@ -336,7 +337,7 @@ const III_yinYang = [
   {
     name: "YinYang III.3.A.β",
     id: "iii-3-a-beta",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.282699, vy: 0.327209 },
       { m: 1, x: 0, y: 0, vx: -0.565398, vy: -0.654418 },
       { m: 1, x: 1, y: 0, vx: 0.282699, vy: 0.327209 }
@@ -345,7 +346,7 @@ const III_yinYang = [
   {
     name: "YinYang III.9.A.α",
     id: "iii-9-a-alpha",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.513150, vy: 0.289437 },
       { m: 1, x: 0, y: 0, vx: -1.0263, vy: -0.578874 },
       { m: 1, x: 1, y: 0, vx: 0.513150, vy: 0.289437 }
@@ -354,7 +355,7 @@ const III_yinYang = [
   {
     name: "YinYang III.9.A.β",
     id: "iii-9-a-beta",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.276237, vy: 0.331714 },
       { m: 1, x: 0, y: 0, vx: -0.552474, vy: -0.663428 },
       { m: 1, x: 1, y: 0, vx: 0.276237, vy: 0.331714 }
@@ -363,7 +364,7 @@ const III_yinYang = [
   {
     name: "YinYang III.12.A.α",
     id: "iii-12-a-alpha",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.416822, vy: 0.330333 },
       { m: 1, x: 0, y: 0, vx: -0.833644, vy: -0.660666 },
       { m: 1, x: 1, y: 0, vx: 0.416822, vy: 0.330333 }
@@ -372,7 +373,7 @@ const III_yinYang = [
   {
     name: "YinYang III.12.A.β",
     id: "iii-12-a-beta",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.417343, vy: 0.3131 },
       { m: 1, x: 0, y: 0, vx: -0.834686, vy: -0.6262 },
       { m: 1, x: 1, y: 0, vx: 0.417343, vy: 0.3131 }
@@ -381,7 +382,7 @@ const III_yinYang = [
   {
     name: "YinYang III.13.A.α",
     id: "iii-13-a-alpha",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.416444, vy: 0.336397 },
       { m: 1, x: 0, y: 0, vx: -0.832888, vy: -0.672794 },
       { m: 1, x: 1, y: 0, vx: 0.416444, vy: 0.336397 }
@@ -390,7 +391,7 @@ const III_yinYang = [
   {
     name: "YinYang III.13.A.β",
     id: "iii-13-a-beta",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.415819, vy: 0.306804 },
       { m: 1, x: 0, y: 0, vx: -0.831638, vy: -0.613608 },
       { m: 1, x: 1, y: 0, vx: 0.415819, vy: 0.306804 }
@@ -399,7 +400,7 @@ const III_yinYang = [
   {
     name: "YinYang III.15.A.α",
     id: "iii-15-a-alpha",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.414396, vy: 0.339223 },
       { m: 1, x: 0, y: 0, vx: -0.828792, vy: -0.678446 },
       { m: 1, x: 1, y: 0, vx: 0.414396, vy: 0.339223 }
@@ -408,7 +409,7 @@ const III_yinYang = [
   {
     name: "YinYang III.15.A.β",
     id: "iii-15-a-beta",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.417701, vy: 0.303455 },
       { m: 1, x: 0, y: 0, vx: -0.835402, vy: -0.60691 },
       { m: 1, x: 1, y: 0, vx: 0.417701, vy: 0.303455 }
@@ -417,7 +418,7 @@ const III_yinYang = [
   {
     name: "YinYang III.15.B.α",
     id: "iii-15-b-alpha",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.513063, vy: 0.296863 },
       { m: 1, x: 0, y: 0, vx: -1.026126, vy: -0.593726 },
       { m: 1, x: 1, y: 0, vx: 0.513063, vy: 0.296863 }
@@ -426,7 +427,7 @@ const III_yinYang = [
   {
     name: "YinYang III.15.B.β",
     id: "iii-15-b-beta",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.282036, vy: 0.325643 },
       { m: 1, x: 0, y: 0, vx: -0.564072, vy: -0.651286 },
       { m: 1, x: 1, y: 0, vx: 0.282036, vy: 0.325643 }
@@ -435,7 +436,7 @@ const III_yinYang = [
   {
     name: "YinYang III.15.C.α",
     id: "iii-15-c-alpha",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.516228, vy: 0.311409 },
       { m: 1, x: 0, y: 0, vx: -1.032456, vy: -0.622818 },
       { m: 1, x: 1, y: 0, vx: 0.516228, vy: 0.311409 }
@@ -444,7 +445,7 @@ const III_yinYang = [
   {
     name: "YinYang III.15.C.β",
     id: "iii-15-c-beta",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.280396, vy: 0.329229 },
       { m: 1, x: 0, y: 0, vx: -0.560792, vy: -0.658458 },
       { m: 1, x: 1, y: 0, vx: 0.280396, vy: 0.329229 }
@@ -453,7 +454,7 @@ const III_yinYang = [
   {
     name: "YinYang III.16.A.α",
     id: "iii-16-a-alpha",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.427659, vy: 0.340300 },
       { m: 1, x: 0, y: 0, vx: -0.855318, vy: -0.680600 },
       { m: 1, x: 1, y: 0, vx: 0.427659, vy: 0.340300 }
@@ -462,7 +463,7 @@ const III_yinYang = [
   {
     name: "YinYang III.16.A.β",
     id: "iii-16-a-beta",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.429098, vy: 0.299359 },
       { m: 1, x: 0, y: 0, vx: -0.858196, vy: -0.598718 },
       { m: 1, x: 1, y: 0, vx: 0.429098, vy: 0.299359 }
@@ -471,7 +472,7 @@ const III_yinYang = [
   {
     name: "YinYang III.18.A.α",
     id: "iii-18-a-alpha",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.413720, vy: 0.341698 },
       { m: 1, x: 0, y: 0, vx: -0.827440, vy: -0.683396 },
       { m: 1, x: 1, y: 0, vx: 0.413720, vy: 0.341698 }
@@ -480,7 +481,7 @@ const III_yinYang = [
   {
     name: "YinYang III.18.A.β",
     id: "iii-18-a-beta",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.414643, vy: 0.301216 },
       { m: 1, x: 0, y: 0, vx: -0.829286, vy: -0.602432 },
       { m: 1, x: 1, y: 0, vx: 0.414643, vy: 0.301216 }
@@ -489,7 +490,7 @@ const III_yinYang = [
   {
     name: "YinYang III.19.A.β",
     id: "iii-19-a-beta",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.418091, vy: 0.299900 },
       { m: 1, x: 0, y: 0, vx: -0.836182, vy: -0.599800 },
       { m: 1, x: 1, y: 0, vx: 0.418091, vy: 0.299900 }
@@ -498,7 +499,7 @@ const III_yinYang = [
   {
     name: "YinYang III.21.A.β",
     id: "iii-21-a-beta",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.418259, vy: 0.299482 },
       { m: 1, x: 0, y: 0, vx: -0.836518, vy: -0.598964 },
       { m: 1, x: 1, y: 0, vx: 0.418259, vy: 0.299482 }
@@ -512,7 +513,7 @@ const IVa_moth = [
     id: "iva-2-a",
     show: true,
     sim: "cash-karp",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.464445, vy: 0.396060 },
       { m: 1, x: 0, y: 0, vx: -0.92889, vy: -0.79212 },
       { m: 1, x: 1, y: 0, vx: 0.464445, vy: 0.396060 }
@@ -522,7 +523,7 @@ const IVa_moth = [
     name: "Moth IVa.4.A",
     show: true,
     id: "iva-4-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.439166, vy: 0.452968 },
       { m: 1, x: 0, y: 0, vx: -0.878332, vy: -0.905936 },
       { m: 1, x: 1, y: 0, vx: 0.439166, vy: 0.452968 }
@@ -531,7 +532,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.4.B",
     id: "iva-4-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.382604, vy: 0.459000 },
       { m: 1, x: 0, y: 0, vx: -0.765208, vy: -0.918000 },
       { m: 1, x: 1, y: 0, vx: 0.382604, vy: 0.459000 }
@@ -542,7 +543,7 @@ const IVa_moth = [
     id: "iva-6-a",
     show: true,
     sim: "cash-karp",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.429090, vy: 0.475313 },
       { m: 1, x: 0, y: 0, vx: -0.85818, vy: -0.950626 },
       { m: 1, x: 1, y: 0, vx: 0.429090, vy: 0.475313 }
@@ -551,7 +552,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.8.A",
     id: "iva-8-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.536917, vy: 0.453083 },
       { m: 1, x: 0, y: 0, vx: -1.073834, vy: -0.906166 },
       { m: 1, x: 1, y: 0, vx: 0.536917, vy: 0.453083 }
@@ -562,7 +563,7 @@ const IVa_moth = [
     id: "iva-8-b",
      show: true,
     sim: "cash-karp",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.556677, vy: 0.434231 },
       { m: 1, x: 0, y: 0, vx: -1.113354, vy: -0.868462 },
       { m: 1, x: 1, y: 0, vx: 0.556677, vy: 0.434231 }
@@ -571,7 +572,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.8.C",
     id: "iva-8-c",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.559188, vy: 0.427252 },
       { m: 1, x: 0, y: 0, vx: -1.118376, vy: -0.854504 },
       { m: 1, x: 1, y: 0, vx: 0.559188, vy: 0.427252 }
@@ -580,7 +581,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.8.D",
     id: "iva-8-d",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.443173, vy: 0.492707 },
       { m: 1, x: 0, y: 0, vx: -0.886346, vy: -0.985414 },
       { m: 1, x: 1, y: 0, vx: 0.443173, vy: 0.492707 }
@@ -589,7 +590,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.8.E",
     id: "iva-8-e",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.445695, vy: 0.492500 },
       { m: 1, x: 0, y: 0, vx: -0.89139, vy: -0.985000 },
       { m: 1, x: 1, y: 0, vx: 0.445695, vy: 0.492500 }
@@ -598,7 +599,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.8.F",
     id: "iva-8-f",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.401574, vy: 0.490047 },
       { m: 1, x: 0, y: 0, vx: -0.803148, vy: -0.980094 },
       { m: 1, x: 1, y: 0, vx: 0.401574, vy: 0.490047 }
@@ -606,7 +607,7 @@ const IVa_moth = [
   }, {
     name: "Moth IVa.8.G",
     id: "iva-8-g",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.396528, vy: 0.492290 },
       { m: 1, x: 0, y: 0, vx: -0.793056, vy: -0.984580 },
       { m: 1, x: 1, y: 0, vx: 0.396528, vy: 0.492290 }
@@ -615,7 +616,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.8.H",
     id: "iva-8-h",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.405043, vy: 0.492281 },
       { m: 1, x: 0, y: 0, vx: -0.810086, vy: -0.984562 },
       { m: 1, x: 1, y: 0, vx: 0.405043, vy: 0.492281 }
@@ -624,7 +625,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.8.I",
     id: "iva-8-i",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.536369, vy: 0.370817 },
       { m: 1, x: 0, y: 0, vx: -1.072738, vy: -0.741634 },
       { m: 1, x: 1, y: 0, vx: 0.536369, vy: 0.370817 }
@@ -633,7 +634,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.8.J",
     id: "iva-8-j",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.470929, vy: 0.463385 },
       { m: 1, x: 0, y: 0, vx: -0.941858, vy: -0.926770 },
       { m: 1, x: 1, y: 0, vx: 0.470929, vy: 0.463385 }
@@ -642,7 +643,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.8.K",
     id: "iva-8-k",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.581298, vy: 0.389502 },
       { m: 1, x: 0, y: 0, vx: -1.162596, vy: -0.779004 },
       { m: 1, x: 1, y: 0, vx: 0.581298, vy: 0.389502 }
@@ -651,7 +652,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.9.A",
     id: "iva-9-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.405276, vy: 0.496191 },
       { m: 1, x: 0, y: 0, vx: -0.810552, vy: -0.992382 },
       { m: 1, x: 1, y: 0, vx: 0.405276, vy: 0.496191 }
@@ -660,7 +661,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.9.B",
     id: "iva-9-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.409717, vy: 0.439222 },
       { m: 1, x: 0, y: 0, vx: -0.819434, vy: -0.878444 },
       { m: 1, x: 1, y: 0, vx: 0.409717, vy: 0.439222 }
@@ -669,7 +670,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.10.A",
     id: "iva-10-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.401289, vy: 0.498542 },
       { m: 1, x: 0, y: 0, vx: -0.802578, vy: -0.997084 },
       { m: 1, x: 1, y: 0, vx: 0.401289, vy: 0.498542 }
@@ -678,7 +679,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.10.B",
     id: "iva-10-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.504456, vy: 0.397379 },
       { m: 1, x: 0, y: 0, vx: -1.008912, vy: -0.794758 },
       { m: 1, x: 1, y: 0, vx: 0.504456, vy: 0.397379 }
@@ -687,7 +688,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.11.A.α",
     id: "iva-11-a-alpha",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.395852, vy: 0.503779 },
       { m: 1, x: 0, y: 0, vx: -0.791704, vy: -1.007558 },
       { m: 1, x: 1, y: 0, vx: 0.395852, vy: 0.503779 }
@@ -696,7 +697,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.11.A.β",
     id: "iva-11-a-beta",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.397055, vy: 0.499666 },
       { m: 1, x: 0, y: 0, vx: -0.794110, vy: -0.999332 },
       { m: 1, x: 1, y: 0, vx: 0.397055, vy: 0.499666 }
@@ -705,7 +706,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.11.B",
     id: "iva-11-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.397055, vy: 0.499666 },
       { m: 1, x: 0, y: 0, vx: -0.794110, vy: -0.999332 },
       { m: 1, x: 1, y: 0, vx: 0.397055, vy: 0.499666 }
@@ -713,7 +714,7 @@ const IVa_moth = [
   }, {
     name: "Moth IVa.12.A",
     id: "iva-12-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.382405, vy: 0.500500 },
       { m: 1, x: 0, y: 0, vx: -0.764810, vy: -1.001000 },
       { m: 1, x: 1, y: 0, vx: 0.382405, vy: 0.500500 }
@@ -722,7 +723,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.12.B",
     id: "iva-12-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.396136, vy: 0.507599 },
       { m: 1, x: 0, y: 0, vx: -0.792272, vy: -1.015198 },
       { m: 1, x: 1, y: 0, vx: 0.396136, vy: 0.507599 }
@@ -731,7 +732,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.12.C",
     id: "iva-12-c",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.398039, vy: 0.503891 },
       { m: 1, x: 0, y: 0, vx: -0.796078, vy: -1.007782 },
       { m: 1, x: 1, y: 0, vx: 0.398039, vy: 0.503891 }
@@ -740,7 +741,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.12.D",
     id: "iva-12-d",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.564500, vy: 0.370600 },
       { m: 1, x: 0, y: 0, vx: -1.129000, vy: -0.741200 },
       { m: 1, x: 1, y: 0, vx: 0.564500, vy: 0.370600 }
@@ -749,7 +750,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.12.E",
     id: "iva-12-e",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.535402, vy: 0.348429 },
       { m: 1, x: 0, y: 0, vx: -1.070804, vy: -0.696858 },
       { m: 1, x: 1, y: 0, vx: 0.535402, vy: 0.348429 }
@@ -758,7 +759,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.13.A",
     id: "iva-13-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.399096, vy: 0.508000 },
       { m: 1, x: 0, y: 0, vx: -0.798192, vy: -1.016000 },
       { m: 1, x: 1, y: 0, vx: 0.399096, vy: 0.508000 }
@@ -767,7 +768,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.13.B",
     id: "iva-13-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.391290, vy: 0.508391 },
       { m: 1, x: 0, y: 0, vx: -0.782580, vy: -1.016782 },
       { m: 1, x: 1, y: 0, vx: 0.391290, vy: 0.508391 }
@@ -776,7 +777,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.13.C",
     id: "iva-13-c",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.403099, vy: 0.502600 },
       { m: 1, x: 0, y: 0, vx: -0.806198, vy: -1.005200 },
       { m: 1, x: 1, y: 0, vx: 0.403099, vy: 0.502600 }
@@ -785,7 +786,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.14.A",
     id: "iva-14-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.387473, vy: 0.508716 },
       { m: 1, x: 0, y: 0, vx: -0.774946, vy: -1.017432 },
       { m: 1, x: 1, y: 0, vx: 0.387473, vy: 0.508716 }
@@ -794,7 +795,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.14.B",
     id: "iva-14-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.396148, vy: 0.508693 },
       { m: 1, x: 0, y: 0, vx: -0.792296, vy: -1.017386 },
       { m: 1, x: 1, y: 0, vx: 0.396148, vy: 0.508693 }
@@ -803,7 +804,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.14.C",
     id: "iva-14-c",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.448047, vy: 0.459645 },
       { m: 1, x: 0, y: 0, vx: -0.896094, vy: -0.919290 },
       { m: 1, x: 1, y: 0, vx: 0.448047, vy: 0.459645 }
@@ -812,7 +813,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.14.D",
     id: "iva-14-d",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.454267, vy: 0.455164 },
       { m: 1, x: 0, y: 0, vx: -0.908534, vy: -0.910328 },
       { m: 1, x: 1, y: 0, vx: 0.454267, vy: 0.455164 }
@@ -821,7 +822,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.15.A",
     id: "iva-15-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.391105, vy: 0.500608 },
       { m: 1, x: 0, y: 0, vx: -0.782210, vy: -1.001216 },
       { m: 1, x: 1, y: 0, vx: 0.391105, vy: 0.500608 }
@@ -830,7 +831,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.15.B",
     id: "iva-15-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.428275, vy: 0.464017 },
       { m: 1, x: 0, y: 0, vx: -0.856550, vy: -0.928034 },
       { m: 1, x: 1, y: 0, vx: 0.428275, vy: 0.464017 }
@@ -839,7 +840,7 @@ const IVa_moth = [
   {
     name: "Moth IVa.16.A",
     id: "iva-16-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.220100, vy: 0.486000 },
       { m: 1, x: 0, y: 0, vx: -0.440200, vy: -0.972000 },
       { m: 1, x: 1, y: 0, vx: 0.220100, vy: 0.486000 }
@@ -851,7 +852,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.3.A",
     id: "ivb-3-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.405916, vy: 0.230163 },
       { m: 1, x: 0, y: 0, vx: -0.811832, vy: -0.460326 },
       { m: 1, x: 1, y: 0, vx: 0.405916, vy: 0.230163 }
@@ -860,7 +861,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.6.A",
     id: "ivb-6-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.414913, vy: 0.274619 },
       { m: 1, x: 0, y: 0, vx: -0.829826, vy: -0.549238 },
       { m: 1, x: 1, y: 0, vx: 0.414913, vy: 0.274619 }
@@ -869,7 +870,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.7.A",
     id: "ivb-7-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.398044, vy: 0.176138 },
       { m: 1, x: 0, y: 0, vx: -0.796088, vy: -0.352276 },
       { m: 1, x: 1, y: 0, vx: 0.398044, vy: 0.176138 }
@@ -878,7 +879,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.9.A",
     id: "ivb-9-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.414349, vy: 0.288103 },
       { m: 1, x: 0, y: 0, vx: -0.828698, vy: -0.576206 },
       { m: 1, x: 1, y: 0, vx: 0.414349, vy: 0.288103 }
@@ -887,7 +888,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.11.A",
     id: "ivb-11-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.395637, vy: 0.154450 },
       { m: 1, x: 0, y: 0, vx: -0.791274, vy: -0.308900 },
       { m: 1, x: 1, y: 0, vx: 0.395637, vy: 0.154450 }
@@ -896,7 +897,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.14.A",
     id: "ivb-14-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.401619, vy: 0.204794 },
       { m: 1, x: 0, y: 0, vx: -0.803238, vy: -0.409588 },
       { m: 1, x: 1, y: 0, vx: 0.401619, vy: 0.204794 }
@@ -905,7 +906,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.14.B",
     id: "ivb-14-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.403492, vy: 0.204300 },
       { m: 1, x: 0, y: 0, vx: -0.806984, vy: -0.4086 },
       { m: 1, x: 1, y: 0, vx: 0.403492, vy: 0.204300 }
@@ -914,7 +915,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.15.A",
     id: "ivb-15-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.415696, vy: 0.296400 },
       { m: 1, x: 0, y: 0, vx: -0.831392, vy: -0.5928 },
       { m: 1, x: 1, y: 0, vx: 0.415696, vy: 0.296400 }
@@ -923,7 +924,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.15.B",
     id: "ivb-15-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.413501, vy: 0.296800 },
       { m: 1, x: 0, y: 0, vx: -0.827002, vy: -0.5936 },
       { m: 1, x: 1, y: 0, vx: 0.413501, vy: 0.296800 }
@@ -932,7 +933,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.15.C.α",
     id: "ivb-15-c-alpha",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.349985, vy: 0.250800 },
       { m: 1, x: 0, y: 0, vx: -0.69997, vy: -0.5016 },
       { m: 1, x: 1, y: 0, vx: 0.349985, vy: 0.250800 }
@@ -941,14 +942,14 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.15.C.β",
     id: "ivb-15-c-beta",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.454337, vy: 0.228394 },
       { m: 1, x: 0, y: 0, vx: -0.908674, vy: -0.456788 },
       { m: 1, x: 1, y: 0, vx: 0.454337, vy: 0.228394 }
     ]
   },{  name: "Butterfly IVb.15.D",
     id: "ivb-15-d",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.395205, vy: 0.142197 },
       { m: 1, x: 0, y: 0, vx: -0.790410, vy: -0.284394 },
       { m: 1, x: 1, y: 0, vx: 0.395205, vy: 0.142197 }
@@ -958,7 +959,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.15.E",
     id: "ivb-15-e",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.393926, vy: 0.142656 },
       { m: 1, x: 0, y: 0, vx: -0.787852, vy: -0.285312 },
       { m: 1, x: 1, y: 0, vx: 0.393926, vy: 0.142656 }
@@ -967,7 +968,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.15.F",
     id: "ivb-15-f",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.394561, vy: 0.142429 },
       { m: 1, x: 0, y: 0, vx: -0.789122, vy: -0.284858 },
       { m: 1, x: 1, y: 0, vx: 0.394561, vy: 0.142429 }
@@ -976,7 +977,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.15.G",
     id: "ivb-15-g",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.314095, vy: 0.244821 },
       { m: 1, x: 0, y: 0, vx: -0.628190, vy: -0.489642 },
       { m: 1, x: 1, y: 0, vx: 0.314095, vy: 0.244821 }
@@ -985,7 +986,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.15.H",
     id: "ivb-15-h",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.473552, vy: 0.210104 },
       { m: 1, x: 0, y: 0, vx: -0.947104, vy: -0.420208 },
       { m: 1, x: 1, y: 0, vx: 0.473552, vy: 0.210104 }
@@ -994,7 +995,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.17.A",
     id: "ivb-17-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.475795, vy: 0.160305 },
       { m: 1, x: 0, y: 0, vx: -0.951590, vy: -0.320610 },
       { m: 1, x: 1, y: 0, vx: 0.475795, vy: 0.160305 }
@@ -1003,7 +1004,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.18.A",
     id: "ivb-18-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.399573, vy: 0.188035 },
       { m: 1, x: 0, y: 0, vx: -0.799146, vy: -0.376070 },
       { m: 1, x: 1, y: 0, vx: 0.399573, vy: 0.188035 }
@@ -1012,7 +1013,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.18.B",
     id: "ivb-18-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.321226, vy: 0.204691 },
       { m: 1, x: 0, y: 0, vx: -0.642452, vy: -0.409382 },
       { m: 1, x: 1, y: 0, vx: 0.321226, vy: 0.204691 }
@@ -1021,7 +1022,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.19.A",
     id: "ivb-19-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.393934, vy: 0.134728 },
       { m: 1, x: 0, y: 0, vx: -0.787868, vy: -0.269456 },
       { m: 1, x: 1, y: 0, vx: 0.393934, vy: 0.134728 }
@@ -1030,7 +1031,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.20.A",
     id: "ivb-20-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.408594, vy: 0.245877 },
       { m: 1, x: 0, y: 0, vx: -0.817188, vy: -0.491754 },
       { m: 1, x: 1, y: 0, vx: 0.408594, vy: 0.245877 }
@@ -1039,7 +1040,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.21.A",
     id: "ivb-21-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.403244, vy: 0.213486 },
       { m: 1, x: 0, y: 0, vx: -0.806488, vy: -0.426972 },
       { m: 1, x: 1, y: 0, vx: 0.403244, vy: 0.213486 }
@@ -1048,7 +1049,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.22.A",
     id: "ivb-22-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.299506, vy: 0.292406 },
       { m: 1, x: 0, y: 0, vx: -0.599012, vy: -0.584812 },
       { m: 1, x: 1, y: 0, vx: 0.299506, vy: 0.292406 }
@@ -1057,7 +1058,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.22.B",
     id: "ivb-22-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.302916, vy: 0.197067 },
       { m: 1, x: 0, y: 0, vx: -0.605832, vy: -0.394134 },
       { m: 1, x: 1, y: 0, vx: 0.302916, vy: 0.197067 }
@@ -1066,7 +1067,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.23.A",
     id: "ivb-23-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.410511, vy: 0.256588 },
       { m: 1, x: 0, y: 0, vx: -0.821022, vy: -0.513176 },
       { m: 1, x: 1, y: 0, vx: 0.410511, vy: 0.256588 }
@@ -1075,7 +1076,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.23.B",
     id: "ivb-23-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.450288, vy: 0.099987 },
       { m: 1, x: 0, y: 0, vx: -0.900576, vy: -0.199974 },
       { m: 1, x: 1, y: 0, vx: 0.450288, vy: 0.099987 }
@@ -1084,7 +1085,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.23.C",
     id: "ivb-23-c",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.393556, vy: 0.129337 },
       { m: 1, x: 0, y: 0, vx: -0.787112, vy: -0.258674 },
       { m: 1, x: 1, y: 0, vx: 0.393556, vy: 0.129337 }
@@ -1093,7 +1094,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.23.D",
     id: "ivb-23-d",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.308989, vy: 0.157106 },
       { m: 1, x: 0, y: 0, vx: -0.617978, vy: -0.314212 },
       { m: 1, x: 1, y: 0, vx: 0.308989, vy: 0.157106 }
@@ -1102,7 +1103,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.24.A",
     id: "ivb-24-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.350112, vy: 0.079339 },
       { m: 1, x: 0, y: 0, vx: -0.700224, vy: -0.158678 },
       { m: 1, x: 1, y: 0, vx: 0.350112, vy: 0.079339 }
@@ -1111,7 +1112,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.25.A",
     id: "ivb-25-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.401353, vy: 0.200855 },
       { m: 1, x: 0, y: 0, vx: -0.802706, vy: -0.401710 },
       { m: 1, x: 1, y: 0, vx: 0.401353, vy: 0.200855 }
@@ -1120,7 +1121,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.26.A",
     id: "ivb-26-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.396987, vy: 0.167167 },
       { m: 1, x: 0, y: 0, vx: -0.793974, vy: -0.334334 },
       { m: 1, x: 1, y: 0, vx: 0.396987, vy: 0.167167 }
@@ -1129,7 +1130,7 @@ const IVb_butterfly = [
   {
     name: "Butterfly IVb.27.A",
     id: "ivb-27-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.393295, vy: 0.125347 },
       { m: 1, x: 0, y: 0, vx: -0.786590, vy: -0.250694 },
       { m: 1, x: 1, y: 0, vx: 0.393295, vy: 0.125347 }
@@ -1141,7 +1142,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.5.A",
     id: "ivc-5-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.383444, vy: 0.377364 },
       { m: 1, x: 0, y: 0, vx: -0.766888, vy: -0.754728 },
       { m: 1, x: 1, y: 0, vx: 0.383444, vy: 0.377364 }
@@ -1150,7 +1151,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.8.A",
     id: "ivc-8-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.519680, vy: 0.353304 },
       { m: 1, x: 0, y: 0, vx: -1.03936, vy: -0.706608 },
       { m: 1, x: 1, y: 0, vx: 0.519680, vy: 0.353304 }
@@ -1159,7 +1160,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.8.B",
     id: "ivc-8-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.519632, vy: 0.353330 },
       { m: 1, x: 0, y: 0, vx: -1.039264, vy: -0.70666 },
       { m: 1, x: 1, y: 0, vx: 0.519632, vy: 0.353330 }
@@ -1168,7 +1169,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.8.C",
     id: "ivc-8-c",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.302616, vy: 0.357685 },
       { m: 1, x: 0, y: 0, vx: -0.605232, vy: -0.71537 },
       { m: 1, x: 1, y: 0, vx: 0.302616, vy: 0.357685 }
@@ -1177,7 +1178,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.12.A.α",
     id: "ivc-12-a-alpha",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.463804, vy: 0.357385 },
       { m: 1, x: 0, y: 0, vx: -0.927608, vy: -0.71477 },
       { m: 1, x: 1, y: 0, vx: 0.463804, vy: 0.357385 }
@@ -1186,7 +1187,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.12.A.β",
     id: "ivc-12-a-beta",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.429325, vy: 0.373739 },
       { m: 1, x: 0, y: 0, vx: -0.85865, vy: -0.747478 },
       { m: 1, x: 1, y: 0, vx: 0.429325, vy: 0.373739 }
@@ -1195,7 +1196,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.12.B",
     id: "ivc-12-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.417326, vy: 0.293300 },
       { m: 1, x: 0, y: 0, vx: -0.834652, vy: -0.5866 },
       { m: 1, x: 1, y: 0, vx: 0.417326, vy: 0.293300 }
@@ -1204,7 +1205,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.13.A",
     id: "ivc-13-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.410016, vy: 0.253400 },
       { m: 1, x: 0, y: 0, vx: -0.820032, vy: -0.5068 },
       { m: 1, x: 1, y: 0, vx: 0.410016, vy: 0.253400 }
@@ -1212,7 +1213,7 @@ const IVc_moth = [
   }, {
     name: "Moth IVc.15.A",
     id: "ivc-15-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.417304, vy: 0.296100 },
       { m: 1, x: 0, y: 0, vx: -0.834608, vy: -0.592200 },
       { m: 1, x: 1, y: 0, vx: 0.417304, vy: 0.296100 }
@@ -1221,7 +1222,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.15.B",
     id: "ivc-15-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.338374, vy: 0.276396 },
       { m: 1, x: 0, y: 0, vx: -0.676748, vy: -0.552792 },
       { m: 1, x: 1, y: 0, vx: 0.338374, vy: 0.276396 }
@@ -1230,7 +1231,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.15.C",
     id: "ivc-15-c",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.339476, vy: 0.276300 },
       { m: 1, x: 0, y: 0, vx: -0.678952, vy: -0.552600 },
       { m: 1, x: 1, y: 0, vx: 0.339476, vy: 0.276300 }
@@ -1239,7 +1240,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.16.A",
     id: "ivc-16-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.471671, vy: 0.252351 },
       { m: 1, x: 0, y: 0, vx: -0.943342, vy: -0.504702 },
       { m: 1, x: 1, y: 0, vx: 0.471671, vy: 0.252351 }
@@ -1248,7 +1249,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.16.B",
     id: "ivc-16-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.411718, vy: 0.266600 },
       { m: 1, x: 0, y: 0, vx: -0.823436, vy: -0.533200 },
       { m: 1, x: 1, y: 0, vx: 0.411718, vy: 0.266600 }
@@ -1257,7 +1258,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.16.C",
     id: "ivc-16-c",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.412798, vy: 0.266401 },
       { m: 1, x: 0, y: 0, vx: -0.825596, vy: -0.532802 },
       { m: 1, x: 1, y: 0, vx: 0.412798, vy: 0.266401 }
@@ -1266,7 +1267,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.17.A",
     id: "ivc-17-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.413909, vy: 0.344900 },
       { m: 1, x: 0, y: 0, vx: -0.827818, vy: -0.689800 },
       { m: 1, x: 1, y: 0, vx: 0.413909, vy: 0.344900 }
@@ -1275,7 +1276,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.17.B",
     id: "ivc-17-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.476139, vy: 0.268743 },
       { m: 1, x: 0, y: 0, vx: -0.952278, vy: -0.537486 },
       { m: 1, x: 1, y: 0, vx: 0.476139, vy: 0.268743 }
@@ -1284,7 +1285,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.18.A",
     id: "ivc-18-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.415114, vy: 0.297900 },
       { m: 1, x: 0, y: 0, vx: -0.830228, vy: -0.595800 },
       { m: 1, x: 1, y: 0, vx: 0.415114, vy: 0.297900 }
@@ -1293,7 +1294,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.19.A",
     id: "ivc-19-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.403994, vy: 0.366295 },
       { m: 1, x: 0, y: 0, vx: -0.807988, vy: -0.732590 },
       { m: 1, x: 1, y: 0, vx: 0.403994, vy: 0.366295 }
@@ -1302,7 +1303,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.19.Bα",
     id: "ivc-19-b-alpha",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.406956, vy: 0.354377 },
       { m: 1, x: 0, y: 0, vx: -0.813912, vy: -0.708754 },
       { m: 1, x: 1, y: 0, vx: 0.406956, vy: 0.354377 }
@@ -1311,7 +1312,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.19.Bβ",
     id: "ivc-19-b-beta",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.390504, vy: 0.351287 },
       { m: 1, x: 0, y: 0, vx: -0.781008, vy: -0.702574 },
       { m: 1, x: 1, y: 0, vx: 0.390504, vy: 0.351287 }
@@ -1320,7 +1321,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.21.A",
     id: "ivc-21-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.415603, vy: 0.298500 },
       { m: 1, x: 0, y: 0, vx: -0.831206, vy: -0.597000 },
       { m: 1, x: 1, y: 0, vx: 0.415603, vy: 0.298500 }
@@ -1329,7 +1330,7 @@ const IVc_moth = [
   {
     name: "Moth IVc.22.A",
     id: "ivc-22-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       { m: 1, x: -1, y: 0, vx: 0.406702, vy: 0.282083 },
       { m: 1, x: 0, y: 0, vx: -0.813404, vy: -0.564166 },
       { m: 1, x: 1, y: 0, vx: 0.406702, vy: 0.282083 }
@@ -1343,7 +1344,7 @@ const V_figure8 = [
     name: "Figure 8 - V.1.A",
     id: "v-1-a",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1371,7 +1372,7 @@ const V_figure8 = [
     name: "Figure 8 - V.1.B",
     id: "v-1-b",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1398,7 +1399,7 @@ const V_figure8 = [
   {
     name: "Figure 8 - V.8.B",
     id: "v-8-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1426,7 +1427,7 @@ const V_figure8 = [
     name: "Figure 8 -  V.11.A",
     id: "v-11-a",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1454,7 +1455,7 @@ const V_figure8 = [
     name: "Figure 8 -  V.11.B",
     id: "v-11-b",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1481,7 +1482,7 @@ const V_figure8 = [
   {
     name: "Figure 8 - V.12.A",
     id: "v-12-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1509,7 +1510,7 @@ const V_figure8 = [
     name: "Figure 8 - V.14.A",
     id: "v-14-a",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1538,7 +1539,7 @@ const V_figure8 = [
     id: "v-15-a",
     show: true,
     scale: 250,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1565,7 +1566,7 @@ const V_figure8 = [
   {
     name: "Figure 8 - V.16.A",
     id: "v-16-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1593,7 +1594,7 @@ const V_figure8 = [
     name: "Figure 8 - V.17.A",
     id: "v-17-a",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1621,7 +1622,7 @@ const V_figure8 = [
     name: "Figure 8 - V.17.B",
     id: "v-17-b",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1649,7 +1650,7 @@ const V_figure8 = [
     name: "Figure 8 - V.17.C",
     id: "v-17-c",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1677,7 +1678,7 @@ const V_figure8 = [
     name: "Figure 8 - V.4.A.\u03b1",
     id: "v-4-a-alpha",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1705,7 +1706,7 @@ const V_figure8 = [
     name: "Figure 8 - V.17.D",
     id: "v-17-d",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1733,7 +1734,7 @@ const V_figure8 = [
     name: "Figure 8 - V.17.E",
     id: "v-17-e",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1761,7 +1762,7 @@ const V_figure8 = [
     name: "Figure 8 - V.17.F",
     id: "v-17-f",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1789,7 +1790,7 @@ const V_figure8 = [
     name: "Figure 8 - V.17.G",
     id: "v-17-g",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1817,7 +1818,7 @@ const V_figure8 = [
     name: "Figure 8 - V.17.H",
     id: "v-17-h",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1845,7 +1846,7 @@ const V_figure8 = [
     name: "Figure 8 - V.17.I",
     id: "v-17-i",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1873,7 +1874,7 @@ const V_figure8 = [
     name: "Figure 8 - V.17.J",
     id: "v-17-j",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1900,7 +1901,7 @@ const V_figure8 = [
   {
     name: "Figure 8 - V.20.A",
     id: "v-20-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1928,7 +1929,7 @@ const V_figure8 = [
     name: "Figure 8 - V.4.A.\u03b2",
     id: "v-4-a-beta",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1957,7 +1958,7 @@ const V_figure8 = [
     show: true,
     id: "v-5-a",
     fav: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -1985,7 +1986,7 @@ const V_figure8 = [
     name: "Figure 8 - V.7.A",
     id: "v-7-a",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2013,7 +2014,7 @@ const V_figure8 = [
     name: "Figure 8 - V.7.B",
     id: "v-7-b",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2041,7 +2042,7 @@ const V_figure8 = [
     name: "Figure 8 - V.7.C",
     id: "v-7-c",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2069,7 +2070,7 @@ const V_figure8 = [
     name: "Figure 8 - V.7.D",
     id: "v-7-d",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2097,7 +2098,7 @@ const V_figure8 = [
     name: "Figure 8 - V.8.A",
     id: "v-8-a",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2128,7 +2129,7 @@ const VI_yarn = [
     name: "Yarn - VI.2.A",
     id: "vi-2-a",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2156,7 +2157,7 @@ const VI_yarn = [
     name: "Yarn - VI.4.A",
     id: "vi-4-a",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2183,7 +2184,7 @@ const VI_yarn = [
   {
     name: "Yarn - VI.6.A",
     id: "vi-6-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2210,7 +2211,7 @@ const VI_yarn = [
   {
     name: "Yarn - VI.6.B",
     id: "vi-6-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2237,7 +2238,7 @@ const VI_yarn = [
   {
     name: "Yarn - VI.6.C",
     id: "vi-6-c",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2264,7 +2265,7 @@ const VI_yarn = [
   {
     name: "Yarn - VI.12.A",
     id: "vi-12-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2291,7 +2292,7 @@ const VI_yarn = [
   {
     name: "Yarn - VI.14.A",
     id: "vi-14-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2321,7 +2322,7 @@ const VIIa_moth = [
   {
     name: "Moth - VIIa.6.A",
     id: "viia-6-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2348,7 +2349,7 @@ const VIIa_moth = [
   {
     name: "Moth - VIIa.7.A.\u03b1",
     id: "viia-7-a-alpha",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2375,7 +2376,7 @@ const VIIa_moth = [
   {
     name: "Moth - VIIa.7.A.\u03b2",
     id: "viia-7-a-beta",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2402,7 +2403,7 @@ const VIIa_moth = [
   {
     name: "Moth - VIIa.10.A",
     id: "viia-10-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2429,7 +2430,7 @@ const VIIa_moth = [
   {
     name: "Moth - VIIa.11.A",
     id: "viia-11-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2456,7 +2457,7 @@ const VIIa_moth = [
   {
     name: "Moth - VIIa.13.A",
     id: "viia-13-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2483,7 +2484,7 @@ const VIIa_moth = [
   {
     name: "Moth - VIIa.13.B",
     id: "viia-13-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2510,7 +2511,7 @@ const VIIa_moth = [
   {
     name: "Moth - VIIa.13.C",
     id: "viia-13-c",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2541,7 +2542,7 @@ const VIIb_moth = [
     name: "Moth - VIIb.4.A",
     id: "viib-4-a",
     show: true,
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2568,7 +2569,7 @@ const VIIb_moth = [
   {
     name: "Moth - VIIb.7.A",
     id: "viib-7-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2595,7 +2596,7 @@ const VIIb_moth = [
   {
     name: "Moth - VIIb.18.A",
     id: "viib-18-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2622,7 +2623,7 @@ const VIIb_moth = [
   {
     name: "Moth - VIIb.20.A",
     id: "viib-20-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2649,7 +2650,7 @@ const VIIb_moth = [
   {
     name: "Moth - VIIb.7.B",
     id: "viib-7-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2676,7 +2677,7 @@ const VIIb_moth = [
   {
     name: "Moth - VIIb.9.A",
     id: "viib-9-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2703,7 +2704,7 @@ const VIIb_moth = [
   {
     name: "Moth - VIIb.10.A",
     id: "viib-10-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2730,7 +2731,7 @@ const VIIb_moth = [
   {
     name: "Moth - VIIb.13.A",
     id: "viib-13-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2757,7 +2758,7 @@ const VIIb_moth = [
   {
     name: "Moth - VIIb.15.A",
     id: "viib-15-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2784,7 +2785,7 @@ const VIIb_moth = [
   {
     name: "Moth - VIIb.15.B",
     id: "viib-15-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2811,7 +2812,7 @@ const VIIb_moth = [
   {
     name: "Moth - VIIb.16.A",
     id: "viib-16-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2838,7 +2839,7 @@ const VIIb_moth = [
   {
     name: "Moth - VIIb.17.A",
     id: "viib-17-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2868,7 +2869,7 @@ const VIII_other = [
   {
     name: "Other - VIII.4.A",
     id: "viii-4-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2895,7 +2896,7 @@ const VIII_other = [
   {
     name: "Other - VIII.8.A",
     id: "viii-8-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2922,7 +2923,7 @@ const VIII_other = [
   {
     name: "Other - VIII.10.A",
     id: "viii-10-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2949,7 +2950,7 @@ const VIII_other = [
   {
     name: "Other - VIII.15.A",
     id: "viii-15-a",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,
@@ -2976,7 +2977,7 @@ const VIII_other = [
   {
     name: "Other - VIII.15.B",
     id: "viii-15-b",
-    bodies: [
+    sim: "cash-karp", bodies:  [
       {
         m: 1,
         x: -1,

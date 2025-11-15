@@ -13,6 +13,7 @@ const configs = [
   {
     name: "Euler E2 (Mass ratio of 3:2:1)",
     id: "euler-e2",
+    text: "This is very unstable unfortunately :(", 
     scale: 200,
     sim: "cash-karp",
     bodies: [
@@ -38,6 +39,15 @@ const configs = [
         vy: -1.1974588179,
       },
     ],
+  }, {
+    name: "Euler E3",
+    id: "E3e",
+    sim: "cash-karp",
+    bodies: [
+{ m: 1, x: -0.5, y: 0.000000, vx: 0.500000, vy: -0.866025 },
+{ m: 1, x: 0.5, y: 0.000000, vx: 0.500000, vy: 0.866025 },
+{ m: 1, x: 0.0, y: 0.866025, vx: -1.000000, vy: 0.000000 }
+]
   }
 ];
 

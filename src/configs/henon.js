@@ -265,8 +265,8 @@ const henon = [
     ]
   },
   {
-  name: "Henon 25 (with field tracers)",
-  id: "henon-25-field",
+  name: "Henon 25",
+  id: "henon-25",
   scale: 150,
   spf: 200,
   sim: "cash-karp",
