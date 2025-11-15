@@ -86,7 +86,7 @@ function App() {
             To Sýmpan
           </h1>
           <p className="centeredText" style={{ fontSize: "1rem" }}>
-            'To Sympan' is my attempt at understanding the universe.
+            'To Sýmpan' is my attempt at understanding the universe.
           </p>
           <h1>The 3-Body Problem</h1>
           {theme == "light" ? (
@@ -571,14 +571,7 @@ function App() {
               ))}
             </ul>
           </section>
-          <section>
-            <h2 className="centeredText">Future Plans</h2>
-            <p>
-              Improve integrator (this part is mostly figuring out how to
-              implement Dormand Prince and refine some errors in Cash-Karp's
-              current implementaion) and explore more configurations!
-            </p>
-          </section>
+          
           <h1>N Body Configurations</h1>
           <p>
             The main purpose of building this project was to create an N-body
@@ -609,6 +602,14 @@ function App() {
               </li>
             ))}
           </ul>
+          <section>
+            <h2 className="centeredText">Future Plans</h2>
+            <p>
+              Improve integrator (this part is mostly figuring out how to
+              implement Dormand Prince and refine some errors in Cash-Karp's
+              current implementaion) and explore more configurations!
+            </p>
+          </section>
              <footer>
           <p>© 2025 tachi-vi. All rights reserved. (I have no idea what this sentence means) </p>
           <p>
