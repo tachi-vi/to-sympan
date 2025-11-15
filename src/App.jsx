@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 
-
 import "./App.css";
 
 import sheensConfigs from "./configs/sheen.js";
@@ -206,7 +205,7 @@ function App() {
               In 1975, Roger Broucke discovered a wide family of periodic orbits
               in the three-body problem. Many of these are both visually
               striking and surprisingly stable. I’ve highlighted the ones I find
-              most beautiful. The original research paper can be found {" "}
+              most beautiful. The original research paper can be found{" "}
               <a href="https://link.springer.com/article/10.1007/BF01228732">
                 here
               </a>
@@ -216,9 +215,9 @@ function App() {
               {brouckeConfigs.map((config) => (
                 <li key={config.id}>
                   <button
-                     className={`${theme === "light" ? "lghtBtn" : "drkBtn"} ${
-        config.fav ? "highlight" : ""
-      }`}
+                    className={`${theme === "light" ? "lghtBtn" : "drkBtn"} ${
+                      config.fav ? "highlight" : ""
+                    }`}
                     onClick={() => handleSimClick(brouckeConfigs, config.id)}
                   >
                     {config.name}
@@ -244,9 +243,9 @@ function App() {
               {henonConfigs.map((config) => (
                 <li key={config.id}>
                   <button
-                     className={`${theme === "light" ? "lghtBtn" : "drkBtn"} ${
-        config.fav ? "highlight" : ""
-      }`}
+                    className={`${theme === "light" ? "lghtBtn" : "drkBtn"} ${
+                      config.fav ? "highlight" : ""
+                    }`}
                     onClick={() => handleSimClick(henonConfigs, config.id)}
                   >
                     {config.name}
@@ -269,9 +268,9 @@ function App() {
               {figure8.map((config) => (
                 <li key={config.id}>
                   <button
-                     className={`${theme === "light" ? "lghtBtn" : "drkBtn"} ${
-        config.fav ? "highlight" : ""
-      }`}
+                    className={`${theme === "light" ? "lghtBtn" : "drkBtn"} ${
+                      config.fav ? "highlight" : ""
+                    }`}
                     onClick={() => handleSimClick(figure8, config.id)}
                   >
                     {config.name}
@@ -307,10 +306,8 @@ function App() {
               bunch of different sequences, which are so complex that you wonder
               how they are periodic in the first place. Unfortunately, due to
               their complexity, I could only include the most primitive variant
-              for most of their sequences. Original paper is {" "}
-              <a href="https://arxiv.org/abs/1303.0181">
-                here.
-              </a>
+              for most of their sequences. Original paper is{" "}
+              <a href="https://arxiv.org/abs/1303.0181">here.</a>
             </p>
             <ul className="grid">
               {I_butterfly.map(
@@ -318,9 +315,9 @@ function App() {
                   config.show == true && (
                     <li key={config.id}>
                       <button
-                         className={`${theme === "light" ? "lghtBtn" : "drkBtn"} ${
-        config.fav ? "highlight" : ""
-      }`}
+                        className={`${
+                          theme === "light" ? "lghtBtn" : "drkBtn"
+                        } ${config.fav ? "highlight" : ""}`}
                         onClick={() => handleSimClick(I_butterfly, config.id)}
                       >
                         {config.name}
@@ -537,7 +534,10 @@ function App() {
           <section>
             <h2 className="centeredText">Tachi's Configurations :p (2025)</h2>
             <p>
-              Just some fun configurations I stumbled upon while experimenting. They’re not physically realistic because their interesting behavior relies on collisions and other unrealistic interactions… but they look cool :p
+              Just some fun configurations I stumbled upon while experimenting.
+              They’re not physically realistic because their interesting
+              behavior relies on collisions and other unrealistic interactions…
+              but they look cool :p
             </p>
             <ul className="grid">
               {tachis.map((config) => (
@@ -555,7 +555,8 @@ function App() {
           <section>
             <h2 className="centeredText">TriSolar!</h2>
             <p>
-              The previously mentioned three-body orbits with some added planets, to see the chaos the Trisolarans suffered through :'(
+              The previously mentioned three-body orbits with some added
+              planets, to see the chaos the Trisolarans suffered through :'(
             </p>
             <ul className="grid">
               {trisolar.map((config) => (
@@ -572,11 +573,18 @@ function App() {
           </section>
           <section>
             <h2 className="centeredText">Future Plans</h2>
-            <p>Improve integrator (this part is mostly figuring out how to implement Dormand Prince and refine some errors in Cash-Karp's current implementaion) and explore more configurations!</p>
+            <p>
+              Improve integrator (this part is mostly figuring out how to
+              implement Dormand Prince and refine some errors in Cash-Karp's
+              current implementaion) and explore more configurations!
+            </p>
           </section>
           <h1>N Body Configurations</h1>
           <p>
-            The main purpose of building this project was to create an N-body simulator; the three-body configurations are just a tangent I went too deep into. So, in the spirit of the original goal, here are some N-body simulations!
+            The main purpose of building this project was to create an N-body
+            simulator; the three-body configurations are just a tangent I went
+            too deep into. So, in the spirit of the original goal, here are some
+            N-body simulations!
           </p>
           {/* <section>
             <h2 className="centeredText">N-Body Problem (Simo's Periods):</h2>
@@ -601,10 +609,17 @@ function App() {
               </li>
             ))}
           </ul>
-        </div>
-        <footer>
-          Author's Github.
+             <footer>
+          <p>© 2025 tachi-vi. All rights reserved. (I have no idea what this sentence means) </p>
+          <p>
+            <a href="https://github.com/tachi-vi" target="_blank">
+              GitHub
+            </a>{" "}
+            
+          </p>
         </footer>
+        </div>
+     
       </>
     );
   } else {

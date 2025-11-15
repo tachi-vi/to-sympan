@@ -198,7 +198,31 @@ margin-block-start: 0;
   text-indent: 0%;
 }
 
+@media (max-width: 768px) {
+  .footer {
+    margin-top: 40px;
+  }
+}
+footer {
+  align-self: center;
+  margin-top: 100px;
+  display: flex;
+  margin-bottom: 5px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0px;
 
+}
+
+footer p{
+  text-indent: 0%;
+  margin-top: 0;
+  font-size: 15px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 .info_page .body-name{
 font-size: 1.5rem;   
   font-weight: bold;   
