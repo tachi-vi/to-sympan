@@ -62,7 +62,7 @@ to-sympan.vercel.app
 
 <img src="./screenshots/5.jpg" width="600"/>
 
-<img src="./screenshots/3.jpg" width="600"/>
+<img src="./screenshots/4.jpg" width="600"/>
 
 ## Running the Project
 
