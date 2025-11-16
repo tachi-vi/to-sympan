@@ -7,6 +7,7 @@ This project began as a small collection of well-known three-body orbits. Over t
 ## Contents
 
 The app has two main sections.
+Each section features gravitational systems with adjustable integration methods and render settings.
 
 ### 1. Three-Body Configurations
 A set of classical and modern initial conditions, including:
@@ -18,9 +19,7 @@ A set of classical and modern initial conditions, including:
 Some orbits simulate cleanly for several cycles. Others drift because of numerical sensitivity or because accurate long-term behavior is difficult to preserve without advanced techniques. They are still included because of their historical or mathematical relevance.
 
 ### 2. N-Body Configurations
-General gravitational systems with adjustable methods and settings.  
-You can load predefined setups and observe how the configuration evolves over time.
-
+A small set of some cool N-Body configurations. More bigger in scale.
 ---
 
 ## Integrators
@@ -42,17 +41,18 @@ Light and dark themes are supported.
 
 ---
 
-## Tech Stack
+## Tech Info
 
 - React + Vite  
 - Canvas renderer  
-- Handwritten physics engine (no external physics libraries)  
+- Handwritten JS physics engine (no external physics libraries)  
 - Modular .js configuration files for all orbits and integrators
 
 ---
 ## Live Link
 
-to-sympan.vercel.app
+
+<a href="to-sympan.vercel.app">to-sympan.vercel.app</a>
 
 ## Screenshots
 
