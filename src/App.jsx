@@ -614,8 +614,8 @@ function App() {
           <p>© 2025 tachi-vi. All rights reserved. (I have no idea what this sentence means) </p>
           <p>
             <a href="https://github.com/tachi-vi/to-sympan" target="_blank">
-              GitHub Repo
-            </a>{" "} <a href="tachi-vi@outlook.com">Email me</a>
+              GitHub-Repo
+            </a>{" "} <a href="tachi-vi@outlook.com">Email-me</a>
             
             
           </p>
