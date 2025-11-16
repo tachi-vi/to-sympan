@@ -1,16 +1,59 @@
-# React + Vite
+# tó sýmpan — N-Body and Three-Body Simulations
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project began as a small collection of well-known three-body orbits. Over time it became a general N-Body simulator with multiple numerical methods and a simple interface for exploring different systems. The idea is to show how gravitational interactions behave when simulated with reasonable accuracy inside the browser.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Contents
 
-## React Compiler
+The app has two main sections.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Three-Body Configurations
+A set of classical and modern initial conditions, including:
 
-## Expanding the ESLint configuration
+- Euler’s collinear solutions
+- Lagrange’s equilateral triangle solutions
+- Periodic orbits discovered numerically in the last few decades
+- Some unstable or chaotic configurations that are included for completeness
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Some orbits simulate cleanly for several cycles. Others drift because of numerical sensitivity or because accurate long-term behavior is difficult to preserve without advanced techniques. They are still included because of their historical or mathematical relevance.
+
+### 2. N-Body Configurations
+General gravitational systems with adjustable methods and settings.  
+You can load predefined setups and observe how the configuration evolves over time.
+
+---
+
+## Integrators
+
+The simulator includes several methods:
+
+- RK2 (Midpoint)
+- RK4
+- Velocity Verlet
+- Cash-Karp RK45 (adaptive step)
+
+Most configurations load with a method that performs well for that specific system, but you can switch to any method from the UI.
+
+---
+
+## Themes
+
+Light and dark themes are supported.
+
+---
+
+## Tech Stack
+
+- React + Vite  
+- Canvas renderer  
+- Handwritten physics engine (no external physics libraries)  
+- Modular configuration files for all orbits
+
+---
+
+## Running the Project
+
+```bash
+npm install
+npm run dev
