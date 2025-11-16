@@ -12,7 +12,6 @@ The app has two main sections.
 A set of classical and modern initial conditions, including:
 
 - Euler’s collinear solutions
-- Lagrange’s equilateral triangle solutions
 - Periodic orbits discovered numerically in the last few decades
 - Some unstable or chaotic configurations that are included for completeness
 
@@ -48,9 +47,22 @@ Light and dark themes are supported.
 - React + Vite  
 - Canvas renderer  
 - Handwritten physics engine (no external physics libraries)  
-- Modular configuration files for all orbits
+- Modular .js configuration files for all orbits and integrators
 
 ---
+## Live Link
+
+to-sympan.vercel.app
+
+## Screenshots
+
+<img src="./screenshots/6.jpg" width="600"/>
+
+<img src="./screenshots/3.jpg" width="600"/>
+
+<img src="./screenshots/5.jpg" width="600"/>
+
+<img src="./screenshots/3.jpg" width="600"/>
 
 ## Running the Project
 
